@@ -1,0 +1,41 @@
+/Users/user/Downloads/EcommercerProject/Ecommercer/Ecommercer/bin/Debug/netstandard2.0/Ecommercer.deps.json
+/Users/user/Downloads/EcommercerProject/Ecommercer/Ecommercer/bin/Debug/netstandard2.0/Ecommercer.dll
+/Users/user/Downloads/EcommercerProject/Ecommercer/Ecommercer/bin/Debug/netstandard2.0/ref/Ecommercer.dll
+/Users/user/Downloads/EcommercerProject/Ecommercer/Ecommercer/bin/Debug/netstandard2.0/Ecommercer.pdb
+/Users/user/Downloads/EcommercerProject/Ecommercer/Ecommercer/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/user/Downloads/EcommercerProject/Ecommercer/Ecommercer/obj/Debug/netstandard2.0/Source/Authentication/Views/LoginSignUpPage.xaml.g.cs
+/Users/user/Downloads/EcommercerProject/Ecommercer/Ecommercer/obj/Debug/netstandard2.0/Source/Common/Styles/Colors.xaml.g.cs
+/Users/user/Downloads/EcommercerProject/Ecommercer/Ecommercer/obj/Debug/netstandard2.0/Source/Common/Styles/CommonStyles.xaml.g.cs
+/Users/user/Downloads/EcommercerProject/Ecommercer/Ecommercer/obj/Debug/netstandard2.0/Source/Common/Styles/Converters.xaml.g.cs
+/Users/user/Downloads/EcommercerProject/Ecommercer/Ecommercer/obj/Debug/netstandard2.0/Source/Common/Styles/Dimensions.xaml.g.cs
+/Users/user/Downloads/EcommercerProject/Ecommercer/Ecommercer/obj/Debug/netstandard2.0/Source/Common/Styles/LabelStyles.xaml.g.cs
+/Users/user/Downloads/EcommercerProject/Ecommercer/Ecommercer/obj/Debug/netstandard2.0/Source/Common/Styles/Strings.xaml.g.cs
+/Users/user/Downloads/EcommercerProject/Ecommercer/Ecommercer/obj/Debug/netstandard2.0/Ecommercer.AssemblyInfoInputs.cache
+/Users/user/Downloads/EcommercerProject/Ecommercer/Ecommercer/obj/Debug/netstandard2.0/Ecommercer.AssemblyInfo.cs
+/Users/user/Downloads/EcommercerProject/Ecommercer/Ecommercer/obj/Debug/netstandard2.0/Ecommercer.csproj.CoreCompileInputs.cache
+/Users/user/Downloads/EcommercerProject/Ecommercer/Ecommercer/obj/Debug/netstandard2.0/Ecommercer.csproj.Fody.CopyLocal.cache
+/Users/user/Downloads/EcommercerProject/Ecommercer/Ecommercer/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/user/Downloads/EcommercerProject/Ecommercer/Ecommercer/obj/Debug/netstandard2.0/Ecommercer.dll
+/Users/user/Downloads/EcommercerProject/Ecommercer/Ecommercer/obj/Debug/netstandard2.0/ref/Ecommercer.dll
+/Users/user/Downloads/EcommercerProject/Ecommercer/Ecommercer/obj/Debug/netstandard2.0/Ecommercer.pdb
+/Users/user/Desktop/Ecommercer Project/Ecommercer/bin/Debug/netstandard2.0/Ecommercer.deps.json
+/Users/user/Desktop/Ecommercer Project/Ecommercer/bin/Debug/netstandard2.0/Ecommercer.dll
+/Users/user/Desktop/Ecommercer Project/Ecommercer/bin/Debug/netstandard2.0/ref/Ecommercer.dll
+/Users/user/Desktop/Ecommercer Project/Ecommercer/bin/Debug/netstandard2.0/Ecommercer.pdb
+/Users/user/Desktop/Ecommercer Project/Ecommercer/obj/Debug/netstandard2.0/Ecommercer.csprojAssemblyReference.cache
+/Users/user/Desktop/Ecommercer Project/Ecommercer/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/user/Desktop/Ecommercer Project/Ecommercer/obj/Debug/netstandard2.0/Source/Authentication/Views/LoginSignUpPage.xaml.g.cs
+/Users/user/Desktop/Ecommercer Project/Ecommercer/obj/Debug/netstandard2.0/Source/Common/Styles/Colors.xaml.g.cs
+/Users/user/Desktop/Ecommercer Project/Ecommercer/obj/Debug/netstandard2.0/Source/Common/Styles/CommonStyles.xaml.g.cs
+/Users/user/Desktop/Ecommercer Project/Ecommercer/obj/Debug/netstandard2.0/Source/Common/Styles/Converters.xaml.g.cs
+/Users/user/Desktop/Ecommercer Project/Ecommercer/obj/Debug/netstandard2.0/Source/Common/Styles/Dimensions.xaml.g.cs
+/Users/user/Desktop/Ecommercer Project/Ecommercer/obj/Debug/netstandard2.0/Source/Common/Styles/LabelStyles.xaml.g.cs
+/Users/user/Desktop/Ecommercer Project/Ecommercer/obj/Debug/netstandard2.0/Source/Common/Styles/Strings.xaml.g.cs
+/Users/user/Desktop/Ecommercer Project/Ecommercer/obj/Debug/netstandard2.0/Ecommercer.AssemblyInfoInputs.cache
+/Users/user/Desktop/Ecommercer Project/Ecommercer/obj/Debug/netstandard2.0/Ecommercer.AssemblyInfo.cs
+/Users/user/Desktop/Ecommercer Project/Ecommercer/obj/Debug/netstandard2.0/Ecommercer.csproj.CoreCompileInputs.cache
+/Users/user/Desktop/Ecommercer Project/Ecommercer/obj/Debug/netstandard2.0/Ecommercer.csproj.Fody.CopyLocal.cache
+/Users/user/Desktop/Ecommercer Project/Ecommercer/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/user/Desktop/Ecommercer Project/Ecommercer/obj/Debug/netstandard2.0/Ecommercer.dll
+/Users/user/Desktop/Ecommercer Project/Ecommercer/obj/Debug/netstandard2.0/ref/Ecommercer.dll
+/Users/user/Desktop/Ecommercer Project/Ecommercer/obj/Debug/netstandard2.0/Ecommercer.pdb

@@ -1,0 +1,5 @@
+﻿<Properties StartupConfiguration="{970498CC-2C0E-4F2A-9514-068E2C2011F2}|Default">
+  <MonoDevelop.Ide.ItemProperties.Ecommercer.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.ItemProperties.Ecommercer.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.3236BAA1-2E45-490F-A469-80CD9537808D" />
+  <MultiItemStartupConfigurations />
+</Properties>
