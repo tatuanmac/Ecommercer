@@ -5,12 +5,17 @@
     xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     x:Name="self"
     x:Class="Ecommercer.Source.Home.Views.HomePage">
+
     <StackLayout>
         <CollectionView
             HeightRequest="56"
             HorizontalOptions="Center"
             ItemsSource="{Binding ToolbarTitle}">
-
+            <CollectionView.Header>
+                <BoxView
+                    HorizontalOptions="Center"
+                    WidthRequest="16" />
+            </CollectionView.Header>
             <CollectionView.ItemsLayout>
                 <LinearItemsLayout
                     Orientation="Horizontal"
@@ -48,11 +53,11 @@
             SeparatorVisibility="None"
             RowHeight="378"
             ItemsSource="{Binding ListStores}">
-            <ListView.Footer>
+            <ListView.Header>
                 <BoxView
                     VerticalOptions="Center"
                     HeightRequest="16" />
-            </ListView.Footer>
+            </ListView.Header>
 
             <ListView.ItemTemplate>
                 <DataTemplate>
