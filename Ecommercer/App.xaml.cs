@@ -46,6 +46,7 @@ namespace Ecommercer
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<LoginSignUpPage, LoginSignUpViewModel>();
+            containerRegistry.RegisterForNavigation<LoginPage, LoginViewModel>();
         }
 
         private void RegisterService(IContainerRegistry containerRegistry)
@@ -63,6 +64,7 @@ namespace Ecommercer
     public sealed partial class Routes
     {
         static readonly string navigation = nameof(NavigationPage);
-        public static readonly Uri LoginSignUp = new Uri($"{nameof(LoginSignUpPage)}", UriKind.Relative);
+        public static readonly Uri LoginSignUp = new Uri($"/{navigation}/{nameof(LoginSignUpPage)}", UriKind.Relative);
+        public static readonly Uri Login = new Uri($"{nameof(LoginPage)}", UriKind.Relative);
     }
 }

@@ -1,5 +1,38 @@
 ﻿<Properties StartupConfiguration="{970498CC-2C0E-4F2A-9514-068E2C2011F2}|Default">
   <MonoDevelop.Ide.ItemProperties.Ecommercer.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommercer/Source/Authentication/Views/LoginPage.xaml">
+    <Files>
+      <File FileName="Ecommercer/Source/Authentication/Views/LoginPage.xaml" Line="158" Column="1" />
+      <File FileName="Ecommercer/Source/Authentication/ViewModels/LoginViewModel.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Ecommercer" expanded="True">
+            <Node name="Ecommercer" expanded="True">
+              <Node name="Source" expanded="True">
+                <Node name="Authentication" expanded="True">
+                  <Node name="ViewModels" expanded="True" />
+                  <Node name="Views" expanded="True">
+                    <Node name="LoginPage.xaml" selected="True" />
+                  </Node>
+                </Node>
+                <Node name="Common" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Ecommercer.iOS" expanded="True">
+              <Node name="Resources" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Ecommercer.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.3236BAA1-2E45-490F-A469-80CD9537808D" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

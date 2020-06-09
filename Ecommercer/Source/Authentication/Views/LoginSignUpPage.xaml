@@ -3,6 +3,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    NavigationPage.HasNavigationBar="False"
     x:Class="Ecommercer.Source.Authentication.Views.LoginSignUpPage">
     <Grid
         RowSpacing="1"
@@ -25,7 +26,7 @@
             Grid.ColumnSpan="2"
             Grid.RowSpan="5"
             Aspect="AspectFill"
-            Source="bgAuth" />
+            Source="bgLoginSignUp" />
         <StackLayout
             HorizontalOptions="Center"
             VerticalOptions="Center"
@@ -72,7 +73,8 @@
             BackgroundColor="{StaticResource ButtonAuth}"
             Padding="0">
             <Frame.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding LoginFBCommand}"/>
+                <TapGestureRecognizer
+                    Command="{Binding LoginFBCommand}" />
             </Frame.GestureRecognizers>
             <StackLayout
                 Spacing="16"
@@ -95,7 +97,8 @@
             BackgroundColor="{StaticResource ButtonAuth}"
             Padding="0">
             <Frame.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding Login}"/>
+                <TapGestureRecognizer
+                    Command="{Binding Login}" />
             </Frame.GestureRecognizers>
             <Label
                 Text="LOGIN"
@@ -111,7 +114,8 @@
             HasShadow="False"
             Padding="0">
             <Frame.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding SignUp}"/>
+                <TapGestureRecognizer
+                    Command="{Binding SignUp}" />
             </Frame.GestureRecognizers>
             <Label
                 Text="SIGN UP"

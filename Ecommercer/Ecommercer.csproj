@@ -32,5 +32,6 @@
     <Folder Include="Source\Authentication\ViewModels\" />
     <Folder Include="Source\Authentication\Model\" />
     <Folder Include="Source\Authentication\Services\" />
+    <Folder Include="Source\Common\Renderer\" />
   </ItemGroup>
 </Project>

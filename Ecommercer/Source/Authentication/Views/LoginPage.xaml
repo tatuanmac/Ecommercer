@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:local="clr-namespace:Ecommercer.Source.Common.Renderer"
+    ios:Page.UseSafeArea="False"
+    NavigationPage.HasNavigationBar="False"
+    x:Class="Ecommercer.Source.Authentication.Views.LoginPage">
+    <Grid
+        BackgroundColor="Violet">
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="32" />
+            <RowDefinition />
+            <RowDefinition
+                Height="64" />
+            <RowDefinition
+                Height="16" />
+            <RowDefinition
+                Height="64" />
+            <RowDefinition
+                Height="16" />
+            <RowDefinition
+                Height="64" />
+            <RowDefinition />
+            <RowDefinition
+                Height="24" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+                Width="40" />
+            <ColumnDefinition />
+            <ColumnDefinition
+                Width="40" />
+        </Grid.ColumnDefinitions>
+
+        <Image
+            Grid.RowSpan="9"
+            Grid.ColumnSpan="3"
+            Aspect="AspectFill"
+            Source="bgLogin" />
+
+        <Image
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            HorizontalOptions="Start"
+            VerticalOptions="Start"
+            Margin="16,16,0,0"
+            Source="btnClose">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer
+                    Command="{Binding CloseCommand}" />
+            </Image.GestureRecognizers>
+        </Image>
+
+        <StackLayout
+            Grid.ColumnSpan="3"
+            Grid.Row="1"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+            <Image
+                Source="logoWhite" />
+            <Label
+                Text="LOGIN"
+                FontSize="30"
+                TextColor="White"
+                HorizontalOptions="Center" />
+        </StackLayout>
+        <local:BorderLessEntry
+            Grid.Row="2"
+            Grid.Column="1"
+            BackgroundColor="Transparent"
+            Margin="0,0,8,0"
+            HorizontalTextAlignment="Center"
+            Placeholder="Username or Email"
+            PlaceholderColor="White"
+            TextColor="White"
+            FontSize="22" />
+
+        <BoxView
+            Grid.Row="2"
+            Grid.ColumnSpan="3"
+            Margin="32,0"
+            Color="Gray"
+            VerticalOptions="End"
+            HeightRequest="1" />
+
+        <local:BorderLessEntry
+            Grid.Row="4"
+            Grid.Column="1"
+            Margin="0,0,8,0"
+            BackgroundColor="Transparent"
+            HorizontalTextAlignment="Center"
+            Placeholder="Password"
+            PlaceholderColor="White"
+            TextColor="White"
+            FontSize="22" />
+
+        <Image
+            Grid.Row="4"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Source="icForgotPass"
+            HorizontalOptions="End"
+            WidthRequest="20"
+            Margin="0,0,32,0"
+            VerticalOptions="Center"
+            HeightRequest="20">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer
+                    Command="{Binding ForgotPassCommand}" />
+            </Image.GestureRecognizers>
+        </Image>
+
+        <BoxView
+            Grid.Row="4"
+            Grid.ColumnSpan="3"
+            Margin="32,0"
+            Color="Gray"
+            VerticalOptions="End"
+            HeightRequest="1" />
+
+        <Entry
+            Grid.Row="6"
+            Grid.ColumnSpan="3"
+            Margin="32,0"
+            BackgroundColor="Transparent"
+            HorizontalTextAlignment="Center"
+            Placeholder="L O G I N"
+            PlaceholderColor="White"
+            TextColor="White"
+            FontSize="17" />
+        <StackLayout
+            Grid.Row="7"
+            HorizontalOptions="Center"
+            VerticalOptions="End"
+            Spacing="16"
+            Grid.Column="1">
+            <BoxView
+                VerticalOptions="Center"
+                HeightRequest="1"
+                BackgroundColor="White"
+                HorizontalOptions="Center" />
+            <Label
+                HorizontalTextAlignment="Center"
+                Text="New member?"
+                TextColor="White" />
+            <Label
+                HorizontalTextAlignment="Center"
+                Text="CREATE ACCOUNT"
+                TextColor="White" />
+
+        </StackLayout>
+    </Grid>
+</ContentPage>

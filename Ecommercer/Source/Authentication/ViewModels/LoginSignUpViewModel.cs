@@ -25,9 +25,9 @@ namespace Ecommercer.Source.Authentication.ViewModels
         Command LoginCommand;
         public Command Login => LoginCommand = LoginCommand ?? new Command(UserLogin);
 
-        private void UserLogin()
+        private async void UserLogin()
         {
-
+            var result = await NavigationService.NavigateAsync(Routes.Login);
         }
 
         Command SignUpCommand;
