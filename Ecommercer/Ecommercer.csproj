@@ -33,5 +33,22 @@
     <Folder Include="Source\Authentication\Model\" />
     <Folder Include="Source\Authentication\Services\" />
     <Folder Include="Source\Common\Renderer\" />
+    <Folder Include="Source\Home\Views\" />
+    <Folder Include="Source\Home\ViewModels\" />
+    <Folder Include="Source\Home\Service\" />
+    <Folder Include="Source\Home\Model\" />
+    <Folder Include="Source\Cart\Views\" />
+    <Folder Include="Source\Cart\ViewModels\" />
+    <Folder Include="Source\Cart\Model\" />
+    <Folder Include="Source\Chat\Views\" />
+    <Folder Include="Source\Chat\ViewModels\" />
+    <Folder Include="Source\Deals\Views\" />
+    <Folder Include="Source\Deals\ViewModels\" />
+    <Folder Include="Source\Profile\Views\" />
+    <Folder Include="Source\Profile\ViewModels\" />
+    <Folder Include="Source\Tags\Views\" />
+    <Folder Include="Source\Tags\ViewModels\" />
+    <Folder Include="Source\Chat\Model\" />
+    <Folder Include="Source\Tags\Model\" />
   </ItemGroup>
 </Project>

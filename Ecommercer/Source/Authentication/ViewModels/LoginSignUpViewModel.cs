@@ -17,9 +17,9 @@ namespace Ecommercer.Source.Authentication.ViewModels
         Command FBCommand;
         public Command LoginFBCommand => FBCommand = FBCommand ?? new Command(LoginWithFacebook);
 
-        private void LoginWithFacebook()
+        private async void LoginWithFacebook()
         {
-
+            var result = await NavigationService.NavigateAsync(Routes.EcoTabbed);
         }
 
         Command LoginCommand;

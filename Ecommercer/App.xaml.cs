@@ -2,6 +2,16 @@
 using System.Globalization;
 using Ecommercer.Source.Authentication.ViewModels;
 using Ecommercer.Source.Authentication.Views;
+using Ecommercer.Source.Cart.ViewModels;
+using Ecommercer.Source.Cart.Views;
+using Ecommercer.Source.Deals.ViewModels;
+using Ecommercer.Source.Deals.Views;
+using Ecommercer.Source.Home.ViewModels;
+using Ecommercer.Source.Home.Views;
+using Ecommercer.Source.Profile.ViewModels;
+using Ecommercer.Source.Profile.Views;
+using Ecommercer.Source.Tags.ViewModels;
+using Ecommercer.Source.Tags.Views;
 using Prism;
 using Prism.DryIoc;
 using Prism.Ioc;
@@ -47,6 +57,12 @@ namespace Ecommercer
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<LoginSignUpPage, LoginSignUpViewModel>();
             containerRegistry.RegisterForNavigation<LoginPage, LoginViewModel>();
+            containerRegistry.RegisterForNavigation<EcoTabbedPage>();
+            containerRegistry.RegisterForNavigation<HomePage, HomeViewModel>();
+            containerRegistry.RegisterForNavigation<DealsPage, DealsViewModel>();
+            containerRegistry.RegisterForNavigation<CartPage, CartViewModel>();
+            containerRegistry.RegisterForNavigation<TagsPage, TagsViewModel>();
+            containerRegistry.RegisterForNavigation<ProfilePage, ProfileViewModel>();
         }
 
         private void RegisterService(IContainerRegistry containerRegistry)
@@ -66,5 +82,6 @@ namespace Ecommercer
         static readonly string navigation = nameof(NavigationPage);
         public static readonly Uri LoginSignUp = new Uri($"/{navigation}/{nameof(LoginSignUpPage)}", UriKind.Relative);
         public static readonly Uri Login = new Uri($"{nameof(LoginPage)}", UriKind.Relative);
+        public static readonly Uri EcoTabbed = new Uri($"/{navigation}/{nameof(EcoTabbedPage)}", UriKind.Absolute);
     }
 }

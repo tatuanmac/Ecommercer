@@ -238,6 +238,10 @@
     <ImageAsset Include="Resources\Assets.xcassets\btnClose.imageset\btnClose%402x.png" />
     <ImageAsset Include="Resources\Assets.xcassets\btnClose.imageset\Contents.json" />
     <ImageAsset Include="Resources\Assets.xcassets\btnClose.imageset\btnClose.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\icTags.imageset\icTags.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\icTags.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\icTags.imageset\icTags%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\icTags.imageset\icTags%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
