@@ -30,6 +30,7 @@ Temporary Items
 ### XamarinStudio ###
 bin/
 obj/
+*.iOS/bin/
 *.userprefs
 .packages
 
@@ -107,7 +108,7 @@ artifacts/
 *.pidb
 *.svclog
 *.scc
-
+*.dll
 # Chutzpah Test files
 _Chutzpah*
 
