@@ -2,7 +2,177 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    BackgroundColor="Aqua" 
+    xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    x:Name="self"
     x:Class="Ecommercer.Source.Home.Views.HomePage">
-    
+    <StackLayout>
+        <CollectionView
+            HeightRequest="56"
+            HorizontalOptions="Center"
+            ItemsSource="{Binding ToolbarTitle}">
+
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout
+                    Orientation="Horizontal"
+                    ItemSpacing="20" />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Label
+                        Text="{Binding Title}"
+                        TextColor="Gray"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Command="{Binding Source={Reference self},Path=BindingContext.EnumCommand}"
+                                CommandParameter="{Binding .}" />
+                        </Label.GestureRecognizers>
+                        <Label.Triggers>
+                            <DataTrigger
+                                TargetType="Label"
+                                Binding="{Binding IsSelected}"
+                                Value="True">
+                                <Setter
+                                    Property="TextColor"
+                                    Value="Black" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <ListView
+            SeparatorVisibility="None"
+            RowHeight="378"
+            ItemsSource="{Binding ListStores}">
+            <ListView.Footer>
+                <BoxView
+                    VerticalOptions="Center"
+                    HeightRequest="16" />
+            </ListView.Footer>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame
+                            Padding="0"
+                            IsClippedToBounds="True"
+                            CornerRadius="12"
+                            Margin="24,20,24,4">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Command="{Binding Source={Reference self},Path=BindingContext.StoreDetailCommand}" />
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition
+                                        Height="*" />
+                                    <RowDefinition
+                                        Height="40" />
+                                    <RowDefinition
+                                        Height="40" />
+                                    <RowDefinition
+                                        Height="40" />
+                                    <RowDefinition
+                                        Height="16" />
+                                    <RowDefinition
+                                        Height="40" />
+                                    <RowDefinition
+                                        Height="*" />
+                                </Grid.RowDefinitions>
+
+                                <!--header-->
+                                <Image
+                                    Grid.RowSpan="2"
+                                    Aspect="AspectFill"
+                                    Source="imgHeader" />
+
+                                <!--avatar-->
+                                <Frame
+                                    Grid.Row="1"
+                                    Grid.RowSpan="2"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Center"
+                                    HeightRequest="80"
+                                    WidthRequest="80"
+                                    BorderColor="White"
+                                    CornerRadius="40"
+                                    Padding="0">
+                                    <ffimage:CachedImage
+                                        Source="{Binding User.User_avatar}" />
+                                </Frame>
+
+                                <!--name-->
+                                <StackLayout
+                                    Margin="16,0"
+                                    VerticalOptions="Center"
+                                    Grid.Row="3">
+                                    <Label
+                                        VerticalTextAlignment="Start"
+                                        HorizontalTextAlignment="Center"
+                                        FontSize="19"
+                                        Text="{Binding User.User_fullname}" />
+
+                                    <Label
+                                        HorizontalTextAlignment="Center"
+                                        VerticalTextAlignment="End"
+                                        FontSize="10"
+                                        TextColor="#A6B0BD"
+                                        Text="{Binding User.User_address}" />
+                                </StackLayout>
+
+                                <BoxView
+                                    Grid.Row="4"
+                                    VerticalOptions="Center"
+                                    HeightRequest="1"
+                                    HorizontalOptions="Center"
+                                    WidthRequest="80"
+                                    Color="#E1E4EC" />
+
+                                <!--rating-->
+                                <StackLayout
+                                    Margin="16,0"
+                                    VerticalOptions="Center"
+                                    Grid.Row="5">
+                                    <Image
+                                        Source="icRating" />
+
+                                    <Label
+                                        HorizontalTextAlignment="Center"
+                                        VerticalTextAlignment="End"
+                                        FontSize="11"
+                                        TextColor="#A6B0BD">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span
+                                                    Text="{Binding Store_review}" />
+                                                <Span
+                                                    Text=" reviews" />
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+
+                                </StackLayout>
+                                <Button
+                                    Margin="16,0"
+                                    BackgroundColor="Transparent"
+                                    HeightRequest="48"
+                                    Grid.Row="6"
+                                    Command="{Binding Source={Reference self},Path=BindingContext.FollowCommand}"
+                                    CornerRadius="10"
+                                    VerticalOptions="Center"
+                                    Text="FOLLOW STORE"
+                                    TextColor="#327AE5"
+                                    BorderColor="#327AE5"
+                                    BorderWidth="2" />
+                            </Grid>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>

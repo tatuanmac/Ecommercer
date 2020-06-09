@@ -75,20 +75,4 @@ namespace Ecommercer.Source.Common.Bases
             navigationService.NavigateAsync(route);
         }
     }
-    public class ViewModelTabBase : BindableBase, IActiveAware
-    {
-        bool isActive;
-        public bool IsActive { get => isActive; set { SetProperty(ref isActive, value, TabActiveChanged); } }
-
-        public virtual void TabActiveChanged()
-        {
-            IsActiveChanged?.Invoke(this, EventArgs.Empty);
-        }
-        public event EventHandler IsActiveChanged;
-        public INavigationService navigationService;
-        public ViewModelTabBase(INavigationService _navigationService)
-        {
-            navigationService = _navigationService;
-        }
-    }
 }

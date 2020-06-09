@@ -1,12 +1,8 @@
 ﻿<Properties StartupConfiguration="{970498CC-2C0E-4F2A-9514-068E2C2011F2}|Default">
   <MonoDevelop.Ide.ItemProperties.Ecommercer.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommercer/Source/Cart/Model/PaymentModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommercer/Source/Home/ViewModels/HomeViewModel.cs">
     <Files>
-      <File FileName="Ecommercer/Source/Home/Views/EcoTabbedPage.xaml" Line="19" Column="29" />
-      <File FileName="Ecommercer/Source/Home/ViewModels/HomeViewModel.cs" Line="15" Column="1" />
-      <File FileName="Ecommercer/Source/Tags/Model/TagsModel.cs" Line="9" Column="17" />
-      <File FileName="Ecommercer/Source/Cart/Model/CartModel.cs" Line="12" Column="48" />
-      <File FileName="Ecommercer/Source/Cart/Model/PaymentModel.cs" Line="1" Column="1" />
+      <File FileName="Ecommercer/Source/Home/ViewModels/HomeViewModel.cs" Line="34" Column="12" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,33 +11,29 @@
             <Node name="Ecommercer" expanded="True">
               <Node name="Source" expanded="True">
                 <Node name="Authentication" expanded="True">
-                  <Node name="Model" expanded="True" />
+                  <Node name="ViewModels" expanded="True" />
                 </Node>
-                <Node name="Cart" expanded="True">
-                  <Node name="Model" expanded="True">
-                    <Node name="PaymentModel.cs" selected="True" />
-                  </Node>
-                </Node>
-                <Node name="Chat" expanded="True">
-                  <Node name="Model" expanded="True" />
+                <Node name="Common" expanded="True">
+                  <Node name="Bases" expanded="True" />
                 </Node>
                 <Node name="Home" expanded="True">
                   <Node name="Model" expanded="True" />
-                  <Node name="ViewModels" expanded="True" />
+                  <Node name="Service" expanded="True" />
+                  <Node name="ViewModels" expanded="True">
+                    <Node name="HomeViewModel.cs" selected="True" />
+                  </Node>
                   <Node name="Views" expanded="True" />
-                </Node>
-                <Node name="Tags" expanded="True">
-                  <Node name="Model" expanded="True" />
                 </Node>
               </Node>
               <Node name="App.xaml" expanded="True" />
             </Node>
+            <Node name="Ecommercer.iOS" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Ecommercer.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.3236BAA1-2E45-490F-A469-80CD9537808D" />
+  <MonoDevelop.Ide.ItemProperties.Ecommercer.iOS Xamarin.HotReload.DebuggerTimeoutException.Ecommercer.iOS.HideInfoBar="True" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B92EF9F9-7F2E-4B85-9ADB-78519361AC15" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

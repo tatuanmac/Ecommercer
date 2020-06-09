@@ -1,34 +1,102 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using Ecommercer.Source.Common.Bases;
+using Ecommercer.Source.Home.Model;
+using Ecommercer.Source.Home.Service;
 using Prism.Navigation;
 using Xamarin.Forms;
-using static Ecommercer.Source.Home.Model.HomeModel;
 
 namespace Ecommercer.Source.Home.ViewModels
 {
-    public class HomeViewModel : ViewModelBase
+
+    public class HomeViewModel : TabbedViewModelBase
     {
-        public List<string> ToolbarTitle = new List<string>();
-
-
-        public HomeViewModel(INavigationService navigationService) : base(navigationService)
-        {
-            ToolbarTitle.Add("Most Popular");
-            ToolbarTitle.Add("Featured");
-            ToolbarTitle.Add("Top Sellers");
-            ToolbarTitle.Add("Following");
-        }
-
+        HomeButton currentFilter;
         public HomeEnum HomeEnum { get; set; } = HomeEnum.MostPopular;
 
-        Command<HomeEnum> Enum;
-        public Command<HomeEnum> EnumCommand => Enum ?? Enum ?? new Command<HomeEnum>(TypeHome);
+        public List<HomeButton> ToolbarTitle { set; get; } = new List<HomeButton> {
+            new HomeButton {
 
-        private void TypeHome(HomeEnum obj)
+                Title="Most Popular",
+                Type = HomeEnum.MostPopular,
+                IsSelected = true
+            },
+            new HomeButton {
+
+                Title="Featured",
+                Type = HomeEnum.Featured
+            },
+            new HomeButton {
+
+                Title="Top Sellers",
+                Type = HomeEnum.TopSellers
+            },
+            new HomeButton {
+
+                Title="Following",
+                Type = HomeEnum.Following
+            }
+        };
+
+        IStore service;
+
+        public ObservableCollection<StoreModel> ListStores { get; set; }
+
+        public HomeViewModel(INavigationService navigationService, IStore service) : base(navigationService)
         {
-            HomeEnum = obj;
+            this.service = service;
+        }
+
+        public override async void TabActiveChanged()
+        {
+            if (IsActive)
+            {
+                var datas = await service.ListStore();
+                if (datas == null)
+                {
+                    return;
+                }
+                ListStores = new ObservableCollection<StoreModel>(datas);
+            }
+        }
+
+        Command<HomeButton> Enum;
+        public Command<HomeButton> EnumCommand => Enum = Enum ?? new Command<HomeButton>(TypeHome);
+
+        private void TypeHome(HomeButton obj)
+        {
+            if (currentFilter != null)
+            {
+                currentFilter.IsSelected = false;
+            }
+            currentFilter = obj;
+            currentFilter.IsSelected = true;
+            foreach (var item in ToolbarTitle)
+            {
+                if (item != obj)
+                {
+                    item.IsSelected = false;
+                }
+            }
+        }
+
+        Command Follow;
+        public Command FollowCommand => Follow = Follow ?? new Command(FollowStore);
+
+        private void FollowStore()
+        {
+
+        }
+
+        Command StoreDetail;
+        public Command StoreDetailCommand => StoreDetail = StoreDetail ?? new Command(StoreDetailStore);
+
+        private void StoreDetailStore()
+        {
+
         }
     }
 }

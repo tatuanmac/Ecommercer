@@ -6,6 +6,7 @@ using Ecommercer.Source.Cart.ViewModels;
 using Ecommercer.Source.Cart.Views;
 using Ecommercer.Source.Deals.ViewModels;
 using Ecommercer.Source.Deals.Views;
+using Ecommercer.Source.Home.Service;
 using Ecommercer.Source.Home.ViewModels;
 using Ecommercer.Source.Home.Views;
 using Ecommercer.Source.Profile.ViewModels;
@@ -41,7 +42,7 @@ namespace Ecommercer
 
             VersionTracking.Track();
 
-            var result = await NavigationService.NavigateAsync(Routes.LoginSignUp);
+            var result = await NavigationService.NavigateAsync(Routes.EcoTabbed);
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -67,6 +68,7 @@ namespace Ecommercer
 
         private void RegisterService(IContainerRegistry containerRegistry)
         {
+            containerRegistry.Register<IStore, StoreData>();
         }
 
         private void RegisterDialogs(IContainerRegistry containerRegistry)
