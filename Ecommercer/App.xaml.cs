@@ -4,6 +4,8 @@ using Ecommercer.Source.Authentication.ViewModels;
 using Ecommercer.Source.Authentication.Views;
 using Ecommercer.Source.Cart.ViewModels;
 using Ecommercer.Source.Cart.Views;
+using Ecommercer.Source.Controls;
+using Ecommercer.Source.Deals.Service;
 using Ecommercer.Source.Deals.ViewModels;
 using Ecommercer.Source.Deals.Views;
 using Ecommercer.Source.Home.Service;
@@ -42,7 +44,7 @@ namespace Ecommercer
             InitializeComponent();
 
             VersionTracking.Track();
-
+            
             var result = await NavigationService.NavigateAsync(Routes.EcoTabbed);
         }
 
@@ -71,6 +73,7 @@ namespace Ecommercer
         {
             containerRegistry.Register<IStore, StoreData>();
             containerRegistry.Register<IProfile, ProfileData>();
+            containerRegistry.Register<IDeal, DealsData>();
         }
 
         private void RegisterDialogs(IContainerRegistry containerRegistry)

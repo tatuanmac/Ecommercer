@@ -1,0 +1,63 @@
+﻿<Properties StartupConfiguration="{970498CC-2C0E-4F2A-9514-068E2C2011F2}|Default">
+  <MonoDevelop.Ide.ItemProperties.Ecommercer.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommercer/Source/Deals/Views/DealsPage.xaml">
+    <Files>
+      <File FileName="Ecommercer/Source/Deals/ViewModels/DealsViewModel.cs" Line="41" Column="1" />
+      <File FileName="Ecommercer/Source/Home/ViewModels/HomeViewModel.cs" Line="57" Column="55" />
+      <File FileName="Ecommercer/Source/Profile/ViewModels/ProfileViewModel.cs" Line="1" Column="1" />
+      <File FileName="Ecommercer/Source/Authentication/ViewModels/LoginViewModel.cs" Line="1" Column="1" />
+      <File FileName="Ecommercer/Source/Authentication/ViewModels/LoginSignUpViewModel.cs" Line="1" Column="1" />
+      <File FileName="Ecommercer/Source/Profile/Service/IProfile.cs" Line="1" Column="1" />
+      <File FileName="Ecommercer/Source/Tags/ViewModels/TagsViewModel.cs" Line="1" Column="1" />
+      <File FileName="Ecommercer/Source/Deals/Views/DealsPage.xaml" Line="125" Column="65" />
+      <File FileName="Ecommercer/App.xaml.cs" Line="76" Column="53" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Ecommercer" expanded="True">
+            <Node name="Ecommercer" expanded="True">
+              <Node name="Source" expanded="True">
+                <Node name="Authentication" expanded="True">
+                  <Node name="ViewModels" expanded="True" />
+                </Node>
+                <Node name="Controls" expanded="True" />
+                <Node name="Deals" expanded="True">
+                  <Node name="ViewModels" expanded="True" />
+                  <Node name="Views" expanded="True">
+                    <Node name="DealsPage.xaml" selected="True" />
+                  </Node>
+                </Node>
+                <Node name="Home" expanded="True">
+                  <Node name="ViewModels" expanded="True" />
+                </Node>
+                <Node name="Profile" expanded="True">
+                  <Node name="Service" expanded="True" />
+                  <Node name="ViewModels" expanded="True" />
+                  <Node name="Views" expanded="True" />
+                </Node>
+                <Node name="Tags" expanded="True">
+                  <Node name="ViewModels" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="App.xaml" expanded="True" />
+            </Node>
+            <Node name="Ecommercer.iOS" expanded="True">
+              <Node name="Resources" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Ecommercer.iOS Xamarin.HotReload.DebuggerTimeoutException.Ecommercer.iOS.HideInfoBar="True" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.3236BAA1-2E45-490F-A469-80CD9537808D" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/user/Desktop/Ecommercer Project/Ecommercer/Source/Home/ViewModels/HomeViewModel.cs" relfile="Ecommercer/Source/Home/ViewModels/HomeViewModel.cs" line="90" column="9" />
+      <Breakpoint file="/Users/user/Desktop/Ecommercer Project/Ecommercer/Source/Home/ViewModels/HomeViewModel.cs" relfile="Ecommercer/Source/Home/ViewModels/HomeViewModel.cs" line="98" column="9" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

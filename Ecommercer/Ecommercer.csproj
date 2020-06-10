@@ -52,5 +52,8 @@
     <Folder Include="Source\Tags\Model\" />
     <Folder Include="Source\Profile\Model\" />
     <Folder Include="Source\Profile\Service\" />
+    <Folder Include="Source\Controls\" />
+    <Folder Include="Source\Deals\Model\" />
+    <Folder Include="Source\Deals\Service\" />
   </ItemGroup>
 </Project>
