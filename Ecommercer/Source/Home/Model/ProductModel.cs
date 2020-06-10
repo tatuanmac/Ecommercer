@@ -12,7 +12,36 @@ namespace Ecommercer.Source.Home.Model
         public string Product_type { get; set; }
         public string Product_detail { get; set; }
         public float Product_price { get; set; }
-
+        public int Product_status { get; set; }
+        public DateTime Product_ordered { get; set; }
+        public string Status
+        {
+            get
+            {
+                if (Product_status == 1)
+                {
+                    return "Shipped";
+                }
+                else
+                {
+                    return "Canceled";
+                }
+            }
+        }
+        public string Color
+        {
+            get
+            {
+                if (Product_status == 1)
+                {
+                    return "#28BF4C";
+                }
+                else
+                {
+                    return "#F73D34";
+                }
+            }
+        }
     }
 
     public class ProductColor : ModelBase

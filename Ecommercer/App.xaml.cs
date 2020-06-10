@@ -9,6 +9,7 @@ using Ecommercer.Source.Deals.Views;
 using Ecommercer.Source.Home.Service;
 using Ecommercer.Source.Home.ViewModels;
 using Ecommercer.Source.Home.Views;
+using Ecommercer.Source.Profile.Service;
 using Ecommercer.Source.Profile.ViewModels;
 using Ecommercer.Source.Profile.Views;
 using Ecommercer.Source.Tags.ViewModels;
@@ -69,6 +70,7 @@ namespace Ecommercer
         private void RegisterService(IContainerRegistry containerRegistry)
         {
             containerRegistry.Register<IStore, StoreData>();
+            containerRegistry.Register<IProfile, ProfileData>();
         }
 
         private void RegisterDialogs(IContainerRegistry containerRegistry)

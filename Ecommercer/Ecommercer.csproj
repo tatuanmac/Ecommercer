@@ -50,5 +50,7 @@
     <Folder Include="Source\Tags\ViewModels\" />
     <Folder Include="Source\Chat\Model\" />
     <Folder Include="Source\Tags\Model\" />
+    <Folder Include="Source\Profile\Model\" />
+    <Folder Include="Source\Profile\Service\" />
   </ItemGroup>
 </Project>
