@@ -67,6 +67,7 @@ namespace Ecommercer
             containerRegistry.RegisterForNavigation<CartPage, CartViewModel>();
             containerRegistry.RegisterForNavigation<TagsPage, TagsViewModel>();
             containerRegistry.RegisterForNavigation<ProfilePage, ProfileViewModel>();
+            containerRegistry.RegisterForNavigation<PersonalandShippingDetailsPage, PersonalandShippingDetailsViewModel>();
         }
 
         private void RegisterService(IContainerRegistry containerRegistry)
@@ -91,5 +92,7 @@ namespace Ecommercer
         public static readonly Uri LoginSignUp = new Uri($"/{navigation}/{nameof(LoginSignUpPage)}", UriKind.Relative);
         public static readonly Uri Login = new Uri($"{nameof(LoginPage)}", UriKind.Relative);
         public static readonly Uri EcoTabbed = new Uri($"/{navigation}/{nameof(EcoTabbedPage)}", UriKind.Absolute);
+        public static readonly Uri PersonalandShippingDetails = new Uri($"{nameof(PersonalandShippingDetailsPage)}", UriKind.Relative);
+
     }
 }

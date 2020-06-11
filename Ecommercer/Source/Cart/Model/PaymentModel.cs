@@ -3,6 +3,16 @@ using Ecommercer.Source.Common.Bases;
 
 namespace Ecommercer.Source.Cart.Model
 {
+    public enum PaymenEnum
+    {
+        Personal_shipping_detail, Review_Purchase
+    }
+    public class PaymentButton: ModelBase
+    {
+        public PaymenEnum Type { get; set; }
+        public string Title { get; set; }
+        public bool IsSelected { get; set; }
+    }
     public class PaymentModel : ModelBase
     {
         public CartModel Cart { get; set; }

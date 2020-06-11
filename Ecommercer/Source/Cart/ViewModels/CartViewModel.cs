@@ -75,6 +75,11 @@ namespace Ecommercer.Source.Cart.ViewModels
                     item.IsSelected = false;
                 }
             }
+            if (obj.Type == CartEnum.Pending_Orders)
+            {
+                NavigationService.NavigateAsync(Routes.PersonalandShippingDetails);
+            }
+
         }
 
         Command Quantily;
