@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Ecommercer.Source.Common.Bases;
 using Ecommercer.Source.Deals.Model;
 using Ecommercer.Source.Deals.Service;
+using Ecommercer.Source.Home.Model;
 using Prism.Navigation;
 using Xamarin.Forms;
 
@@ -34,6 +35,8 @@ namespace Ecommercer.Source.Deals.ViewModels
 
         IDeal service;
 
+        public List<ProductModel> ListDealItems { get; set; }
+
         public DealsViewModel(INavigationService navigationService, IDeal service) : base(navigationService)
         {
             this.service = service;
@@ -48,8 +51,7 @@ namespace Ecommercer.Source.Deals.ViewModels
                 {
                     return;
                 }
-
-
+                ListDealItems = new List<ProductModel>(datas);
             }
         }
 

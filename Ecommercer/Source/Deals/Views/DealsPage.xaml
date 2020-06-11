@@ -53,7 +53,8 @@
         <CollectionView
             VerticalScrollBarVisibility="Never"
             BackgroundColor="#F8F8F8"
-            Margin="16,0">
+            Margin="16,0"
+            ItemsSource="{Binding ListDealItems}">
             <CollectionView.Header>
                 <BoxView
                     VerticalOptions="Center"
@@ -66,20 +67,7 @@
                     HorizontalItemSpacing="16"
                     VerticalItemSpacing="16" />
             </CollectionView.ItemsLayout>
-            <CollectionView.ItemsSource>
-                <x:Array
-                    Type="{x:Type x:String}">
-                    <x:String>mono</x:String>
-                    <x:String>monodroid</x:String>
-                    <x:String>monotouch</x:String>
-                    <x:String>monorail</x:String>
-                    <x:String>monodevelop</x:String>
-                    <x:String>monotone</x:String>
-                    <x:String>monopoly</x:String>
-                    <x:String>monomodal</x:String>
-                    <x:String>mononucleosis</x:String>
-                </x:Array>
-            </CollectionView.ItemsSource>
+
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>
@@ -96,17 +84,20 @@
 
                                 <ffimage:CachedImage
                                     Aspect="AspectFill"
-                                    Source="header1" />
+                                    Source="{Binding Product_big_image}" />
                                 <StackLayout
                                     Margin="8,0"
                                     Spacing="8"
                                     Grid.Row="1"
                                     Grid.RowSpan="2">
                                     <Label
-                                        Text="Happy Hugs Coffee Cup Hugs Coffee Cup"
+                                        Text="{Binding Product_name}"
+                                        MaxLines="2"
+                                        LineBreakMode="TailTruncation"
                                         HorizontalTextAlignment="Center" />
                                     <Label
-                                        Text="Cool coffee cup for the sad rainy days. Buy this and improve your life."
+                                        Text="{Binding Product_detail}"
+                                        MaxLines="3"
                                         FontSize="12"
                                         TextColor="#A6B0BD"
                                         HorizontalTextAlignment="Center" />
@@ -122,8 +113,10 @@
                                         HorizontalTextAlignment="Center">
                                         <Label.FormattedText>
                                             <FormattedString>
-                                                <Span Text="$"/>
-                                                <Span Text="499.95"/>
+                                                <Span
+                                                    Text="$" />
+                                                <Span
+                                                    Text="{Binding Product_price}" />
                                             </FormattedString>
                                         </Label.FormattedText>
                                     </Label>

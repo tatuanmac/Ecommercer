@@ -19,6 +19,6 @@ namespace Ecommercer.Source.Deals.Model
 
     public class DealModel : ModelBase
     {
-        public List<ProductModel> Product { get; set; }
+        public ProductModel Product { get; set; }
     }
 }

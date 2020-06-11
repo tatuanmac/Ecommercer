@@ -806,9 +806,9 @@
           "AsyncAwaitBestPractices.MVVM": "4.1.1",
           "Prism.DryIoc.Forms": "7.2.0.1422",
           "PropertyChanged.Fody": "3.2.8",
-          "Xamarin.Essentials": "1.3.1",
+          "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.FFImageLoading.Forms": "2.4.11.982",
-          "Xamarin.Forms": "4.5.0.495"
+          "Xamarin.Forms": "4.6.0.847"
         },
         "compile": {
           "bin/placeholder/Ecommercer.dll": {}
@@ -1559,9 +1559,9 @@
           "AsyncAwaitBestPractices.MVVM": "4.1.1",
           "Prism.DryIoc.Forms": "7.2.0.1422",
           "PropertyChanged.Fody": "3.2.8",
-          "Xamarin.Essentials": "1.3.1",
+          "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.FFImageLoading.Forms": "2.4.11.982",
-          "Xamarin.Forms": "4.5.0.495"
+          "Xamarin.Forms": "4.6.0.847"
         },
         "compile": {
           "bin/placeholder/Ecommercer.dll": {}
@@ -2312,9 +2312,9 @@
           "AsyncAwaitBestPractices.MVVM": "4.1.1",
           "Prism.DryIoc.Forms": "7.2.0.1422",
           "PropertyChanged.Fody": "3.2.8",
-          "Xamarin.Essentials": "1.3.1",
+          "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.FFImageLoading.Forms": "2.4.11.982",
-          "Xamarin.Forms": "4.5.0.495"
+          "Xamarin.Forms": "4.6.0.847"
         },
         "compile": {
           "bin/placeholder/Ecommercer.dll": {}
@@ -3065,9 +3065,9 @@
           "AsyncAwaitBestPractices.MVVM": "4.1.1",
           "Prism.DryIoc.Forms": "7.2.0.1422",
           "PropertyChanged.Fody": "3.2.8",
-          "Xamarin.Essentials": "1.3.1",
+          "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.FFImageLoading.Forms": "2.4.11.982",
-          "Xamarin.Forms": "4.5.0.495"
+          "Xamarin.Forms": "4.6.0.847"
         },
         "compile": {
           "bin/placeholder/Ecommercer.dll": {}
@@ -6493,20 +6493,20 @@
     ]
   },
   "packageFolders": {
-    "/Users/user/.nuget/packages/": {}
+    "/Users/itedutalk/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/user/Desktop/Ecommercer Project/Ecommercer.iOS/Ecommercer.iOS.csproj",
+      "projectUniqueName": "/Users/itedutalk/Desktop/Ecommercer Project/Ecommercer.iOS/Ecommercer.iOS.csproj",
       "projectName": "Ecommercer.iOS",
-      "projectPath": "/Users/user/Desktop/Ecommercer Project/Ecommercer.iOS/Ecommercer.iOS.csproj",
-      "packagesPath": "/Users/user/.nuget/packages/",
-      "outputPath": "/Users/user/Desktop/Ecommercer Project/Ecommercer.iOS/obj/",
+      "projectPath": "/Users/itedutalk/Desktop/Ecommercer Project/Ecommercer.iOS/Ecommercer.iOS.csproj",
+      "packagesPath": "/Users/itedutalk/.nuget/packages/",
+      "outputPath": "/Users/itedutalk/Desktop/Ecommercer Project/Ecommercer.iOS/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "/Users/user/.config/NuGet/NuGet.Config"
+        "/Users/itedutalk/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
@@ -6517,8 +6517,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "/Users/user/Desktop/Ecommercer Project/Ecommercer/Ecommercer.csproj": {
-              "projectPath": "/Users/user/Desktop/Ecommercer Project/Ecommercer/Ecommercer.csproj"
+            "/Users/itedutalk/Desktop/Ecommercer Project/Ecommercer/Ecommercer.csproj": {
+              "projectPath": "/Users/itedutalk/Desktop/Ecommercer Project/Ecommercer/Ecommercer.csproj"
             }
           }
         }
@@ -6561,5 +6561,33 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Essentials from 1.5.3.2 to 1.3.1. Reference the package directly from the project to select a different version. \n Ecommercer.iOS -> Ecommercer -> Xamarin.Essentials (>= 1.5.3.2) \n Ecommercer.iOS -> Xamarin.Essentials (>= 1.3.1)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Forms from 4.6.0.847 to 4.5.0.495. Reference the package directly from the project to select a different version. \n Ecommercer.iOS -> Ecommercer -> Xamarin.Forms (>= 4.6.0.847) \n Ecommercer.iOS -> Xamarin.Forms (>= 4.5.0.495)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
 }
