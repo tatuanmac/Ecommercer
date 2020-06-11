@@ -1,9 +1,8 @@
 ﻿<Properties StartupConfiguration="{970498CC-2C0E-4F2A-9514-068E2C2011F2}|Default">
   <MonoDevelop.Ide.ItemProperties.Ecommercer.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommercer/Source/Cart/Views/PersonalandShippingDetailsPage.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommercer/Source/Cart/Views/ReviewPurchasePage.xaml">
     <Files>
-      <File FileName="Ecommercer/Source/Cart/Views/PersonalandShippingDetailsPage.xaml" Line="218" Column="25" />
-      <File FileName="Ecommercer/Source/Cart/ViewModels/PersonalandShippingDetailsViewModel.cs" Line="15" Column="17" />
+      <File FileName="Ecommercer/Source/Cart/Views/ReviewPurchasePage.xaml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,7 +18,7 @@
                   <Node name="Service" expanded="True" />
                   <Node name="ViewModels" expanded="True" />
                   <Node name="Views" expanded="True">
-                    <Node name="PersonalandShippingDetailsPage.xaml" selected="True" />
+                    <Node name="ReviewPurchasePage.xaml" expanded="True" selected="True" />
                   </Node>
                 </Node>
                 <Node name="Deals" expanded="True">
