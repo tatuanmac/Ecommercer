@@ -2,6 +2,7 @@
 using System.Globalization;
 using Ecommercer.Source.Authentication.ViewModels;
 using Ecommercer.Source.Authentication.Views;
+using Ecommercer.Source.Cart.Service;
 using Ecommercer.Source.Cart.ViewModels;
 using Ecommercer.Source.Cart.Views;
 using Ecommercer.Source.Deals.Service;
@@ -73,6 +74,7 @@ namespace Ecommercer
             containerRegistry.Register<IStore, StoreData>();
             containerRegistry.Register<IProfile, ProfileData>();
             containerRegistry.Register<IDeal, DealsData>();
+            containerRegistry.Register<ICart, CartData>();
         }
 
         private void RegisterDialogs(IContainerRegistry containerRegistry)

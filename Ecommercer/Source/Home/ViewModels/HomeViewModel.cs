@@ -14,6 +14,7 @@ namespace Ecommercer.Source.Home.ViewModels
 
     public class HomeViewModel : TabbedViewModelBase
     {
+        IStore service;
         HomeButton currentFilter;
         public HomeEnum HomeEnum { get; set; } = HomeEnum.MostPopular;
 
@@ -41,7 +42,6 @@ namespace Ecommercer.Source.Home.ViewModels
             }
         };
 
-        IStore service;
 
         public ObservableCollection<StoreModel> ListStores { get; set; }
 

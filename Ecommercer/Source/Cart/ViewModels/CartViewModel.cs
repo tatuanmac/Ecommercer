@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Ecommercer.Source.Cart.Model;
+using Ecommercer.Source.Cart.Service;
 using Ecommercer.Source.Common.Bases;
 using Prism.Navigation;
 using Xamarin.Forms;
@@ -10,6 +11,8 @@ namespace Ecommercer.Source.Cart.ViewModels
 {
     public class CartViewModel : TabbedViewModelBase
     {
+        ICart service;
+
         CartButton current;
 
         public CartEnum CartEnum { get; set; } = CartEnum.Current_Order;
@@ -35,16 +38,23 @@ namespace Ecommercer.Source.Cart.ViewModels
             }
 
         };
+
         public ObservableCollection<CartModel> ListCartItem { get; set; }
 
-        public CartViewModel(INavigationService navigationService) : base(navigationService)
+        public CartViewModel(INavigationService navigationService, ICart service) : base(navigationService)
         {
-
+            this.service = service;
         }
 
-        public override void TabActiveChanged()
+        public override async void TabActiveChanged()
         {
+            var cartData = await service.GetListItemCart();
+            if (cartData == null)
+            {
+                return;
+            }
 
+            ListCartItem = new ObservableCollection<CartModel>(cartData);
         }
 
         Command<CartButton> Enum;
