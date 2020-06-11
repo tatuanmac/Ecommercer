@@ -1,10 +1,78 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using Ecommercer.Source.Cart.Model;
+using Ecommercer.Source.Common.Bases;
+using Prism.Navigation;
+using Xamarin.Forms;
+
 namespace Ecommercer.Source.Cart.ViewModels
 {
-    public class CartViewModel
+    public class CartViewModel : TabbedViewModelBase
     {
-        public CartViewModel()
+        CartButton current;
+
+        public CartEnum CartEnum { get; set; } = CartEnum.Current_Order;
+
+        public List<CartButton> ToolbarTitle { get; set; } = new List<CartButton>
         {
+            new CartButton
+            {
+                 Title = "Current Order",
+                 Type = CartEnum.Current_Order,
+                 IsSelected = true
+            },
+            new CartButton
+            {
+                 Title = "Pending Orders",
+                 Type = CartEnum.Pending_Orders
+
+            },
+            new CartButton
+            {
+                 Title = "History",
+                 Type = CartEnum.History
+            }
+
+        };
+        public ObservableCollection<CartModel> ListCartItem { get; set; }
+
+        public CartViewModel(INavigationService navigationService) : base(navigationService)
+        {
+
+        }
+
+        public override void TabActiveChanged()
+        {
+
+        }
+
+        Command<CartButton> Enum;
+        public Command<CartButton> EnumCommand => Enum = Enum ?? new Command<CartButton>(TypeCart);
+
+        private void TypeCart(CartButton obj)
+        {
+            if (current != null)
+            {
+                current.IsSelected = false;
+            }
+            current = obj;
+            current.IsSelected = true;
+            foreach (var item in ToolbarTitle)
+            {
+                if (item != obj)
+                {
+                    item.IsSelected = false;
+                }
+            }
+        }
+
+        Command Quantily;
+        public Command QuantilyCommand => Quantily = Quantily ?? new Command(QuantilyChange);
+
+        private void QuantilyChange()
+        {
+
         }
     }
 }

@@ -2,7 +2,227 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    x:Name="self"
+    BackgroundColor="{StaticResource BackgroundColor}"
     x:Class="Ecommercer.Source.Cart.Views.CartPage">
-    <ContentPage.Content>
-    </ContentPage.Content>
+    <StackLayout
+        Spacing="0">
+        <CollectionView
+            BackgroundColor="White"
+            HeightRequest="56"
+            HorizontalOptions="Center"
+            ItemsSource="{Binding ToolbarTitle}">
+            <CollectionView.Header>
+                <BoxView
+                    HorizontalOptions="Center"
+                    WidthRequest="16" />
+            </CollectionView.Header>
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout
+                    Orientation="Horizontal"
+                    ItemSpacing="20" />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Label
+                        Text="{Binding Title}"
+                        TextColor="Gray"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Command="{Binding Source={Reference self},Path=BindingContext.EnumCommand}"
+                                CommandParameter="{Binding .}" />
+                        </Label.GestureRecognizers>
+                        <Label.Triggers>
+                            <DataTrigger
+                                TargetType="Label"
+                                Binding="{Binding IsSelected}"
+                                Value="True">
+                                <Setter
+                                    Property="TextColor"
+                                    Value="Black" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <ListView
+            RowHeight="400"
+            BackgroundColor="{StaticResource BackgroundColor}"
+            SeparatorVisibility="None">
+            <ListView.ItemsSource>
+                <x:Array
+                    Type="{x:Type x:String}">
+                    <x:String>mono</x:String>
+                    <x:String>monodroid</x:String>
+                    <x:String>monotouch</x:String>
+                    <x:String>monorail</x:String>
+                    <x:String>monodevelop</x:String>
+                    <x:String>monotone</x:String>
+                    <x:String>monopoly</x:String>
+                    <x:String>monomodal</x:String>
+                    <x:String>mononucleosis</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame
+                            Margin="16"
+                            Padding="0">
+                            <StackLayout>
+                                <Frame
+                                    Padding="0"
+                                    HasShadow="False"
+                                    HeightRequest="60">
+                                    <Grid
+                                        ColumnSpacing="0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition />
+                                            <RowDefinition />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition
+                                                Width="64" />
+                                            <ColumnDefinition />
+                                            <ColumnDefinition
+                                                Width="44" />
+                                        </Grid.ColumnDefinitions>
+                                        <Frame
+                                            Grid.RowSpan="2"
+                                            VerticalOptions="Center"
+                                            HorizontalOptions="Center"
+                                            HeightRequest="48"
+                                            HasShadow="False"
+                                            WidthRequest="48"
+                                            Margin="8"
+                                            CornerRadius="20"
+                                            Padding="0">
+                                            <ffimage:CachedImage
+                                                Source="user1" />
+                                        </Frame>
+
+                                        <Label
+                                            Grid.Column="1"
+                                            FontSize="11"
+                                            VerticalTextAlignment="End"
+                                            TextColor="#A6B0BD"
+                                            Text="Order from:" />
+                                        <Label
+                                            Grid.Column="1"
+                                            Grid.Row="1"
+                                            FontSize="16"
+                                            VerticalTextAlignment="Start"
+                                            Text="Mark Robertson" />
+                                        <Image
+                                            Grid.Column="2"
+                                            Margin="0,0,8,0"
+                                            HorizontalOptions="Center"
+                                            WidthRequest="28"
+                                            VerticalOptions="Center"
+                                            HeightRequest="8"
+                                            Grid.RowSpan="2"
+                                            Source="icMenu" />
+                                    </Grid>
+                                </Frame>
+                                <BoxView
+                                    HeightRequest="1"
+                                    Color="Gray"
+                                    Margin="16,0" />
+                                <ListView
+                                    RowHeight="96"
+                                    HeightRequest="270"
+                                    VerticalOptions="Center">
+                                    <ListView.ItemsSource>
+                                        <x:Array
+                                            Type="{x:Type x:String}">
+                                            <x:String>mono</x:String>
+                                            <x:String>monodroid</x:String>
+                                            <x:String>monotouch</x:String>
+                                        </x:Array>
+                                    </ListView.ItemsSource>
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <ViewCell>
+                                                <Frame
+                                                    HasShadow="False"
+                                                    Padding="0">
+                                                    <Grid>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition />
+                                                            <ColumnDefinition />
+                                                            <ColumnDefinition />
+                                                        </Grid.ColumnDefinitions>
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition />
+                                                            <RowDefinition />
+                                                            <RowDefinition />
+                                                        </Grid.RowDefinitions>
+                                                        <ffimage:CachedImage
+                                                            Grid.RowSpan="3"
+                                                            Margin="8"
+                                                            Aspect="AspectFit"
+                                                            Source="product1" />
+                                                        <Label
+                                                            Grid.Column="1"
+                                                            Grid.ColumnSpan="2"
+                                                            VerticalTextAlignment="Center"
+                                                            HorizontalTextAlignment="Start"
+                                                            Text="Mlem mlem mlem" />
+                                                        <Label
+                                                            Grid.Column="1"
+                                                            Grid.Row="1"
+                                                            Grid.ColumnSpan="2"
+                                                            VerticalTextAlignment="Center"
+                                                            HorizontalTextAlignment="Start"
+                                                            Text="Mlem mlem mlem" />
+
+                                                        <Label
+                                                            Grid.Column="1"
+                                                            Grid.Row="2"
+                                                            FontAttributes="Bold"
+                                                            FontSize="22"
+                                                            TextColor="#8DC63F"
+                                                            VerticalTextAlignment="Center"
+                                                            HorizontalTextAlignment="Start">
+                                                            <Label.FormattedText>
+                                                                <FormattedString>
+                                                                    <Span
+                                                                        Text="$" />
+                                                                    <Span
+                                                                        Text="33.33" />
+                                                                </FormattedString>
+                                                            </Label.FormattedText>
+                                                        </Label>
+                                                        <Label
+                                                            Grid.Column="2"
+                                                            Grid.Row="2"
+                                                            VerticalTextAlignment="Center">
+                                                            <Label.FormattedText>
+                                                                <FormattedString>
+                                                                    <Span
+                                                                        Text="Quantily: " />
+                                                                    <Span
+                                                                        Text="22" />
+                                                                </FormattedString>
+                                                            </Label.FormattedText>
+                                                        </Label>
+                                                    </Grid>
+                                                </Frame>
+                                            </ViewCell>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </StackLayout>
+
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>

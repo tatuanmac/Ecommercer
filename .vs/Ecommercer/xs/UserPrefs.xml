@@ -1,12 +1,23 @@
 ﻿<Properties StartupConfiguration="{970498CC-2C0E-4F2A-9514-068E2C2011F2}|Default">
   <MonoDevelop.Ide.ItemProperties.Ecommercer.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommercer/Source/Deals/Views/DealsPage.xaml">
+    <Files>
+      <File FileName="Ecommercer/Source/Cart/Views/CartPage.xaml" Line="165" Column="58" />
+      <File FileName="Ecommercer/Source/Cart/ViewModels/CartViewModel.cs" />
+      <File FileName="Ecommercer/Source/Cart/Model/CartModel.cs" />
+      <File FileName="Ecommercer/Source/Deals/Views/DealsPage.xaml" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Ecommercer" expanded="True">
             <Node name="Ecommercer" expanded="True">
               <Node name="Source" expanded="True">
+                <Node name="Cart" expanded="True">
+                  <Node name="Model" expanded="True" />
+                  <Node name="ViewModels" expanded="True" />
+                  <Node name="Views" expanded="True" />
+                </Node>
                 <Node name="Deals" expanded="True">
                   <Node name="Model" expanded="True" />
                   <Node name="ViewModels" expanded="True" />
@@ -16,10 +27,6 @@
                 </Node>
               </Node>
               <Node name="App.xaml" expanded="True" />
-            </Node>
-            <Node name="Ecommercer.iOS" expanded="True">
-              <Node name="Renderers" expanded="True" />
-              <Node name="Resources" expanded="True" />
             </Node>
           </Node>
         </State>
