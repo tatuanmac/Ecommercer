@@ -1,12 +1,6 @@
 ﻿<Properties StartupConfiguration="{970498CC-2C0E-4F2A-9514-068E2C2011F2}|Default">
   <MonoDevelop.Ide.ItemProperties.Ecommercer.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommercer/Source/Deals/ViewModels/DealsViewModel.cs">
-    <Files>
-      <File FileName="Ecommercer/Source/Deals/Views/DealsPage.xaml" Line="94" Column="76" />
-      <File FileName="Ecommercer/Source/Deals/Service/IDeal.cs" Line="22" Column="43" />
-      <File FileName="Ecommercer/Source/Deals/Model/DealModel.cs" Line="22" Column="36" />
-      <File FileName="Ecommercer/Source/Deals/ViewModels/DealsViewModel.cs" Line="54" Column="63" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -15,17 +9,10 @@
               <Node name="Source" expanded="True">
                 <Node name="Deals" expanded="True">
                   <Node name="Model" expanded="True" />
-                  <Node name="Service" expanded="True" />
-                  <Node name="ViewModels" expanded="True">
-                    <Node name="DealsViewModel.cs" selected="True" />
-                  </Node>
-                  <Node name="Views" expanded="True" />
-                </Node>
-                <Node name="Home" expanded="True">
-                  <Node name="Model" expanded="True" />
-                </Node>
-                <Node name="Tags" expanded="True">
                   <Node name="ViewModels" expanded="True" />
+                  <Node name="Views" expanded="True">
+                    <Node name="DealsPage.xaml" selected="True" />
+                  </Node>
                 </Node>
               </Node>
               <Node name="App.xaml" expanded="True" />

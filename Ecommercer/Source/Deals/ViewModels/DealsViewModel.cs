@@ -75,5 +75,13 @@ namespace Ecommercer.Source.Deals.ViewModels
                 }
             }
         }
+
+        Command Buy;
+        public Command BuyCommand => Buy = Buy ?? new Command(BuyItemNow);
+
+        private void BuyItemNow(object obj)
+        {
+
+        }
     }
 }

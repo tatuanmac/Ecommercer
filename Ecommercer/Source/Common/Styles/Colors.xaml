@@ -7,7 +7,7 @@
     <Color
         x:Key="SeparatorColor">#B9B9B9</Color>
     <Color
-        x:Key="BackgroundColor">#F6F6F6</Color>
+        x:Key="BackgroundColor">#F8F8F8</Color>
     <Color
         x:Key="SurfaceColor">#FFFFFF</Color>
     <Color

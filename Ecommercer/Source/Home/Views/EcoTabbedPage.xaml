@@ -11,22 +11,22 @@
     <TabbedPage.Children>
         <views:HomePage
             IconImageSource="icHome"
-            Title="Home" />
+            Title="HOME" />
 
         <views1:DealsPage
             IconImageSource="icDeals"
-            Title="Deals" />
+            Title="DEALS" />
 
         <views2:CartPage
             IconImageSource="icCartBlue" />
 
         <views3:TagsPage
             IconImageSource="icTags"
-            Title="Tags" />
+            Title="TAGS" />
 
         <views4:ProfilePage
             IconImageSource="icProfile"
-            Title="Profile" />
+            Title="PROFILE" />
 
     </TabbedPage.Children>
 </TabbedPage>
