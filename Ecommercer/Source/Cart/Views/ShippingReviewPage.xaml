@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="self"
+    BackgroundColor="Aqua"
+    x:Class="Ecommercer.Source.Cart.Views.ShippingReviewPage">
+
+    <StackLayout>
+        <CollectionView
+            BackgroundColor="White"
+            HeightRequest="56"
+            HorizontalOptions="Center"
+            ItemsSource="{Binding ToolbarItem}">
+            <CollectionView.Header>
+                <BoxView
+                    HorizontalOptions="Center"
+                    WidthRequest="16" />
+            </CollectionView.Header>
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout
+                    Orientation="Horizontal"
+                    ItemSpacing="20" />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Label
+                        Text="{Binding Title}"
+                        TextColor="Gray"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Command="{Binding Source={Reference self},Path=BindingContext.EnumCommand}"
+                                CommandParameter="{Binding .}" />
+                        </Label.GestureRecognizers>
+                        <Label.Triggers>
+                            <DataTrigger
+                                TargetType="Label"
+                                Binding="{Binding IsSelected}"
+                                Value="True">
+                                <Setter
+                                    Property="TextColor"
+                                    Value="Black" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

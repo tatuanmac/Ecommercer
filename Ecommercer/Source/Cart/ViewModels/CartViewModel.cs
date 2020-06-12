@@ -77,7 +77,7 @@ namespace Ecommercer.Source.Cart.ViewModels
             }
             if (obj.Type == CartEnum.Pending_Orders)
             {
-                NavigationService.NavigateAsync(Routes.PersonalandShippingDetails);
+                NavigationService.NavigateAsync(Routes.ShippingReview);
             }
 
         }

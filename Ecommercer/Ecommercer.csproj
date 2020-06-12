@@ -55,5 +55,6 @@
     <Folder Include="Source\Deals\Model\" />
     <Folder Include="Source\Deals\Service\" />
     <Folder Include="Source\Cart\Service\" />
+    <Folder Include="Source\Deals\Navigation\" />
   </ItemGroup>
 </Project>

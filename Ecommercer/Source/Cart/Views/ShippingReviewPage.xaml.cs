@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace Ecommercer.Source.Cart.Views
 {
-    public partial class ReviewPurchasePage : ContentPage
+    public partial class ShippingReviewPage : ContentPage
     {
-        public ReviewPurchasePage()
+        public ShippingReviewPage()
         {
             InitializeComponent();
         }
