@@ -28,9 +28,11 @@ namespace Ecommercer.Source.Cart.ViewModels
             }
         };
 
+        public int positionView { get; set; }
+
         public ShippingReviewPageViewModel(INavigationService navigationService) : base(navigationService)
         {
-
+            positionView = 0;
         }
 
         Command<PaymentButton> Enum;
@@ -43,14 +45,24 @@ namespace Ecommercer.Source.Cart.ViewModels
             {
                 currentButton.IsSelected = false;
             }
+
             currentButton = obj;
             currentButton.IsSelected = true;
+
             foreach (var item in ToolbarItem)
             {
                 if (item != obj)
                 {
                     item.IsSelected = false;
                 }
+            }
+            if (obj.Type == PaymenEnum.Personal_shipping_detail)
+            {
+                positionView = 0;
+            }
+            else
+            {
+                positionView = 1;
             }
         }
     }

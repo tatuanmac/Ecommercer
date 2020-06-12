@@ -3,10 +3,13 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Name="self"
-    BackgroundColor="Aqua"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:views="clr-namespace:Ecommercer.Source.Cart.Views"
+    ios:Page.UseSafeArea="true"
     x:Class="Ecommercer.Source.Cart.Views.ShippingReviewPage">
 
-    <StackLayout>
+    <StackLayout
+        Spacing="0">
         <CollectionView
             BackgroundColor="White"
             HeightRequest="56"
@@ -17,6 +20,7 @@
                     HorizontalOptions="Center"
                     WidthRequest="16" />
             </CollectionView.Header>
+
             <CollectionView.ItemsLayout>
                 <LinearItemsLayout
                     Orientation="Horizontal"
@@ -49,5 +53,28 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
+
+        <CarouselView
+            HorizontalScrollBarVisibility="Never"
+            IsSwipeEnabled="False"
+            Position="{Binding positionView}">
+            <CarouselView.ItemsSource>
+                <x:Array
+                    Type="{x:Type View}">
+                    <views:PersonalandShippingDetailsPage />
+                    <views:PaymentMethodPage />
+                </x:Array>
+            </CarouselView.ItemsSource>
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Frame
+                        HasShadow="False"
+                        CornerRadius="0"
+                        Padding="0"
+                        Content="{Binding .}" />
+
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
     </StackLayout>
 </ContentPage>

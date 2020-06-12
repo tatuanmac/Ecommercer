@@ -46,7 +46,7 @@ namespace Ecommercer
 
             VersionTracking.Track();
 
-            var result = await NavigationService.NavigateAsync(Routes.PaymentMethod);
+            var result = await NavigationService.NavigateAsync(Routes.EcoTabbed);
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -71,8 +71,8 @@ namespace Ecommercer
             containerRegistry.RegisterForNavigation<TagsPage, TagsViewModel>();
             containerRegistry.RegisterForNavigation<ProfilePage, ProfileViewModel>();
             containerRegistry.RegisterForNavigation<ShippingReviewPage, ShippingReviewPageViewModel>();
-            containerRegistry.RegisterForNavigation<PaymentMethodPage, PaymentMethodViewModel>();
-            containerRegistry.RegisterForNavigation<PersonalandShippingDetailsPage, PersonalandShippingDetailsViewModel>();
+            //containerRegistry.RegisterForNavigation<PaymentMethodPage, PaymentMethodViewModel>();
+            //containerRegistry.RegisterForNavigation<PersonalandShippingDetailsPage, PersonalandShippingDetailsViewModel>();
         }
 
         private void RegisterService(IContainerRegistry containerRegistry)

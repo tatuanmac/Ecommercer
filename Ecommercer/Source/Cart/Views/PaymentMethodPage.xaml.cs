@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace Ecommercer.Source.Cart.Views
 {
-    public partial class PaymentMethodPage : ContentPage
+    public partial class PaymentMethodPage : ContentView
     {
         public PaymentMethodPage()
         {
