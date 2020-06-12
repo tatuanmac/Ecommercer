@@ -127,6 +127,7 @@
                             FontSize="9" />
                         <local:BorderLessEntry
                             Placeholder="Choose Country"
+                            Text="{Binding Country}"
                             PlaceholderColor="Black" />
                         <BoxView
                             HeightRequest="1"
@@ -142,6 +143,7 @@
                             FontSize="9" />
                         <local:BorderLessEntry
                             Placeholder="64 Rosewood Street, Building C"
+                            Text="{Binding Address}"
                             PlaceholderColor="Black" />
                         <BoxView
                             HeightRequest="1"
@@ -157,6 +159,7 @@
                             FontSize="9" />
                         <local:BorderLessEntry
                             Placeholder="Enter Postal Code"
+                            Text="{Binding ZIPCode}"
                             PlaceholderColor="Black" />
                         <BoxView
                             HeightRequest="1"
@@ -172,6 +175,7 @@
                             FontSize="9" />
                         <local:BorderLessEntry
                             Placeholder="Choose City"
+                            Text="{Binding City}"
                             PlaceholderColor="Black" />
                         <BoxView
                             HeightRequest="1"

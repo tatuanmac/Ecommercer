@@ -2,12 +2,10 @@
   <MonoDevelop.Ide.ItemProperties.Ecommercer.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Ecommercer/Source/Cart/ViewModels/ShippingReviewPageViewModel.cs">
     <Files>
-      <File FileName="Ecommercer/Source/Cart/Views/PersonalandShippingDetailsPage.xaml" Line="92" Column="55" />
-      <File FileName="Ecommercer/Source/Cart/ViewModels/CartViewModel.cs" Line="81" Column="1" />
-      <File FileName="Ecommercer/Source/Cart/ViewModels/ShippingReviewPageViewModel.cs" Line="52" Column="1" />
-      <File FileName="Ecommercer/Source/Cart/Views/ShippingReviewPage.xaml" Line="51" Column="45" />
-      <File FileName="Ecommercer/Source/Cart/Views/PersonalandShippingDetailsPage.xaml.cs" Line="1" Column="1" />
-      <File FileName="Ecommercer/Source/Cart/Views/ShippingReviewPage.xaml.cs" Line="25" Column="1" />
+      <File FileName="Ecommercer/Source/Cart/Views/PersonalandShippingDetailsPage.xaml" Line="137" Column="33" />
+      <File FileName="Ecommercer/Source/Cart/ViewModels/ShippingReviewPageViewModel.cs" Line="110" Column="14" />
+      <File FileName="Ecommercer/Source/Cart/Model/ShippingAddressModel.cs" Line="7" Column="18" />
+      <File FileName="Ecommercer/Source/Cart/Model/PaymentModel.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,7 +14,10 @@
             <Node name="Ecommercer" expanded="True">
               <Node name="Source" expanded="True">
                 <Node name="Cart" expanded="True">
-                  <Node name="ViewModels" expanded="True" />
+                  <Node name="Model" expanded="True" />
+                  <Node name="ViewModels" expanded="True">
+                    <Node name="ShippingReviewPageViewModel.cs" selected="True" />
+                  </Node>
                   <Node name="Views" expanded="True" />
                 </Node>
               </Node>

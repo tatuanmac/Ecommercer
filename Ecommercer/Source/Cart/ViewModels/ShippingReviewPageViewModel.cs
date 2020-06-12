@@ -8,13 +8,12 @@ using Xamarin.Forms;
 
 namespace Ecommercer.Source.Cart.ViewModels
 {
-
     public class ShippingReviewPageViewModel : ViewModelBase
     {
 
         PaymentButton currentButton;
 
-        public PaymenEnum PaymenEnum { get; set; } = PaymenEnum.Personal_shipping_detail;
+        public PaymenEnum PaymenEnum { get; set; }
 
         public List<PaymentButton> ToolbarItem { get; set; } = new List<PaymentButton>
         {
@@ -27,7 +26,8 @@ namespace Ecommercer.Source.Cart.ViewModels
             new PaymentButton
             {
                 Type = PaymenEnum.Review_Purchase,
-                Title = "Review & Purchase"
+                Title = "Review & Purchase",
+                IsSelected = false
             }
         };
 
@@ -37,7 +37,7 @@ namespace Ecommercer.Source.Cart.ViewModels
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string EmailAddress { get; set; }
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
 
         //SHIPPING DETAILS
         public string Country { get; set; }
@@ -57,19 +57,39 @@ namespace Ecommercer.Source.Cart.ViewModels
 
         private void SaveAndShipHere(object obj)
         {
-            Model = new ShippingAddressModel()
+            if (string.IsNullOrEmpty(FirstName) || string.IsNullOrEmpty(LastName) || string.IsNullOrEmpty(EmailAddress) || string.IsNullOrEmpty(PhoneNumber)
+                || string.IsNullOrEmpty(Address) || string.IsNullOrEmpty(City) || string.IsNullOrEmpty(Country) || string.IsNullOrEmpty(ZIPCode))
             {
-                User = new Authentication.Model.UserModel
+
+            }
+            else
+            {
+                //Model = new ShippingAddressModel()
+                //{
+                //    User = new Authentication.Model.UserModel
+                //    {
+                //        User_fullname = FirstName + LastName,
+                //        User_email = EmailAddress,
+                //        User_phone_number = PhoneNumber
+                //    },
+                //    Shipping_address = Address,
+                //    Shipping_city = City,
+                //    Shipping_country = Country,
+                //    Shipping_zipcode = ZIPCode
+                //};
+
+                foreach (var item in ToolbarItem)
                 {
-                    User_fullname = FirstName + LastName,
-                    User_email = EmailAddress,
-                    User_phone_number = PhoneNumber
-                },
-                Shipping_address = Address,
-                Shipping_city = City,
-                Shipping_country = Country,
-                Shipping_zipcode = ZIPCode
-            };
+                    if (item != obj)
+                    {
+                        item.IsSelected = false;
+                    }
+                }
+                positionView = 1;
+                ToolbarItem[positionView].IsSelected = true;
+            }
+
+
         }
 
         Command<PaymentButton> Enum;
@@ -77,29 +97,35 @@ namespace Ecommercer.Source.Cart.ViewModels
 
         private void EnumTap(PaymentButton obj)
         {
-
-            if (currentButton != null)
-            {
-                currentButton.IsSelected = false;
-            }
-
             currentButton = obj;
-            currentButton.IsSelected = true;
 
             foreach (var item in ToolbarItem)
             {
-                if (item != obj)
+                if (item != currentButton)
                 {
                     item.IsSelected = false;
                 }
             }
+            
+
             if (obj.Type == PaymenEnum.Personal_shipping_detail)
             {
+                //    //FirstName = "";
+                //    //LastName = "";
+                //    //EmailAddress = "";
+                //    //PhoneNumber = "";
+
+                //    //Country = "";
+                //    //Address = "";
+                //    //ZIPCode = "";
+                //    //City = "";
+                currentButton.IsSelected = true;
+                obj.IsSelected = true;
                 positionView = 0;
-            }
-            else
+            }else if (obj.Type == PaymenEnum.Review_Purchase)
             {
-                positionView = 1;
+                currentButton.IsSelected = false;
+                obj.IsSelected = false;
             }
         }
     }
