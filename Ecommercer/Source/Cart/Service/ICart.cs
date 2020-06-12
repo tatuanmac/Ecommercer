@@ -10,7 +10,9 @@ namespace Ecommercer.Source.Cart.Service
     public interface ICart
     {
         Task<List<CartModel>> GetListItemCart();
+
     }
+
     public class CartData : ICart
     {
         Task<List<CartModel>> ICart.GetListItemCart()
@@ -112,5 +114,6 @@ namespace Ecommercer.Source.Cart.Service
             };
             return Task.FromResult(cartData);
         }
+
     }
 }

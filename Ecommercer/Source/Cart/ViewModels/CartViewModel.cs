@@ -60,7 +60,7 @@ namespace Ecommercer.Source.Cart.ViewModels
         Command<CartButton> Enum;
         public Command<CartButton> EnumCommand => Enum = Enum ?? new Command<CartButton>(TypeCart);
 
-        private void TypeCart(CartButton obj)
+        private async void TypeCart(CartButton obj)
         {
             if (current != null)
             {
@@ -77,7 +77,7 @@ namespace Ecommercer.Source.Cart.ViewModels
             }
             if (obj.Type == CartEnum.Pending_Orders)
             {
-                NavigationService.NavigateAsync(Routes.ShippingReview);
+              var xx= await  NavigationService.NavigateAsync(Routes.ShippingReview);
             }
 
         }

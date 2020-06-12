@@ -40,7 +40,8 @@
                             TextColor="#A6B0BD"
                             FontSize="9" />
                         <local:BorderLessEntry
-                            Placeholder="Matthew Jonathan"
+                            Placeholder="First Name"
+                            Text="{Binding FirstName}"
                             PlaceholderColor="Black" />
                         <BoxView
                             HeightRequest="1"
@@ -55,7 +56,8 @@
                             TextColor="#A6B0BD"
                             FontSize="9" />
                         <local:BorderLessEntry
-                            Placeholder="Robertson"
+                            Placeholder="Last Name"
+                            Text="{Binding LastName}"
                             PlaceholderColor="Black" />
                         <BoxView
                             HeightRequest="1"
@@ -70,7 +72,8 @@
                             TextColor="#A6B0BD"
                             FontSize="9" />
                         <local:BorderLessEntry
-                            Placeholder="matthew.j.robertson@mail.com"
+                            Placeholder="Email Address"
+                            Text="{Binding EmailAddress}"
                             PlaceholderColor="Black" />
                         <BoxView
                             HeightRequest="1"
@@ -86,6 +89,7 @@
                             FontSize="9" />
                         <local:BorderLessEntry
                             Placeholder="Enter phone number"
+                            Text="{Binding PhoneNumber}"
                             PlaceholderColor="Black" />
                         <BoxView
                             HeightRequest="1"
@@ -110,7 +114,7 @@
                         <RowDefinition />
                     </Grid.RowDefinitions>
                     <Label
-                        Text="PERSONAL DETAILS:"
+                        Text="SHIPPING DETAILS:"
                         TextColor="#327AE5"
                         FontSize="9" />
 

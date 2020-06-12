@@ -6,10 +6,12 @@
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:views="clr-namespace:Ecommercer.Source.Cart.Views"
     ios:Page.UseSafeArea="true"
+    Title="Complete Order"
     x:Class="Ecommercer.Source.Cart.Views.ShippingReviewPage">
 
     <StackLayout
         Spacing="0">
+
         <CollectionView
             BackgroundColor="White"
             HeightRequest="56"
@@ -55,24 +57,22 @@
         </CollectionView>
 
         <CarouselView
+            x:Name="csView"
             HorizontalScrollBarVisibility="Never"
             IsSwipeEnabled="False"
             Position="{Binding positionView}">
-            <CarouselView.ItemsSource>
+            <!--<CarouselView.ItemsSource>
                 <x:Array
                     Type="{x:Type View}">
-                    <views:PersonalandShippingDetailsPage />
+                    <views:PersonalandShippingDetailsPage  />
                     <views:PaymentMethodPage />
                 </x:Array>
-            </CarouselView.ItemsSource>
+            </CarouselView.ItemsSource>-->
             <CarouselView.ItemTemplate>
                 <DataTemplate>
-                    <Frame
-                        HasShadow="False"
-                        CornerRadius="0"
-                        Padding="0"
-                        Content="{Binding .}" />
-
+                    <ContentView
+                        Content="{Binding .}"
+                        />
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>

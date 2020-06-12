@@ -11,7 +11,7 @@ namespace Ecommercer.Source.Authentication.Model
         public string User_password { set; get; }
         public string User_fullname { set; get; }
         public string User_address { set; get; }
-        public string User_phone_number { set; get; }
+        public int User_phone_number { set; get; }
         public string User_avatar { set; get; }
     }
 

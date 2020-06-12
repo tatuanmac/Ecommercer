@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Ecommercer.Source.Cart.Model;
 using Ecommercer.Source.Common.Bases;
 using Prism.Navigation;
@@ -7,8 +8,10 @@ using Xamarin.Forms;
 
 namespace Ecommercer.Source.Cart.ViewModels
 {
+
     public class ShippingReviewPageViewModel : ViewModelBase
     {
+
         PaymentButton currentButton;
 
         public PaymenEnum PaymenEnum { get; set; } = PaymenEnum.Personal_shipping_detail;
@@ -30,9 +33,43 @@ namespace Ecommercer.Source.Cart.ViewModels
 
         public int positionView { get; set; }
 
+        //Personal detail
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string EmailAddress { get; set; }
+        public int PhoneNumber { get; set; }
+
+        //SHIPPING DETAILS
+        public string Country { get; set; }
+        public string Address { get; set; }
+        public string ZIPCode { get; set; }
+        public string City { get; set; }
+
         public ShippingReviewPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             positionView = 0;
+        }
+
+        ShippingAddressModel Model;
+
+        Command SaveAndShip;
+        public Command SaveCommand => SaveAndShip = SaveAndShip ?? new Command(SaveAndShipHere);
+
+        private void SaveAndShipHere(object obj)
+        {
+            Model = new ShippingAddressModel()
+            {
+                User = new Authentication.Model.UserModel
+                {
+                    User_fullname = FirstName + LastName,
+                    User_email = EmailAddress,
+                    User_phone_number = PhoneNumber
+                },
+                Shipping_address = Address,
+                Shipping_city = City,
+                Shipping_country = Country,
+                Shipping_zipcode = ZIPCode
+            };
         }
 
         Command<PaymentButton> Enum;
