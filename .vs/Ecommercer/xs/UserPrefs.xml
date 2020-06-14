@@ -3,9 +3,9 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Ecommercer/Source/Cart/ViewModels/ShippingReviewPageViewModel.cs">
     <Files>
       <File FileName="Ecommercer/Source/Cart/Views/PersonalandShippingDetailsPage.xaml" Line="137" Column="33" />
-      <File FileName="Ecommercer/Source/Cart/ViewModels/ShippingReviewPageViewModel.cs" Line="110" Column="14" />
-      <File FileName="Ecommercer/Source/Cart/Model/ShippingAddressModel.cs" Line="7" Column="18" />
-      <File FileName="Ecommercer/Source/Cart/Model/PaymentModel.cs" Line="1" Column="1" />
+      <File FileName="Ecommercer/Source/Cart/ViewModels/ShippingReviewPageViewModel.cs" Line="124" Column="1" />
+      <File FileName="Ecommercer/Source/Cart/Model/ShippingAddressModel.cs" />
+      <File FileName="Ecommercer/Source/Cart/Model/PaymentModel.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,7 +18,6 @@
                   <Node name="ViewModels" expanded="True">
                     <Node name="ShippingReviewPageViewModel.cs" selected="True" />
                   </Node>
-                  <Node name="Views" expanded="True" />
                 </Node>
               </Node>
             </Node>
@@ -28,7 +27,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Ecommercer.iOS Xamarin.HotReload.UnhandledDeviceException.Ecommercer.iOS.HideInfoBar="True" Xamarin.HotReload.DebuggerTimeoutException.Ecommercer.iOS.HideInfoBar="True" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.A6F0909A-0894-4997-82D0-F4B4FFFAFE95" />
+  <MonoDevelop.Ide.ItemProperties.Ecommercer.iOS Xamarin.HotReload.UnhandledDeviceException.Ecommercer.iOS.HideInfoBar="True" Xamarin.HotReload.DebuggerTimeoutException.Ecommercer.iOS.HideInfoBar="True" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.3236BAA1-2E45-490F-A469-80CD9537808D" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="../../../Ecommercer/Source/Deals/ViewModels/DealsViewModel.cs" line="53" column="20" endLine="53" endColumn="35" offsetX="-1" offsetY="-1" expression="a" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>

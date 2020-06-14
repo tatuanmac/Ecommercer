@@ -98,34 +98,48 @@ namespace Ecommercer.Source.Cart.ViewModels
         private void EnumTap(PaymentButton obj)
         {
             currentButton = obj;
-
+            currentButton.IsSelected = true;
             foreach (var item in ToolbarItem)
             {
                 if (item != currentButton)
                 {
                     item.IsSelected = false;
+
+                }
+                if (item.Type == PaymenEnum.Personal_shipping_detail && obj.Type == PaymenEnum.Personal_shipping_detail)
+                {
+                    item.IsSelected = true;
+                }
+                else
+                {
+                    item.IsSelected = false;
                 }
             }
-            
-
+            if (ToolbarItem[0].IsSelected == true) {
+                obj.IsSelected = true;
+            }
+            else
+            {
+                obj.IsSelected = true;
+            }
             if (obj.Type == PaymenEnum.Personal_shipping_detail)
             {
-                //    //FirstName = "";
-                //    //LastName = "";
-                //    //EmailAddress = "";
-                //    //PhoneNumber = "";
+                FirstName = "";
+                LastName = "";
+                EmailAddress = "";
+                PhoneNumber = "";
 
-                //    //Country = "";
-                //    //Address = "";
-                //    //ZIPCode = "";
-                //    //City = "";
-                currentButton.IsSelected = true;
+                Country = "";
+                Address = "";
+                ZIPCode = "";
+                City = "";
                 obj.IsSelected = true;
                 positionView = 0;
-            }else if (obj.Type == PaymenEnum.Review_Purchase)
+            }
+            else
             {
-                currentButton.IsSelected = false;
                 obj.IsSelected = false;
+                ToolbarItem[0].IsSelected = true;
             }
         }
     }
