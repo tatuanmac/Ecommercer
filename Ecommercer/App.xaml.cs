@@ -71,8 +71,7 @@ namespace Ecommercer
             containerRegistry.RegisterForNavigation<TagsPage, TagsViewModel>();
             containerRegistry.RegisterForNavigation<ProfilePage, ProfileViewModel>();
             containerRegistry.RegisterForNavigation<ShippingReviewPage, ShippingReviewPageViewModel>();
-            //containerRegistry.RegisterForNavigation<PaymentMethodPage, PaymentMethodViewModel>();
-            //containerRegistry.RegisterForNavigation<PersonalandShippingDetailsPage, PersonalandShippingDetailsViewModel>();
+            containerRegistry.RegisterForNavigation<StoreDetailPage, StoreDetailViewModel>();
         }
 
         private void RegisterService(IContainerRegistry containerRegistry)
@@ -100,6 +99,6 @@ namespace Ecommercer
         public static readonly Uri ShippingReview = new Uri($"{nameof(ShippingReviewPage)}", UriKind.Relative);
         public static readonly Uri PersonalandShippingDetails = new Uri($"{nameof(PersonalandShippingDetailsPage)}", UriKind.Relative);
         public static readonly Uri PaymentMethod = new Uri($"{nameof(PaymentMethodPage)}", UriKind.Relative);
-
+        public static readonly Uri StoreDetail = new Uri($"{nameof(StoreDetailPage)}", UriKind.Relative);
     }
 }

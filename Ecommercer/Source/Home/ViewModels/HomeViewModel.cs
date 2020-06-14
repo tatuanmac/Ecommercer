@@ -96,7 +96,7 @@ namespace Ecommercer.Source.Home.ViewModels
 
         private void StoreDetailStore()
         {
-
+            var a = NavigationService.NavigateAsync(Routes.StoreDetail);
         }
     }
 }
