@@ -6493,20 +6493,20 @@
     ]
   },
   "packageFolders": {
-    "/Users/user/.nuget/packages/": {}
+    "/Users/itedutalk/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/user/Desktop/Ecommercer Project/Ecommercer.iOS/Ecommercer.iOS.csproj",
+      "projectUniqueName": "/Users/itedutalk/Desktop/Ecommercer Project/Ecommercer.iOS/Ecommercer.iOS.csproj",
       "projectName": "Ecommercer.iOS",
-      "projectPath": "/Users/user/Desktop/Ecommercer Project/Ecommercer.iOS/Ecommercer.iOS.csproj",
-      "packagesPath": "/Users/user/.nuget/packages/",
-      "outputPath": "/Users/user/Desktop/Ecommercer Project/Ecommercer.iOS/obj/",
+      "projectPath": "/Users/itedutalk/Desktop/Ecommercer Project/Ecommercer.iOS/Ecommercer.iOS.csproj",
+      "packagesPath": "/Users/itedutalk/.nuget/packages/",
+      "outputPath": "/Users/itedutalk/Desktop/Ecommercer Project/Ecommercer.iOS/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "/Users/user/.config/NuGet/NuGet.Config"
+        "/Users/itedutalk/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
@@ -6517,8 +6517,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "/Users/user/Desktop/Ecommercer Project/Ecommercer/Ecommercer.csproj": {
-              "projectPath": "/Users/user/Desktop/Ecommercer Project/Ecommercer/Ecommercer.csproj"
+            "/Users/itedutalk/Desktop/Ecommercer Project/Ecommercer/Ecommercer.csproj": {
+              "projectPath": "/Users/itedutalk/Desktop/Ecommercer Project/Ecommercer/Ecommercer.csproj"
             }
           }
         }

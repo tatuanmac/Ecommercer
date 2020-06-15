@@ -242,6 +242,10 @@
     <ImageAsset Include="Resources\Assets.xcassets\icMenu.imageset\icMenu-1.png" />
     <ImageAsset Include="Resources\Assets.xcassets\icMenu.imageset\icMenu%402x-1.png" />
     <ImageAsset Include="Resources\Assets.xcassets\icMenu.imageset\icMenu%403x-1.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\btnCloseBlack.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\btnCloseBlack.imageset\btnCloseBlack.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\btnCloseBlack.imageset\btnCloseBlack%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\btnCloseBlack.imageset\btnCloseBlack%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -276,5 +280,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />
+    <Folder Include="Resources\Assets.xcassets\btnCloseBlack.imageset\" />
   </ItemGroup>
 </Project>

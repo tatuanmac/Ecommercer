@@ -64,19 +64,19 @@ namespace Ecommercer.Source.Cart.ViewModels
             }
             else
             {
-                //Model = new ShippingAddressModel()
-                //{
-                //    User = new Authentication.Model.UserModel
-                //    {
-                //        User_fullname = FirstName + LastName,
-                //        User_email = EmailAddress,
-                //        User_phone_number = PhoneNumber
-                //    },
-                //    Shipping_address = Address,
-                //    Shipping_city = City,
-                //    Shipping_country = Country,
-                //    Shipping_zipcode = ZIPCode
-                //};
+                Model = new ShippingAddressModel()
+                {
+                    User = new Authentication.Model.UserModel
+                    {
+                        User_fullname = FirstName + LastName,
+                        User_email = EmailAddress,
+                        User_phone_number = PhoneNumber
+                    },
+                    Shipping_address = Address,
+                    Shipping_city = City,
+                    Shipping_country = Country,
+                    Shipping_zipcode = ZIPCode
+                };
 
                 foreach (var item in ToolbarItem)
                 {

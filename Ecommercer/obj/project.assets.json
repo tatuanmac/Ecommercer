@@ -1768,19 +1768,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/user/.nuget/packages/": {}
+    "/Users/itedutalk/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/user/Desktop/Ecommercer Project/Ecommercer/Ecommercer.csproj",
+      "projectUniqueName": "/Users/itedutalk/Desktop/Ecommercer Project/Ecommercer/Ecommercer.csproj",
       "projectName": "Ecommercer",
-      "projectPath": "/Users/user/Desktop/Ecommercer Project/Ecommercer/Ecommercer.csproj",
-      "packagesPath": "/Users/user/.nuget/packages/",
-      "outputPath": "/Users/user/Desktop/Ecommercer Project/Ecommercer/obj/",
+      "projectPath": "/Users/itedutalk/Desktop/Ecommercer Project/Ecommercer/Ecommercer.csproj",
+      "packagesPath": "/Users/itedutalk/.nuget/packages/",
+      "outputPath": "/Users/itedutalk/Desktop/Ecommercer Project/Ecommercer/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/user/.config/NuGet/NuGet.Config"
+        "/Users/itedutalk/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
@@ -1843,7 +1843,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
       }
     }
   }
