@@ -2,7 +2,43 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     x:Class="Ecommercer.Source.Home.Views.SearchPage">
     <ContentPage.Content>
+        <CarouselView
+            VerticalOptions="Center"
+            HeightRequest="240"
+            BackgroundColor="Aqua"
+            PeekAreaInsets="120">
+            <CarouselView.ItemsSource>
+                <x:Array
+                    Type="{x:Type x:String}">
+                    <x:String>mono</x:String>
+                    <x:String>monodroid</x:String>
+                    <x:String>monotouch</x:String>
+                    <x:String>monorail</x:String>
+                </x:Array>
+            </CarouselView.ItemsSource>
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Frame
+                        WidthRequest="80"
+                        HeightRequest="80"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        BackgroundColor="WhiteSmoke"
+                        CornerRadius="40"
+                        HasShadow="False"
+                        Padding="0">
+                        <ffimage:CachedImage
+                            WidthRequest="80"
+                            HeightRequest="80"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Source="btnCloseBlack" />
+                    </Frame>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
     </ContentPage.Content>
 </ContentPage>

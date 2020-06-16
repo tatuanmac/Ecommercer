@@ -1,8 +1,10 @@
 ﻿<Properties StartupConfiguration="{970498CC-2C0E-4F2A-9514-068E2C2011F2}|Default">
   <MonoDevelop.Ide.ItemProperties.Ecommercer.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommercer/Source/Home/Views/StoreDetailPage.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommercer/Source/Common/Navigation/NavigationBar.xaml.cs">
     <Files>
-      <File FileName="Ecommercer/Source/Home/Views/StoreDetailPage.xaml" Line="40" Column="31" />
+      <File FileName="Ecommercer/Source/Common/Navigation/NavigationBar.xaml" Line="7" Column="29" />
+      <File FileName="Ecommercer.iOS/Renderers/GradientColorStackRenderer.cs" Line="28" Column="6" />
+      <File FileName="Ecommercer/Source/Common/Navigation/NavigationBar.xaml.cs" Line="42" Column="23" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -10,22 +12,29 @@
           <Node name="Ecommercer" expanded="True">
             <Node name="Ecommercer" expanded="True">
               <Node name="Source" expanded="True">
-                <Node name="Home" expanded="True">
-                  <Node name="Views" expanded="True">
-                    <Node name="StoreDetailPage.xaml" selected="True" />
+                <Node name="Common" expanded="True">
+                  <Node name="Bases" expanded="True" />
+                  <Node name="Navigation" expanded="True">
+                    <Node name="NavigationBar.xaml" expanded="True">
+                      <Node name="NavigationBar.xaml.cs" selected="True" />
+                    </Node>
                   </Node>
                 </Node>
+                <Node name="Home" expanded="True">
+                  <Node name="Views" expanded="True" />
+                </Node>
               </Node>
+              <Node name="App.xaml" expanded="True" />
             </Node>
-            <Node name="Ecommercer.Android" expanded="True">
-              <Node name="Resources" expanded="True" />
+            <Node name="Ecommercer.iOS" expanded="True">
+              <Node name="Renderers" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Ecommercer.iOS Xamarin.HotReload.UnhandledDeviceException.Ecommercer.iOS.HideInfoBar="True" Xamarin.HotReload.DebuggerTimeoutException.Ecommercer.iOS.HideInfoBar="True" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.A6F0909A-0894-4997-82D0-F4B4FFFAFE95" />
+  <MonoDevelop.Ide.ItemProperties.Ecommercer.iOS Xamarin.HotReload.UnhandledDeviceException.Ecommercer.iOS.HideInfoBar="True" Xamarin.HotReload.DebuggerTimeoutException.Ecommercer.iOS.HideInfoBar="True" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.90D7A6E2-8B11-41A7-90A7-9EA05B851B75" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="../../../Ecommercer/Source/Deals/ViewModels/DealsViewModel.cs" line="53" column="20" endLine="53" endColumn="35" offsetX="-1" offsetY="-1" expression="a" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>

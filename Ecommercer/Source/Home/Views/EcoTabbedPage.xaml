@@ -7,6 +7,7 @@
     xmlns:views2="clr-namespace:Ecommercer.Source.Cart.Views"
     xmlns:views3="clr-namespace:Ecommercer.Source.Tags.Views"
     xmlns:views4="clr-namespace:Ecommercer.Source.Profile.Views"
+    NavigationPage.HasNavigationBar="False"
     x:Class="Ecommercer.Source.Home.Views.EcoTabbedPage">
     <TabbedPage.Children>
         <views:HomePage

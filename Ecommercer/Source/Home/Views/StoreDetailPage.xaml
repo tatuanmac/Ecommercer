@@ -4,125 +4,124 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     NavigationPage.HasBackButton="False"
+    Title="Home"
     x:Class="Ecommercer.Source.Home.Views.StoreDetailPage">
-    <StackLayout>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition
-                    Height="100" />
-                <RowDefinition
-                    Height="40" />
-                <RowDefinition
-                    Height="40" />
-                <RowDefinition
-                    Height="16" />
-                <RowDefinition
-                    Height="40" />
-                <RowDefinition
-                    Height="16" />
-                <RowDefinition
-                    Height="40" />
-                <RowDefinition
-                    Height="*" />
-            </Grid.RowDefinitions>
 
-            <!--header-->
-            <CarouselView
-                Grid.RowSpan="2"
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="115" />
+            <RowDefinition
+                Height="40" />
+            <RowDefinition
+                Height="40" />
+            <RowDefinition
+                Height="16" />
+            <RowDefinition
+                Height="40" />
+            <RowDefinition
+                Height="16" />
+            <RowDefinition
+                Height="40" />
+            <RowDefinition
+                Height="*" />
+        </Grid.RowDefinitions>
+
+        <!--header-->
+        <Frame
+            HasShadow="False"
+            Padding="0"
+            BackgroundColor="Aqua"
+            Grid.RowSpan="2"
+            CornerRadius="0">
+            <!--<CarouselView
+                PeekAreaInsets="80"
                 BackgroundColor="Aqua">
 
+                <CarouselView.ItemsSource>
+                    <x:Array
+                        Type="{x:Type x:String}">
+                        <x:String>mono</x:String>
+                        <x:String>monodroid</x:String>
+                        <x:String>monotouch</x:String>
+                        <x:String>monorail</x:String>
+                        <x:String>monodevelop</x:String>
+                        <x:String>monotone</x:String>
+                        <x:String>monopoly</x:String>
+                        <x:String>monomodal</x:String>
+                        <x:String>mononucleosis</x:String>
+                    </x:Array>
+                </CarouselView.ItemsSource>
+
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+
+                        <Frame
+                            WidthRequest="10"
+                            HeightRequest="10"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            CornerRadius="40"
+                            HasShadow="False"
+                            Padding="0">
+                            <ffimage:CachedImage
+                                WidthRequest="10"
+                                HeightRequest="10"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                Source="btnCloseBlack" />
+                        </Frame>
+                        <StackLayout
+                            VerticalOptions="Center"
+                            VerticalOptions=""
+                            BackgroundColor="White">
+                            <Label
+                                Text="Hello World" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>-->
+            <CarouselView PeekAreaInsets="80">
+                <CarouselView.ItemsLayout>
+                    <LinearItemsLayout
+                        Orientation="Horizontal" />
+                </CarouselView.ItemsLayout>
+                <CarouselView.ItemsSource>
+                    <x:Array
+                        Type="{x:Type x:String}">
+                        <x:String>mono</x:String>
+                        <x:String>monodroid</x:String>
+                        <x:String>monotouch</x:String>
+                        <x:String>monorail</x:String>
+                        <x:String>monodevelop</x:String>
+                        <x:String>monotone</x:String>
+                        <x:String>monopoly</x:String>
+                        <x:String>monomodal</x:String>
+                        <x:String>mononucleosis</x:String>
+                    </x:Array>
+                </CarouselView.ItemsSource>
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame
+                            BackgroundColor="Transparent"
+                            CornerRadius="40"
+                            HasShadow="False"
+                            Padding="0">
+                            <ffimage:CachedImage
+                                WidthRequest="80"
+                                HeightRequest="80"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                Source="btnCloseBlack" />
+                        </Frame>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
             </CarouselView>
-
-            <!--avatar-->
-            <Frame
-                Grid.Row="1"
-                Grid.RowSpan="2"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
-                HeightRequest="80"
-                WidthRequest="80"
-                BorderColor="White"
-                CornerRadius="40"
-                HasShadow="False"
-                Padding="0">
-                <ffimage:CachedImage
-                    Source="btnCloseBlack" />
-            </Frame>
-
-            <!--name-->
-            <StackLayout
-                Margin="16,0"
-                VerticalOptions="Center"
-                Grid.Row="4">
-                <Label
-                    VerticalTextAlignment="Start"
-                    HorizontalTextAlignment="Center"
-                    FontSize="19"
-                    Text="cxvbxcvbxcvb" />
-
-                <Label
-                    HorizontalTextAlignment="Center"
-                    VerticalTextAlignment="End"
-                    FontSize="10"
-                    TextColor="#A6B0BD"
-                    Text="asdasdasd" />
-            </StackLayout>
-
-            <BoxView
-                Grid.Row="5"
-                VerticalOptions="Center"
-                HeightRequest="1"
-                HorizontalOptions="Center"
-                WidthRequest="80"
-                Color="#E1E4EC" />
-
-            <!--rating-->
-            <StackLayout
-                Margin="16,0"
-                VerticalOptions="Center"
-                Grid.Row="6">
-                <Image
-                    Source="icRating" />
-
-                <Label
-                    HorizontalTextAlignment="Center"
-                    VerticalTextAlignment="End"
-                    FontSize="11"
-                    TextColor="#A6B0BD">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span
-                                Text="123" />
-                            <Span
-                                Text=" reviews" />
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-            </StackLayout>
-
-            <!--list item-->
-            <CollectionView
-                Grid.Row="7"
-                HorizontalScrollBarVisibility="Never">
-
+            <!--<CollectionView>
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout
-                        Orientation="Horizontal"
-                        ItemSpacing="24" />
+                        Orientation="Horizontal" />
                 </CollectionView.ItemsLayout>
-
-                <CollectionView.Header>
-                    <BoxView
-                        HorizontalOptions="Center"
-                        WidthRequest="24" />
-                </CollectionView.Header>
-
-                <CollectionView.Footer>
-                    <BoxView
-                        HorizontalOptions="End"
-                        WidthRequest="64" />
-                </CollectionView.Footer>
-
                 <CollectionView.ItemsSource>
                     <x:Array
                         Type="{x:Type x:String}">
@@ -139,98 +138,227 @@
                 </CollectionView.ItemsSource>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout>
-                            <Frame
-                                IsClippedToBounds="True"
-                                WidthRequest="160"
-                                HeightRequest="220"
-                                Padding="0"
-                                CornerRadius="14"
-                                Margin="0,8">
-                                <Frame.GestureRecognizers>
-                                    
-                                </Frame.GestureRecognizers>
-                                <Grid RowSpacing="0">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition />
-                                        <ColumnDefinition />
-                                        <ColumnDefinition
-                                            Width="40" />
-                                    </Grid.ColumnDefinitions>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition
-                                            Height="40" />
-                                        <RowDefinition />
-                                        <RowDefinition
-                                            Height="*" />
-                                    </Grid.RowDefinitions>
-
-                                    <!--button-->
-                                    <ffimage:CachedImage
-                                        Grid.Column="2"
-                                        Margin="8"
-                                        HorizontalOptions="Center"
-                                        VerticalOptions="Center"
-                                        Aspect="AspectFit"
-                                        Source="icAddToCart" />
-
-                                    <!--Image product-->
-                                    <Frame
-                                        HorizontalOptions="Center"
-                                        VerticalOptions="Center"
-                                        Grid.Row="1"
-                                        HasShadow="False"
-                                        Grid.ColumnSpan="3"
-                                        Padding="0">
-                                        <ffimage:CachedImage
-                                            HeightRequest="250"
-                                            WidthRequest="250"
-                                            Aspect="AspectFit"
-                                            Source="product1" />
-                                    </Frame>
-
-                                    <!--detail-->
-                                    <StackLayout
-                                        VerticalOptions="Center"
-                                        Grid.Row="2"
-                                        Grid.ColumnSpan="3">
-                                        <Label
-                                            TextColor="#1E2024"
-                                            HorizontalTextAlignment="Center"
-                                            Text="BO PLAY BeoPlay H8"
-                                            FontSize="9" />
-                                        <Label
-                                            HorizontalTextAlignment="Center"
-                                            TextColor="#1E2024"
-                                            FontSize="17">
-                                            <Label.FormattedText>
-                                                <FormattedString>
-                                                    <Span
-                                                        Text="$" />
-                                                    <Span
-                                                        Text="499.95" />
-                                                </FormattedString>
-                                            </Label.FormattedText>
-                                        </Label>
-                                    </StackLayout>
-                                </Grid>
-                            </Frame>
-                        </StackLayout>
+                        <Frame
+                            BackgroundColor="Transparent"
+                            CornerRadius="40"
+                            HasShadow="False"
+                            Padding="0">
+                            <ffimage:CachedImage
+                                WidthRequest="80"
+                                HeightRequest="80"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                Source="btnCloseBlack" />
+                        </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
-            </CollectionView>
+            </CollectionView>-->
+        </Frame>
 
-            <Button
-                Margin="16"
-                BackgroundColor="Transparent"
-                HeightRequest="48"
-                Grid.Row="8"
-                CornerRadius="10"
-                VerticalOptions="Start"
-                Text="FOLLOW STORE"
-                TextColor="#327AE5"
-                BorderColor="#327AE5"
-                BorderWidth="2" />
-        </Grid>
-    </StackLayout>
+
+
+        <Frame
+            Grid.Row="1"
+            Grid.RowSpan="2"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            HeightRequest="50"
+            WidthRequest="50"
+            CornerRadius="25"
+            HasShadow="False"
+            Padding="0">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding CloseCommand}"/>
+            </Frame.GestureRecognizers>
+            <ffimage:CachedImage
+                Source="btnCloseBlack">
+
+            </ffimage:CachedImage>
+        </Frame>
+
+        <!--name-->
+        <StackLayout
+            Margin="16,0"
+            VerticalOptions="Center"
+            Grid.Row="4">
+            <Label
+                VerticalTextAlignment="Start"
+                HorizontalTextAlignment="Center"
+                FontSize="19"
+                Text="cxvbxcvbxcvb" />
+
+            <Label
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="End"
+                FontSize="10"
+                TextColor="#A6B0BD"
+                Text="asdasdasd" />
+        </StackLayout>
+
+        <BoxView
+            Grid.Row="5"
+            VerticalOptions="Center"
+            HeightRequest="1"
+            HorizontalOptions="Center"
+            WidthRequest="80"
+            Color="#E1E4EC" />
+
+        <!--rating-->
+        <StackLayout
+            Margin="16,0"
+            VerticalOptions="Center"
+            Grid.Row="6">
+            <Image
+                Source="icRating" />
+
+            <Label
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="End"
+                FontSize="11"
+                TextColor="#A6B0BD">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span
+                            Text="123" />
+                        <Span
+                            Text=" reviews" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+
+        <!--list item-->
+        <CollectionView
+            Grid.Row="7"
+            HorizontalScrollBarVisibility="Never">
+
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout
+                    Orientation="Horizontal"
+                    ItemSpacing="24" />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.Header>
+                <BoxView
+                    HorizontalOptions="Center"
+                    WidthRequest="24" />
+            </CollectionView.Header>
+
+            <CollectionView.Footer>
+                <BoxView
+                    HorizontalOptions="End"
+                    WidthRequest="64" />
+            </CollectionView.Footer>
+
+            <CollectionView.ItemsSource>
+                <x:Array
+                    Type="{x:Type x:String}">
+                    <x:String>mono</x:String>
+                    <x:String>monodroid</x:String>
+                    <x:String>monotouch</x:String>
+                    <x:String>monorail</x:String>
+                    <x:String>monodevelop</x:String>
+                    <x:String>monotone</x:String>
+                    <x:String>monopoly</x:String>
+                    <x:String>monomodal</x:String>
+                    <x:String>mononucleosis</x:String>
+                </x:Array>
+            </CollectionView.ItemsSource>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame
+                            IsClippedToBounds="True"
+                            WidthRequest="160"
+                            HeightRequest="220"
+                            Padding="0"
+                            CornerRadius="14"
+                            Margin="0,8">
+                            <Frame.GestureRecognizers>
+
+                            </Frame.GestureRecognizers>
+                            <Grid
+                                RowSpacing="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition
+                                        Width="40" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition
+                                        Height="40" />
+                                    <RowDefinition />
+                                    <RowDefinition
+                                        Height="*" />
+                                </Grid.RowDefinitions>
+
+                                <!--button-->
+                                <ffimage:CachedImage
+                                    Grid.Column="2"
+                                    Margin="8"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    Aspect="AspectFit"
+                                    Source="icAddToCart" />
+
+                                <!--Image product-->
+                                <Frame
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    Grid.Row="1"
+                                    Grid.ColumnSpan="3"
+                                    HasShadow="False"
+                                    Padding="0">
+                                    <ffimage:CachedImage
+                                        HeightRequest="250"
+                                        WidthRequest="250"
+                                        Aspect="AspectFit"
+                                        Source="product1" />
+                                </Frame>
+
+                                <!--detail-->
+                                <StackLayout
+                                    VerticalOptions="Center"
+                                    Grid.Row="2"
+                                    Grid.ColumnSpan="3">
+                                    <Label
+                                        TextColor="#1E2024"
+                                        HorizontalTextAlignment="Center"
+                                        Text="BO PLAY BeoPlay H8"
+                                        FontSize="9" />
+                                    <Label
+                                        HorizontalTextAlignment="Center"
+                                        TextColor="#1E2024"
+                                        FontSize="17">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span
+                                                    Text="$" />
+                                                <Span
+                                                    Text="499.95" />
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button
+            Margin="16"
+            BackgroundColor="Transparent"
+            HeightRequest="48"
+            Grid.Row="8"
+            CornerRadius="10"
+            VerticalOptions="Start"
+            Text="FOLLOW STORE"
+            TextColor="#327AE5"
+            BorderColor="#327AE5"
+            BorderWidth="2" />
+    </Grid>
+
 </ContentPage>

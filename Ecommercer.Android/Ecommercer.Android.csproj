@@ -69,6 +69,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renderer\GradientColorStackRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -109,10 +110,6 @@
       <Generator></Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable-xhdpi\icLoading.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable-xhdpi\.DS_Store">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
@@ -228,10 +225,6 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable-xxhdpi\.DS_Store">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
     <AndroidResource Include="Resources\drawable-xxhdpi\header4.png">
       <SubType></SubType>
       <Generator></Generator>
@@ -341,10 +334,6 @@
       <Generator></Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable-hdpi\icLoading.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable-hdpi\.DS_Store">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
@@ -460,10 +449,6 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable-ldpi\.DS_Store">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
     <AndroidResource Include="Resources\drawable-ldpi\header4.png">
       <SubType></SubType>
       <Generator></Generator>
@@ -576,10 +561,6 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable-mdpi\.DS_Store">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
     <AndroidResource Include="Resources\drawable-mdpi\header4.png">
       <SubType></SubType>
       <Generator></Generator>
@@ -689,10 +670,6 @@
       <Generator></Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable-xxxhdpi\icLoading.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\.DS_Store">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>

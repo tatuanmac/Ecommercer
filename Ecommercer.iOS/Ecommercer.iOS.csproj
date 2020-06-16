@@ -69,6 +69,7 @@
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Renderers\EntryRenderers.cs" />
+    <Compile Include="Renderers\GradientColorStackRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
@@ -195,10 +196,7 @@
     <ImageAsset Include="Resources\Assets.xcassets\icCartBlue.imageset\icCartBlue%403x.png" />
     <ImageAsset Include="Resources\Assets.xcassets\icCartBlue.imageset\Contents.json" />
     <ImageAsset Include="Resources\Assets.xcassets\icCartBlue.imageset\icCartBlue%402x.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\icSearch.imageset\icSearch.png" />
     <ImageAsset Include="Resources\Assets.xcassets\icSearch.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\icSearch.imageset\icSearch%402x.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\icSearch.imageset\icSearch%403x.png" />
     <ImageAsset Include="Resources\Assets.xcassets\icArrowDown.imageset\icArrowDown%402x.png" />
     <ImageAsset Include="Resources\Assets.xcassets\icArrowDown.imageset\icArrowDown%403x.png" />
     <ImageAsset Include="Resources\Assets.xcassets\icArrowDown.imageset\icArrowDown.png" />
@@ -246,6 +244,9 @@
     <ImageAsset Include="Resources\Assets.xcassets\btnCloseBlack.imageset\btnCloseBlack.png" />
     <ImageAsset Include="Resources\Assets.xcassets\btnCloseBlack.imageset\btnCloseBlack%402x.png" />
     <ImageAsset Include="Resources\Assets.xcassets\btnCloseBlack.imageset\btnCloseBlack%403x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\icSearch.imageset\icSearch-1.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\icSearch.imageset\icSearch%402x-1.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\icSearch.imageset\icSearch%403x-1.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

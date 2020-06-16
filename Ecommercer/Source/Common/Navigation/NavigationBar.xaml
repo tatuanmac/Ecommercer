@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<controls:GradientColorStack
+    xmlns:controls="clr-namespace:Ecommercer.Source.Common.Navigation"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Ecommercer.Source.Common.Navigation.NavigationBar"
+    Orientation="Horizontal"
+    StartColor="{StaticResource GradientStart}"
+    EndColor="{StaticResource GradientEnd}">
+    <Grid
+        HorizontalOptions="FillAndExpand">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+                Width="*" />
+            <ColumnDefinition
+                Width="*" />
+            <ColumnDefinition
+                Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="64" />
+        </Grid.RowDefinitions>
+        <Label
+            VerticalOptions="EndAndExpand"
+            VerticalTextAlignment="End"
+            Grid.Column="1"
+            Text="{Binding TitleView}"
+            LineBreakMode="WordWrap"
+            HorizontalOptions="CenterAndExpand"
+            HorizontalTextAlignment="Center"
+            Margin="16"
+            x:Name="title" />
+        <Image
+            Grid.Column="2"
+            Source="icSearch"
+            HorizontalOptions="End"
+            VerticalOptions="End"
+            HeightRequest="16"
+            Aspect="AspectFill"
+            Margin="16,0,16,18"
+            x:Name="search">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer
+                    Tapped="TapGestureRecognizer_Tapped" />
+            </Image.GestureRecognizers>
+        </Image>
+    </Grid>
+</controls:GradientColorStack>

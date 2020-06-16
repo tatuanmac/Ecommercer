@@ -5,6 +5,7 @@ using Ecommercer.Source.Authentication.Views;
 using Ecommercer.Source.Cart.Service;
 using Ecommercer.Source.Cart.ViewModels;
 using Ecommercer.Source.Cart.Views;
+using Ecommercer.Source.Common.Renderer;
 using Ecommercer.Source.Deals.Navigation;
 using Ecommercer.Source.Deals.Service;
 using Ecommercer.Source.Deals.ViewModels;
@@ -45,8 +46,7 @@ namespace Ecommercer
             InitializeComponent();
 
             VersionTracking.Track();
-
-            var result = await NavigationService.NavigateAsync(Routes.EcoTabbed);
+            var abc = await NavigationService.NavigateAsync(Routes.EcoTabbed);
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -60,8 +60,7 @@ namespace Ecommercer
 
         private void RegisterForNavigation(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterForNavigation<NavigationPageGradientHeader>();
-            //containerRegistry.RegisterForNavigation<NavigationPage>();
+            containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<LoginSignUpPage, LoginSignUpViewModel>();
             containerRegistry.RegisterForNavigation<LoginPage, LoginViewModel>();
             containerRegistry.RegisterForNavigation<EcoTabbedPage>();
@@ -69,6 +68,7 @@ namespace Ecommercer
             containerRegistry.RegisterForNavigation<DealsPage, DealsViewModel>();
             containerRegistry.RegisterForNavigation<CartPage, CartViewModel>();
             containerRegistry.RegisterForNavigation<TagsPage, TagsViewModel>();
+            containerRegistry.RegisterForNavigation<SearchPage>();
             containerRegistry.RegisterForNavigation<ProfilePage, ProfileViewModel>();
             containerRegistry.RegisterForNavigation<ShippingReviewPage, ShippingReviewPageViewModel>();
             containerRegistry.RegisterForNavigation<StoreDetailPage, StoreDetailViewModel>();
@@ -92,7 +92,7 @@ namespace Ecommercer
     }
     public sealed partial class Routes
     {
-        static readonly string navigation = nameof(NavigationPageGradientHeader);
+        static readonly string navigation = nameof(NavigationPage);
         public static readonly Uri LoginSignUp = new Uri($"/{navigation}/{nameof(LoginSignUpPage)}", UriKind.Relative);
         public static readonly Uri Login = new Uri($"{nameof(LoginPage)}", UriKind.Relative);
         public static readonly Uri EcoTabbed = new Uri($"/{navigation}/{nameof(EcoTabbedPage)}", UriKind.Absolute);
@@ -100,5 +100,6 @@ namespace Ecommercer
         public static readonly Uri PersonalandShippingDetails = new Uri($"{nameof(PersonalandShippingDetailsPage)}", UriKind.Relative);
         public static readonly Uri PaymentMethod = new Uri($"{nameof(PaymentMethodPage)}", UriKind.Relative);
         public static readonly Uri StoreDetail = new Uri($"{nameof(StoreDetailPage)}", UriKind.Relative);
+        public static readonly Uri Search = new Uri($"{nameof(SearchPage)}", UriKind.Relative);
     }
 }

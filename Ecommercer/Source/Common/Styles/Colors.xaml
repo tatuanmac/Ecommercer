@@ -26,4 +26,8 @@
         x:Key="RightColor">#EF8D08</Color>
     <Color
         x:Key="ButtonAuth">#7FA3E8</Color>
+    <Color
+        x:Key="GradientStart">#327AE5</Color>
+    <Color
+        x:Key="GradientEnd">#A642DC</Color>
 </ResourceDictionary>
