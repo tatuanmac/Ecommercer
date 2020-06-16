@@ -5,12 +5,17 @@
     xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:navigation="clr-namespace:Ecommercer.Source.Common.Navigation"
     x:Name="self"
+    
     BackgroundColor="{StaticResource BackgroundColor}"
     x:Class="Ecommercer.Source.Home.Views.HomePage">
-   
+
     <StackLayout
         Spacing="0">
-        <navigation:NavigationBar />
+        <navigation:HomeNavigationBar
+            TitleView="Settings"
+            Command="{Binding SearchCommand}"
+            MenuCommand="{Binding MasterMenuCommand}" />
+
         <CollectionView
             BackgroundColor="White"
             HeightRequest="56"

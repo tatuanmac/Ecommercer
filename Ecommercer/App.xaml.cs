@@ -68,10 +68,11 @@ namespace Ecommercer
             containerRegistry.RegisterForNavigation<DealsPage, DealsViewModel>();
             containerRegistry.RegisterForNavigation<CartPage, CartViewModel>();
             containerRegistry.RegisterForNavigation<TagsPage, TagsViewModel>();
-            containerRegistry.RegisterForNavigation<SearchPage>();
+            containerRegistry.RegisterForNavigation<SearchPage, SearchViewModel>();
             containerRegistry.RegisterForNavigation<ProfilePage, ProfileViewModel>();
             containerRegistry.RegisterForNavigation<ShippingReviewPage, ShippingReviewPageViewModel>();
             containerRegistry.RegisterForNavigation<StoreDetailPage, StoreDetailViewModel>();
+
         }
 
         private void RegisterService(IContainerRegistry containerRegistry)

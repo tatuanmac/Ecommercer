@@ -15,7 +15,8 @@
           "PropertyChanged.Fody": "3.2.8",
           "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.FFImageLoading.Forms": "2.4.11.982",
-          "Xamarin.Forms": "4.6.0.847"
+          "Xamarin.Forms": "4.6.0.847",
+          "Xamarin.Forms.PancakeView": "1.4.2"
         },
         "runtime": {
           "Ecommercer.dll": {}
@@ -103,6 +104,17 @@
           "lib/netstandard1.0/PropertyChanged.dll": {
             "assemblyVersion": "3.2.8.0",
             "fileVersion": "3.2.8.0"
+          }
+        }
+      },
+      "System.ComponentModel/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.ComponentModel.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.24705.1"
           }
         }
       },
@@ -255,6 +267,18 @@
             "fileVersion": "4.6.0.487"
           }
         }
+      },
+      "Xamarin.Forms.PancakeView/1.4.2": {
+        "dependencies": {
+          "System.ComponentModel": "4.3.0",
+          "Xamarin.Forms": "4.6.0.847"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.PancakeView.dll": {
+            "assemblyVersion": "1.4.1.0",
+            "fileVersion": "1.4.1.0"
+          }
+        }
       }
     }
   },
@@ -340,6 +364,13 @@
       "sha512": "sha512-UfhhtFPgbqwx8cpuxdRbz9cuHve2BXEs1DjPAA/4p/TfqnTct3glcUz5MQ/TGDjFxHmO1Dc4ETS+B1Zk38TnbQ==",
       "path": "propertychanged.fody/3.2.8",
       "hashPath": "propertychanged.fody.3.2.8.nupkg.sha512"
+    },
+    "System.ComponentModel/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VyGn1jGRZVfxnh8EdvDCi71v3bMXrsu8aYJOwoV7SNDLVhiEqwP86pPMyRGsDsxhXAm2b3o9OIqeETfN5qfezw==",
+      "path": "system.componentmodel/4.3.0",
+      "hashPath": "system.componentmodel.4.3.0.nupkg.sha512"
     },
     "System.IO/4.3.0": {
       "type": "package",
@@ -445,6 +476,13 @@
       "sha512": "sha512-xUUgs1/xDdS9I/oN2UkdRwd/YToqg0qhwIK8yvyJJ2Xbhsc1ssV4/DUICdjuwCttzeiAcrhILqD+0BQhifUfxw==",
       "path": "xamarin.forms/4.6.0.847",
       "hashPath": "xamarin.forms.4.6.0.847.nupkg.sha512"
+    },
+    "Xamarin.Forms.PancakeView/1.4.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0HGhwpvL8780UYmueP3Vazn6hmYB8GYEYyjkcPcW1qmnkYcfMc8h/9RZsDtUC7QFHikxCdxS29Aw8T0XrPETAQ==",
+      "path": "xamarin.forms.pancakeview/1.4.2",
+      "hashPath": "xamarin.forms.pancakeview.1.4.2.nupkg.sha512"
     }
   }
 }

@@ -98,5 +98,21 @@ namespace Ecommercer.Source.Home.ViewModels
         {
             var a = NavigationService.NavigateAsync(Routes.StoreDetail);
         }
+
+        Command SearchCmd;
+        public Command SearchCommand => SearchCmd = SearchCmd ?? new Command(Searching);
+
+        private void Searching()
+        {
+            NavigationService.NavigateAsync(Routes.Search);
+        }
+
+        Command MasterMenuCmd;
+        public Command MasterMenuCommand => MasterMenuCmd = MasterMenuCmd ?? new Command(MasterPageMenu);
+
+        private void MasterPageMenu()
+        {
+
+        }
     }
 }

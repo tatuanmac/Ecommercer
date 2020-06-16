@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using CoreGraphics;
 using FFImageLoading.Forms.Platform;
 using Foundation;
 using Prism;
@@ -15,6 +16,7 @@ namespace Ecommercer.iOS
     [Register("AppDelegate")]
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
+        
         //
         // This method is invoked when the application has loaded and is ready to run. In this 
         // method you should instantiate the window, load the UI into it and then make the window
@@ -24,6 +26,13 @@ namespace Ecommercer.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+
+            //UIView statusBar = new UIView(UIApplication.SharedApplication.StatusBarFrame)
+            //{
+            //    BackgroundColor = UIColor.Yellow
+            //};
+            //UIApplication.SharedApplication.KeyWindow.AddSubview(statusBar);
+
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
@@ -36,6 +45,31 @@ namespace Ecommercer.iOS
         }
 
         public UIStatusBarStyle PreferredStatusBarStyle() => UIStatusBarStyle.LightContent;
+
+        public override void OnActivated(UIApplication uiApplication)
+        {
+            if (UIDevice.CurrentDevice.CheckSystemVersion(13, 0))
+            {
+                var topBarHeight = UIApplication.SharedApplication.KeyWindow.WindowScene.StatusBarManager.StatusBarFrame.Size.Height;
+                
+                //UIView statusBar = new UIView(UIApplication.SharedApplication.KeyWindow.WindowScene.StatusBarManager.StatusBarFrame)
+                //{
+                //    BackgroundColor = UIColor.Red
+                //};
+
+                //UIApplication.SharedApplication.KeyWindow.AddSubview(statusBar);
+            }
+            else
+            {
+                UIView statusBar = UIApplication.SharedApplication.ValueForKey(new NSString("statusBar")) as UIView;
+                if (statusBar.RespondsToSelector(new ObjCRuntime.Selector("setBackgroundColor:")))
+                {
+                    statusBar.BackgroundColor = UIColor.Red;
+                    UIApplication.SharedApplication.StatusBarStyle = UIStatusBarStyle.BlackOpaque;
+                }
+            }
+            base.OnActivated(uiApplication);
+        }
     }
 
     class IOSPlatform : IPlatformInitializer

@@ -19,5 +19,12 @@ namespace Ecommercer.Source.Home.ViewModels
             NavigationService.GoBackAsync();
         }
 
+        Command BackCmd;
+        public Command BackCommand => BackCmd = BackCmd ?? new Command(BackToPreviousPage);
+
+        private void BackToPreviousPage()
+        {
+            NavigationService.GoBackAsync();
+        }
     }
 }

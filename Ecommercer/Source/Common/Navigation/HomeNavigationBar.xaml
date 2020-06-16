@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<controls:GradientColorStack
-    xmlns:controls="clr-namespace:Ecommercer.Source.Common.Navigation"
+<navigation:GradientColorStack
+    xmlns:navigation="clr-namespace:Ecommercer.Source.Common.Navigation"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="Ecommercer.Source.Common.Navigation.NavigationBar"
+    x:Class="Ecommercer.Source.Common.Navigation.HomeNavigationBar"
     Orientation="Horizontal"
     StartColor="{StaticResource GradientStart}"
     EndColor="{StaticResource GradientEnd}">
-    <Grid
+    <Grid x:Name="gridNav"
+        VerticalOptions="CenterAndExpand"
         HorizontalOptions="FillAndExpand">
         <Grid.ColumnDefinitions>
             <ColumnDefinition
@@ -19,23 +20,20 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition
-                Height="64" />
+                Height="Auto" />
         </Grid.RowDefinitions>
-
         <Image
-            Grid.Column="0"
-            Source="icBack"
+            Source="icMasterMenu"
             HorizontalOptions="Center"
             VerticalOptions="Center"
             HeightRequest="16"
             Aspect="AspectFill"
-            x:Name="back">
+            x:Name="menu">
             <Image.GestureRecognizers>
                 <TapGestureRecognizer
-                    Tapped="TapGestureRecognizer_Tapped" />
+                    Tapped="TapGestureRecognizer_Tapped1" />
             </Image.GestureRecognizers>
         </Image>
-
         <Label
             VerticalOptions="CenterAndExpand"
             VerticalTextAlignment="Center"
@@ -44,10 +42,22 @@
             LineBreakMode="WordWrap"
             HorizontalOptions="CenterAndExpand"
             HorizontalTextAlignment="Center"
-            Margin="16"
             FontAttributes="Bold"
             TextColor="White"
             x:Name="title" />
 
+        <Image
+            Grid.Column="2"
+            Source="icSearch"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            HeightRequest="16"
+            Aspect="AspectFill"
+            x:Name="search">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer
+                    Tapped="TapGestureRecognizer_Tapped" />
+            </Image.GestureRecognizers>
+        </Image>
     </Grid>
-</controls:GradientColorStack>
+</navigation:GradientColorStack>

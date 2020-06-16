@@ -3,7 +3,7 @@
     xmlns:controls="clr-namespace:Ecommercer.Source.Common.Navigation"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="Ecommercer.Source.Common.Navigation.NavigationBar"
+    x:Class="Ecommercer.Source.Common.Navigation.SearchNavigationBar"
     Orientation="Horizontal"
     StartColor="{StaticResource GradientStart}"
     EndColor="{StaticResource GradientEnd}">
@@ -21,7 +21,6 @@
             <RowDefinition
                 Height="64" />
         </Grid.RowDefinitions>
-
         <Image
             Grid.Column="0"
             Source="icBack"
@@ -31,23 +30,36 @@
             Aspect="AspectFill"
             x:Name="back">
             <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+            </Image.GestureRecognizers>
+        </Image>
+        <!--search--> 
+        <SearchBar
+            x:Name="searchBar"
+            Placeholder="Search Items"
+            CancelButtonColor="Orange"
+            VerticalOptions="Center"
+            HorizontalOptions="StartAndExpand"
+            BackgroundColor="Transparent"
+            PlaceholderColor="White"
+            Text="{Binding TextSearch}"
+            TextColor="White"
+            Grid.Column="1"
+            TextChanged="SearchBar_TextChanged">
+        </SearchBar>
+
+        <Image
+            Grid.Column="2"
+            Source="icFilter"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            HeightRequest="16"
+            Aspect="AspectFill"
+            x:Name="filter">
+            <Image.GestureRecognizers>
                 <TapGestureRecognizer
                     Tapped="TapGestureRecognizer_Tapped" />
             </Image.GestureRecognizers>
         </Image>
-
-        <Label
-            VerticalOptions="CenterAndExpand"
-            VerticalTextAlignment="Center"
-            Grid.Column="1"
-            Text="{Binding TitleView}"
-            LineBreakMode="WordWrap"
-            HorizontalOptions="CenterAndExpand"
-            HorizontalTextAlignment="Center"
-            Margin="16"
-            FontAttributes="Bold"
-            TextColor="White"
-            x:Name="title" />
-
     </Grid>
 </controls:GradientColorStack>

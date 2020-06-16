@@ -41,4 +41,5 @@ namespace Ecommercer.iOS.Renderers
             NativeView.Layer.InsertSublayer(gradientLayer, 0);
         }
     }
+   
 }
