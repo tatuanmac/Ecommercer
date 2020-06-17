@@ -58,5 +58,8 @@
     <Folder Include="Source\Cart\Service\" />
     <Folder Include="Source\Deals\Navigation\" />
     <Folder Include="Source\Common\Navigation\" />
+    <Folder Include="Source\Detail\" />
+    <Folder Include="Source\Detail\View\" />
+    <Folder Include="Source\Detail\ViewModels\" />
   </ItemGroup>
 </Project>

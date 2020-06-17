@@ -10,6 +10,8 @@ using Ecommercer.Source.Deals.Navigation;
 using Ecommercer.Source.Deals.Service;
 using Ecommercer.Source.Deals.ViewModels;
 using Ecommercer.Source.Deals.Views;
+using Ecommercer.Source.Detail.View;
+using Ecommercer.Source.Detail.ViewModels;
 using Ecommercer.Source.Home.Service;
 using Ecommercer.Source.Home.ViewModels;
 using Ecommercer.Source.Home.Views;
@@ -46,7 +48,7 @@ namespace Ecommercer
             InitializeComponent();
 
             VersionTracking.Track();
-            var abc = await NavigationService.NavigateAsync(Routes.EcoTabbed);
+            var abc = await NavigationService.NavigateAsync(Routes.ProductDetail);
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -72,7 +74,7 @@ namespace Ecommercer
             containerRegistry.RegisterForNavigation<ProfilePage, ProfileViewModel>();
             containerRegistry.RegisterForNavigation<ShippingReviewPage, ShippingReviewPageViewModel>();
             containerRegistry.RegisterForNavigation<StoreDetailPage, StoreDetailViewModel>();
-
+            containerRegistry.RegisterForNavigation<ProductDetailPage, DetailProductViewModel>();
         }
 
         private void RegisterService(IContainerRegistry containerRegistry)
@@ -102,5 +104,6 @@ namespace Ecommercer
         public static readonly Uri PaymentMethod = new Uri($"{nameof(PaymentMethodPage)}", UriKind.Relative);
         public static readonly Uri StoreDetail = new Uri($"{nameof(StoreDetailPage)}", UriKind.Relative);
         public static readonly Uri Search = new Uri($"{nameof(SearchPage)}", UriKind.Relative);
+        public static readonly Uri ProductDetail = new Uri($"{nameof(ProductDetailPage)}", UriKind.Relative);
     }
 }

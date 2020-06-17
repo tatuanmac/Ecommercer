@@ -115,13 +115,14 @@
                                         FontAttributes="Bold"
                                         FontSize="22"
                                         TextColor="#8DC63F"
+                                        MaxLines="1"
                                         HorizontalTextAlignment="Center">
                                         <Label.FormattedText>
                                             <FormattedString>
                                                 <Span
                                                     Text="$" />
                                                 <Span
-                                                    Text="{Binding Product_price}" />
+                                                    Text="{Binding Product_price}"/>
                                             </FormattedString>
                                         </Label.FormattedText>
                                     </Label>

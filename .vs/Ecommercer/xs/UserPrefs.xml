@@ -1,21 +1,9 @@
 ﻿<Properties StartupConfiguration="{970498CC-2C0E-4F2A-9514-068E2C2011F2}|Default">
   <MonoDevelop.Ide.ItemProperties.Ecommercer.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommercer/Source/Profile/Views/ProfilePage.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommercer/Source/Detail/ViewModels/DetailProductViewModel.cs">
     <Files>
-      <File FileName="Ecommercer/Source/Home/Views/SearchPage.xaml" Line="14" Column="50" />
-      <File FileName="Ecommercer/Source/Home/ViewModels/SearchViewModel.cs" Line="38" Column="35" />
-      <File FileName="Ecommercer/Source/Home/Views/StoreDetailPage.xaml" Line="13" Column="29" />
-      <File FileName="Ecommercer/Source/Home/Views/HomePage.xaml" Line="11" Column="5" />
-      <File FileName="Ecommercer/Source/Common/Navigation/SearchNavigationBar.xaml" Line="10" Column="5" />
-      <File FileName="Ecommercer/Source/Common/Navigation/HomeNavigationBar.xaml" Line="23" Column="31" />
-      <File FileName="Ecommercer/Source/Common/Navigation/HomeNavigationBar.xaml.cs" Line="43" Column="17" />
-      <File FileName="Ecommercer/Source/Common/Navigation/SearchNavigationBar.xaml.cs" Line="53" Column="17" />
-      <File FileName="Ecommercer/Source/Common/Navigation/NavigationBar.xaml" Line="1" Column="1" />
-      <File FileName="Ecommercer/Source/Common/Navigation/NavigationBar.xaml.cs" Line="53" Column="17" />
-      <File FileName="Ecommercer/Source/Deals/Views/DealsPage.xaml" Line="10" Column="5" />
-      <File FileName="Ecommercer/Source/Cart/Views/CartPage.xaml" Line="14" Column="1" />
-      <File FileName="Ecommercer/Source/Tags/Views/TagsPage.xaml" Line="10" Column="28" />
-      <File FileName="Ecommercer/Source/Profile/Views/ProfilePage.xaml" Line="12" Column="31" />
+      <File FileName="Ecommercer/Source/Detail/View/ProductDetailPage.xaml" Line="13" Column="15" />
+      <File FileName="Ecommercer/Source/Detail/ViewModels/DetailProductViewModel.cs" Line="24" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -23,14 +11,18 @@
           <Node name="Ecommercer" expanded="True">
             <Node name="Ecommercer" expanded="True">
               <Node name="Source" expanded="True">
-                <Node name="Profile" expanded="True">
-                  <Node name="Views" expanded="True">
-                    <Node name="ProfilePage.xaml" selected="True" />
+                <Node name="Detail" expanded="True">
+                  <Node name="View" expanded="True" />
+                  <Node name="ViewModels" expanded="True">
+                    <Node name="DetailProductViewModel.cs" selected="True" />
                   </Node>
                 </Node>
+                <Node name="Home" expanded="True">
+                  <Node name="ViewModels" expanded="True" />
+                </Node>
               </Node>
+              <Node name="App.xaml" expanded="True" />
             </Node>
-            <Node name="Ecommercer.iOS" expanded="True" />
           </Node>
         </State>
       </Pad>

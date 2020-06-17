@@ -3,11 +3,11 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:navigation="clr-namespace:Ecommercer.Source.Common.Navigation"
-    x:Name="self"
-    x:Class="Ecommercer.Source.Tags.Views.TagsPage">
+    x:Class="Ecommercer.Source.Detail.View.ProductDetailPage">
     <StackLayout
-        Spacing="0">
-        <navigation:HomeNavigationBar
-            TitleView="Tags" />
+        Padding="0">
+        <navigation:NavigationBar
+            TitleView="Product Detail"
+            BackCommand="{Binding BackCommand}" />
     </StackLayout>
 </ContentPage>
