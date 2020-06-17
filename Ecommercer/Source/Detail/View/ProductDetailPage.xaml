@@ -5,6 +5,7 @@
     xmlns:navigation="clr-namespace:Ecommercer.Source.Common.Navigation"
     xmlns:ffImage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     x:Name="self"
+    NavigationPage.HasNavigationBar="False"
     x:Class="Ecommercer.Source.Detail.View.ProductDetailPage">
     <StackLayout
         Padding="0"
@@ -62,6 +63,7 @@
                             SelectedIndicatorColor="DarkGray"
                             HorizontalOptions="Center" />
                     </StackLayout>
+
                     <!--detail-->
                     <Grid
                         RowSpacing="16"
@@ -108,6 +110,7 @@
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
+
                         <BoxView
                             Grid.Row="2"
                             Grid.ColumnSpan="2"
@@ -151,7 +154,6 @@
                             BorderColor="#327AE5"
                             BorderWidth="2" />
                     </Grid>
-
                 </StackLayout>
             </ScrollView>
 
@@ -202,8 +204,6 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-
         </Grid>
-
     </StackLayout>
 </ContentPage>

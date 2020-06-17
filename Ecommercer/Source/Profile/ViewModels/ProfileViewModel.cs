@@ -46,7 +46,7 @@ namespace Ecommercer.Source.Profile.ViewModels
 
         private void ItemsDetail(ProfileModel obj)
         {
-
+            NavigationService.NavigateAsync(Routes.ProductDetail);
         }
 
     }

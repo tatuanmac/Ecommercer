@@ -6,6 +6,7 @@
     xmlns:navigation="clr-namespace:Ecommercer.Source.Common.Navigation"
     NavigationPage.HasNavigationBar="False"
     BackgroundColor="{StaticResource BackgroundColor}"
+    x:Name="self"
     x:Class="Ecommercer.Source.Home.Views.StoreDetailPage">
     <StackLayout
         Spacing="0">
@@ -112,6 +113,7 @@
                                 CornerRadius="40"
                                 HasShadow="False"
                                 Padding="0">
+
                                 <ffimage:CachedImage
                                     WidthRequest="80"
                                     HeightRequest="80"
@@ -281,7 +283,8 @@
                                 CornerRadius="14"
                                 Margin="0,8">
                                 <Frame.GestureRecognizers>
-
+                                    <TapGestureRecognizer
+                                        Command="{Binding Source={Reference self}, Path=BindingContext.ItemDetailCommand}" />
                                 </Frame.GestureRecognizers>
                                 <Grid
                                     RowSpacing="0">
