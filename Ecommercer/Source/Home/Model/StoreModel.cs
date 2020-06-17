@@ -13,6 +13,5 @@ namespace Ecommercer.Source.Home.Model
         public float Store_rate { get; set; }
         public List<ProductModel> ProductItem { get; set; }
         public int Quantily { get; set; }
-
     }
 }

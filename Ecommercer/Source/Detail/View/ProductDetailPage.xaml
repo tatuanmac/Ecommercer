@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:navigation="clr-namespace:Ecommercer.Source.Common.Navigation"
     xmlns:ffImage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    x:Name="self"
     x:Class="Ecommercer.Source.Detail.View.ProductDetailPage">
     <StackLayout
         Padding="0"
@@ -156,29 +157,19 @@
 
             <!--color bar-->
             <CollectionView
+                HorizontalScrollBarVisibility="Never"
+                ItemsSource="{Binding Colors}"
                 Grid.Row="1">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout
                         Orientation="Horizontal" />
                 </CollectionView.ItemsLayout>
-
-                <CollectionView.ItemsSource>
-                    <x:Array
-                        Type="{x:Type x:String}">
-                        <x:String>#1F1F1F</x:String>
-                        <x:String>#EEEDE9</x:String>
-                        <x:String>#F62B7C</x:String>
-                        <x:String>#E10A19</x:String>
-                        <x:String>#7D959F</x:String>
-                    </x:Array>
-                </CollectionView.ItemsSource>
-
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Frame
                             CornerRadius="0"
                             HasShadow="False"
-                            BackgroundColor="{Binding .}"
+                            BackgroundColor="{Binding ColorProduct}"
                             VerticalOptions="Center"
                             HorizontalOptions="Center"
                             HeightRequest="80"
@@ -190,15 +181,11 @@
                                 HeightRequest="16"
                                 HorizontalOptions="Center"
                                 WidthRequest="20">
-                                <Image.GestureRecognizers>
-                                    <TapGestureRecognizer
-                                        Command="{Binding ChooseColorCommand}"
-                                        CommandParameter="{Binding .}" />
-                                </Image.GestureRecognizers>
+
                                 <Image.Triggers>
                                     <DataTrigger
                                         TargetType="Image"
-                                        Binding="{Binding .}"
+                                        Binding="{Binding IsColorSelected}"
                                         Value="True">
                                         <Setter
                                             Property="IsVisible"
@@ -206,7 +193,11 @@
                                     </DataTrigger>
                                 </Image.Triggers>
                             </Image>
-
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Command="{Binding Source={Reference self},Path=BindingContext.ChooseColorCommand}"
+                                    CommandParameter="{Binding .}" />
+                            </Frame.GestureRecognizers>
                         </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
