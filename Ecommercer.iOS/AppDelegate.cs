@@ -7,6 +7,7 @@ using Foundation;
 using Prism;
 using Prism.Ioc;
 using UIKit;
+using Xamarin.Forms;
 
 namespace Ecommercer.iOS
 {
@@ -32,7 +33,7 @@ namespace Ecommercer.iOS
             //    BackgroundColor = UIColor.Yellow
             //};
             //UIApplication.SharedApplication.KeyWindow.AddSubview(statusBar);
-
+            Forms.SetFlags("IndicatorView_Experimental");
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());

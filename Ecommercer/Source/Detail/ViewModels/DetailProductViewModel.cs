@@ -19,5 +19,13 @@ namespace Ecommercer.Source.Detail.ViewModels
         {
             NavigationService.GoBackAsync();
         }
+
+        Command ChooseColorCmd;
+        public Command ChooseColorCommand => ChooseColorCmd = ChooseColorCmd ?? new Command(ChooseColor);
+
+        private void ChooseColor(object obj)
+        {
+
+        }
     }
 }

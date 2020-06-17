@@ -256,6 +256,10 @@
     <ImageAsset Include="Resources\Assets.xcassets\icBack.imageset\icBack.png" />
     <ImageAsset Include="Resources\Assets.xcassets\icBack.imageset\icBack%403x.png" />
     <ImageAsset Include="Resources\Assets.xcassets\icBack.imageset\icBack%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\icCheckmark.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\icCheckmark.imageset\icCheckmark.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\icCheckmark.imageset\icCheckmark%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\icCheckmark.imageset\icCheckmark%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -293,5 +297,6 @@
     <Folder Include="Resources\Assets.xcassets\btnCloseBlack.imageset\" />
     <Folder Include="Resources\Assets.xcassets\icMasterMenu.imageset\" />
     <Folder Include="Resources\Assets.xcassets\icBack.imageset\" />
+    <Folder Include="Resources\Assets.xcassets\icCheckmark.imageset\" />
   </ItemGroup>
 </Project>

@@ -3,11 +3,216 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:navigation="clr-namespace:Ecommercer.Source.Common.Navigation"
+    xmlns:ffImage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     x:Class="Ecommercer.Source.Detail.View.ProductDetailPage">
     <StackLayout
-        Padding="0">
+        Padding="0"
+        Margin="0,0,0,40">
         <navigation:NavigationBar
             TitleView="Product Detail"
             BackCommand="{Binding BackCommand}" />
+        <Grid
+            VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition
+                    Height="80" />
+            </Grid.RowDefinitions>
+            <ScrollView>
+                <StackLayout>
+                    <!--list image-->
+                    <StackLayout>
+                        <CarouselView
+                            HorizontalScrollBarVisibility="Never"
+                            HeightRequest="270"
+                            IndicatorView="indicatorView">
+
+                            <CarouselView.ItemsSource>
+                                <x:Array
+                                    Type="{x:Type x:String}">
+                                    <x:String>mono</x:String>
+                                    <x:String>monodroid</x:String>
+                                    <x:String>monotouch</x:String>
+                                    <x:String>monorail</x:String>
+                                    <x:String>monodevelop</x:String>
+                                    <x:String>monotone</x:String>
+                                    <x:String>monopoly</x:String>
+                                    <x:String>monomodal</x:String>
+                                    <x:String>mononucleosis</x:String>
+                                </x:Array>
+                            </CarouselView.ItemsSource>
+                            <CarouselView.ItemsLayout>
+                                <LinearItemsLayout
+                                    Orientation="Horizontal" />
+                            </CarouselView.ItemsLayout>
+                            <CarouselView.ItemTemplate>
+                                <DataTemplate>
+                                    <Frame
+                                        HasShadow="False">
+                                        <ffImage:CachedImage
+                                            Source="product1" />
+                                    </Frame>
+                                </DataTemplate>
+                            </CarouselView.ItemTemplate>
+                        </CarouselView>
+                        <IndicatorView
+                            x:Name="indicatorView"
+                            IndicatorColor="LightGray"
+                            SelectedIndicatorColor="DarkGray"
+                            HorizontalOptions="Center" />
+                    </StackLayout>
+                    <!--detail-->
+                    <Grid
+                        RowSpacing="16"
+                        Margin="32,8">
+                        <Grid.RowDefinitions>
+                            <RowDefinition
+                                Height="20" />
+                            <RowDefinition
+                                Height="20" />
+                            <RowDefinition
+                                Height="8" />
+                            <RowDefinition />
+                            <RowDefinition
+                                Height="44" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <Label
+                            VerticalOptions="Center"
+                            Text="Beats Solo 2"
+                            FontSize="20" />
+                        <Label
+                            Grid.Row="1"
+                            VerticalOptions="Center"
+                            TextColor="#A6B0BD"
+                            Text="Wireless On-Ear Headphones"
+                            FontSize="10" />
+
+                        <Label
+                            VerticalOptions="Center"
+                            HorizontalOptions="End"
+                            FontSize="19"
+                            Grid.Column="1"
+                            Grid.RowSpan="2">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span
+                                        Text="$" />
+                                    <Span
+                                        Text="499.95" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <BoxView
+                            Grid.Row="2"
+                            Grid.ColumnSpan="2"
+                            Color="#E1E4EC"
+                            VerticalOptions="Center"
+                            HeightRequest="1" />
+                        <Label
+                            Grid.ColumnSpan="2"
+                            Grid.Row="3"
+                            FontSize="12">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span
+                                        Text="Immerse yourself in an emotional experience. The Solo2 has a more dynamic, wider range of sound, with a clarity that will bring you closer to what the artist intended you to hear…"
+                                        TextColor="#A6B0BD" />
+                                    <Span
+                                        Text="See more"
+                                        TextColor="#327AE5" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                        <Button
+                            Grid.Row="4"
+                            BackgroundColor="Transparent"
+                            CornerRadius="10"
+                            FontSize="10"
+                            Text="ASK A QUESTION"
+                            TextColor="#327AE5"
+                            BorderColor="#327AE5"
+                            BorderWidth="2" />
+
+                        <Button
+                            Grid.Row="4"
+                            Grid.Column="1"
+                            BackgroundColor="#327AE5"
+                            CornerRadius="10"
+                            Text="PURCHASE"
+                            FontSize="10"
+                            TextColor="White"
+                            BorderColor="#327AE5"
+                            BorderWidth="2" />
+                    </Grid>
+
+                </StackLayout>
+            </ScrollView>
+
+            <!--color bar-->
+            <CollectionView
+                Grid.Row="1">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout
+                        Orientation="Horizontal" />
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemsSource>
+                    <x:Array
+                        Type="{x:Type x:String}">
+                        <x:String>#1F1F1F</x:String>
+                        <x:String>#EEEDE9</x:String>
+                        <x:String>#F62B7C</x:String>
+                        <x:String>#E10A19</x:String>
+                        <x:String>#7D959F</x:String>
+                    </x:Array>
+                </CollectionView.ItemsSource>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame
+                            CornerRadius="0"
+                            HasShadow="False"
+                            BackgroundColor="{Binding .}"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            HeightRequest="80"
+                            WidthRequest="64">
+                            <Image
+                                IsVisible="False"
+                                Source="icCheckmark"
+                                VerticalOptions="Center"
+                                HeightRequest="16"
+                                HorizontalOptions="Center"
+                                WidthRequest="20">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Command="{Binding ChooseColorCommand}"
+                                        CommandParameter="{Binding .}" />
+                                </Image.GestureRecognizers>
+                                <Image.Triggers>
+                                    <DataTrigger
+                                        TargetType="Image"
+                                        Binding="{Binding .}"
+                                        Value="True">
+                                        <Setter
+                                            Property="IsVisible"
+                                            Value="True" />
+                                    </DataTrigger>
+                                </Image.Triggers>
+                            </Image>
+
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </Grid>
+
     </StackLayout>
 </ContentPage>
