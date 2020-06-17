@@ -8,7 +8,6 @@
     StartColor="{StaticResource GradientStart}"
     EndColor="{StaticResource GradientEnd}">
     <Grid x:Name="gridNav"
-        VerticalOptions="CenterAndExpand"
         HorizontalOptions="FillAndExpand">
         <Grid.ColumnDefinitions>
             <ColumnDefinition

@@ -1,14 +1,21 @@
 ﻿<Properties StartupConfiguration="{970498CC-2C0E-4F2A-9514-068E2C2011F2}|Default">
   <MonoDevelop.Ide.ItemProperties.Ecommercer.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommercer/Source/Home/Views/StoreDetailPage.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommercer/Source/Profile/Views/ProfilePage.xaml">
     <Files>
-      <File FileName="Ecommercer/Source/Common/Navigation/HomeNavigationBar.xaml.cs" Line="40" Column="58" />
-      <File FileName="Ecommercer/Source/Common/Navigation/HomeNavigationBar.xaml" Line="44" Column="45" />
-      <File FileName="Ecommercer/Source/Common/Navigation/IGetHeightStatusBar.cs" Line="7" Column="22" />
-      <File FileName="Ecommercer/Source/Home/Views/HomePage.xaml" Line="15" Column="32" />
-      <File FileName="Ecommercer.iOS/AppDelegate.cs" Line="72" Column="10" />
-      <File FileName="Ecommercer/Source/Home/Views/SearchPage.xaml" Line="15" Column="38" />
-      <File FileName="Ecommercer/Source/Home/Views/StoreDetailPage.xaml" Line="6" Column="73" />
+      <File FileName="Ecommercer/Source/Home/Views/SearchPage.xaml" Line="14" Column="50" />
+      <File FileName="Ecommercer/Source/Home/ViewModels/SearchViewModel.cs" Line="38" Column="35" />
+      <File FileName="Ecommercer/Source/Home/Views/StoreDetailPage.xaml" Line="13" Column="29" />
+      <File FileName="Ecommercer/Source/Home/Views/HomePage.xaml" Line="11" Column="5" />
+      <File FileName="Ecommercer/Source/Common/Navigation/SearchNavigationBar.xaml" Line="10" Column="5" />
+      <File FileName="Ecommercer/Source/Common/Navigation/HomeNavigationBar.xaml" Line="23" Column="31" />
+      <File FileName="Ecommercer/Source/Common/Navigation/HomeNavigationBar.xaml.cs" Line="43" Column="17" />
+      <File FileName="Ecommercer/Source/Common/Navigation/SearchNavigationBar.xaml.cs" Line="53" Column="17" />
+      <File FileName="Ecommercer/Source/Common/Navigation/NavigationBar.xaml" Line="1" Column="1" />
+      <File FileName="Ecommercer/Source/Common/Navigation/NavigationBar.xaml.cs" Line="53" Column="17" />
+      <File FileName="Ecommercer/Source/Deals/Views/DealsPage.xaml" Line="10" Column="5" />
+      <File FileName="Ecommercer/Source/Cart/Views/CartPage.xaml" Line="14" Column="1" />
+      <File FileName="Ecommercer/Source/Tags/Views/TagsPage.xaml" Line="10" Column="28" />
+      <File FileName="Ecommercer/Source/Profile/Views/ProfilePage.xaml" Line="12" Column="31" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,30 +23,20 @@
           <Node name="Ecommercer" expanded="True">
             <Node name="Ecommercer" expanded="True">
               <Node name="Source" expanded="True">
-                <Node name="Common" expanded="True">
-                  <Node name="Navigation" expanded="True">
-                    <Node name="HomeNavigationBar.xaml" expanded="True" />
-                    <Node name="NavigationBar.xaml" expanded="True" />
-                    <Node name="SearchNavigationBar.xaml" expanded="True" />
-                  </Node>
-                  <Node name="Styles" expanded="True" />
-                </Node>
-                <Node name="Home" expanded="True">
+                <Node name="Profile" expanded="True">
                   <Node name="Views" expanded="True">
-                    <Node name="StoreDetailPage.xaml" selected="True" />
+                    <Node name="ProfilePage.xaml" selected="True" />
                   </Node>
                 </Node>
               </Node>
             </Node>
-            <Node name="Ecommercer.iOS" expanded="True">
-              <Node name="Renderers" expanded="True" />
-            </Node>
+            <Node name="Ecommercer.iOS" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Ecommercer.iOS Xamarin.HotReload.UnhandledDeviceException.Ecommercer.iOS.HideInfoBar="True" Xamarin.HotReload.DebuggerTimeoutException.Ecommercer.iOS.HideInfoBar="True" automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1C20F0F6-8C1F-40D0-98E5-E61AF95F7BAD" />
+  <MonoDevelop.Ide.ItemProperties.Ecommercer.iOS Xamarin.HotReload.UnhandledDeviceException.Ecommercer.iOS.HideInfoBar="True" Xamarin.HotReload.DebuggerTimeoutException.Ecommercer.iOS.HideInfoBar="True" automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.90D7A6E2-8B11-41A7-90A7-9EA05B851B75" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

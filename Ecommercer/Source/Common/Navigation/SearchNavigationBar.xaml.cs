@@ -25,13 +25,6 @@ namespace Ecommercer.Source.Common.Navigation
             set { SetValue(BackCommandProperty, value); }
         }
         //Search
-        public static readonly BindableProperty TextChangedProperty =
-            BindableProperty.Create(nameof(TextChange), typeof(ICommand), typeof(SearchNavigationBar), null);
-        public ICommand TextChange
-        {
-            get { return (ICommand)GetValue(TextChangedProperty); }
-            set { SetValue(TextChangedProperty, value); }
-        }
         public static readonly BindableProperty SearchCommandProperty =
             BindableProperty.Create(nameof(SearchCommand), typeof(ICommand), typeof(SearchNavigationBar), null);
         public ICommand SearchCommand
@@ -47,9 +40,18 @@ namespace Ecommercer.Source.Common.Navigation
             get { return (string)GetValue(TextSearchProperty); }
             set { SetValue(TextSearchProperty, value); }
         }
+
+        
         public SearchNavigationBar()
         {
             InitializeComponent();
+            var heightStatusBar = DependencyService.Get<IGetHeightStatusBar>().GetStatusBarHeight();
+            var heightNavigation = DependencyService.Get<IGetHeightStatusBar>().GetNavigationHeight();
+            double a = heightNavigation + heightStatusBar;
+
+            gridNav.Margin = new Thickness(0, heightStatusBar, 0, 0);
+            this.HeightRequest = a;
+            //
             var gestureRecognizer = new TapGestureRecognizer();
             gestureRecognizer.Tapped += (sender, e) => FilterCommand?.Execute(sender);
             filter.GestureRecognizers.Add(gestureRecognizer);
@@ -59,9 +61,8 @@ namespace Ecommercer.Source.Common.Navigation
             back.GestureRecognizers.Add(backGR);
             //
             var searchGR = new TapGestureRecognizer();
-            //  searchGR.Tapped += (sender, e) => TextChange?.Execute(sender);
             searchBar.GestureRecognizers.Add(searchGR);
-
+            searchBar.BindingContext = this;
 
         }
 
@@ -81,8 +82,8 @@ namespace Ecommercer.Source.Common.Navigation
 
         void SearchBar_TextChanged(System.Object sender, Xamarin.Forms.TextChangedEventArgs e)
         {
-            //TextChange.Execute(sender);
-            SearchCommand.Execute(sender);
+            SearchCommand?.Execute(sender);
+           
         }
     }
 }

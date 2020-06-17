@@ -5,85 +5,21 @@
     xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     NavigationPage.HasNavigationBar="False"
     xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:navigation="clr-namespace:Ecommercer.Source.Common.Navigation"
     x:Class="Ecommercer.Source.Home.Views.SearchPage">
     <ContentPage.Content>
         <StackLayout
             Spacing="0">
-            <Grid
-                HorizontalOptions="FillAndExpand">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition
-                        Width="52" />
-                    <ColumnDefinition
-                        Width="*" />
-                    <ColumnDefinition
-                        Width="52" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition
-                        Height="64" />
-                </Grid.RowDefinitions>
+            <navigation:SearchNavigationBar
+                BackCommand="{Binding BackCommand}"
+                FilterCommand="{Binding FilterCommand}"
+                SearchCommand="{Binding TextChangeCommand}"
+                TextSearch="{Binding TextResult, Mode=TwoWay}"/>
 
-                <yummy:PancakeView
-                    BackgroundGradientStartColor="{StaticResource GradientStart}"
-                    BackgroundGradientEndColor="{StaticResource GradientEnd}"
-                    Grid.ColumnSpan="3"
-                    Grid.RowSpan="1" />
-
-                <Image
-                        Grid.Column="0"
-                        Source="icBack"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                        HeightRequest="16"
-                        Aspect="AspectFill"
-                        x:Name="back">
-                        <Image.GestureRecognizers>
-                            <TapGestureRecognizer />
-                        </Image.GestureRecognizers>
-                    </Image>
-                    <!--search-->
-                    <SearchBar
-                        x:Name="searchBar"
-                        Placeholder="Search Items"
-                        CancelButtonColor="Orange"
-                        VerticalOptions="Center"
-                        HorizontalOptions="StartAndExpand"
-                        BackgroundColor="Transparent"
-                        PlaceholderColor="White"
-                        TextColor="White"
-                        Grid.Column="1">
-                    </SearchBar>
-
-                    <Image
-                        Grid.Column="2"
-                        Source="icFilter"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                        HeightRequest="16"
-                        Aspect="AspectFill"
-                        x:Name="filter">
-                        <Image.GestureRecognizers>
-                            <TapGestureRecognizer />
-                        </Image.GestureRecognizers>
-                    </Image>
-            </Grid>
             <ListView
-                RowHeight="96">
-                <ListView.ItemsSource>
-                    <x:Array
-                        Type="{x:Type x:String}">
-                        <x:String>mono</x:String>
-                        <x:String>monodroid</x:String>
-                        <x:String>monotouch</x:String>
-                        <x:String>monorail</x:String>
-                        <x:String>monodevelop</x:String>
-                        <x:String>monotone</x:String>
-                        <x:String>monopoly</x:String>
-                        <x:String>monomodal</x:String>
-                        <x:String>mononucleosis</x:String>
-                    </x:Array>
-                </ListView.ItemsSource>
+                RowHeight="96"
+                ItemsSource="{Binding ListProduct}">
+                
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -113,7 +49,7 @@
                                         FontSize="16"
                                         VerticalTextAlignment="Center"
                                         HorizontalTextAlignment="Start"
-                                        Text="Mlem mlem mlem" />
+                                        Text="{Binding Product_name}" />
                                     <Label
                                         Grid.Column="1"
                                         Grid.Row="1"
@@ -122,7 +58,7 @@
                                         Grid.ColumnSpan="2"
                                         VerticalTextAlignment="Center"
                                         HorizontalTextAlignment="Start"
-                                        Text="Mlem mlem mlem" />
+                                        Text="{Binding Product_detail}" />
 
                                     <Label
                                         Grid.Column="1"
@@ -137,7 +73,7 @@
                                                 <Span
                                                     Text="$" />
                                                 <Span
-                                                    Text="33.33" />
+                                                    Text="{Binding Product_price}" />
                                             </FormattedString>
                                         </Label.FormattedText>
                                     </Label>

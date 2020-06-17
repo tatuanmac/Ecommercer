@@ -7,7 +7,7 @@
     Orientation="Horizontal"
     StartColor="{StaticResource GradientStart}"
     EndColor="{StaticResource GradientEnd}">
-    <Grid
+    <Grid x:Name="gridNav"
         HorizontalOptions="FillAndExpand">
         <Grid.ColumnDefinitions>
             <ColumnDefinition

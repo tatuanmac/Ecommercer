@@ -3,11 +3,15 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:navigation="clr-namespace:Ecommercer.Source.Common.Navigation"
     x:Name="self"
     BackgroundColor="{StaticResource BackgroundColor}"
     x:Class="Ecommercer.Source.Cart.Views.CartPage">
     <StackLayout
         Spacing="0">
+        <navigation:HomeNavigationBar
+            TitleView="Cart" />
+
         <CollectionView
             BackgroundColor="White"
             HeightRequest="56"
@@ -57,7 +61,6 @@
             x:Name="GroupedView"
             IsGroupingEnabled="true"
             HasUnevenRows="True"
-
             SeparatorVisibility="None"
             ItemsSource="{Binding ListCartItem}">
 

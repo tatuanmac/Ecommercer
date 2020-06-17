@@ -102,9 +102,9 @@ namespace Ecommercer.Source.Home.ViewModels
         Command SearchCmd;
         public Command SearchCommand => SearchCmd = SearchCmd ?? new Command(Searching);
 
-        private void Searching()
+        private async void Searching()
         {
-            NavigationService.NavigateAsync(Routes.Search);
+            await NavigationService.NavigateAsync(Routes.Search);
         }
 
         Command MasterMenuCmd;

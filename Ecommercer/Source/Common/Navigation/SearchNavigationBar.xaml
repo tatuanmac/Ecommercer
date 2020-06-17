@@ -7,7 +7,7 @@
     Orientation="Horizontal"
     StartColor="{StaticResource GradientStart}"
     EndColor="{StaticResource GradientEnd}">
-    <Grid
+    <Grid x:Name="gridNav"
         HorizontalOptions="FillAndExpand">
         <Grid.ColumnDefinitions>
             <ColumnDefinition
@@ -19,7 +19,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition
-                Height="64" />
+                Height="Auto" />
         </Grid.RowDefinitions>
         <Image
             Grid.Column="0"
@@ -42,7 +42,7 @@
             HorizontalOptions="StartAndExpand"
             BackgroundColor="Transparent"
             PlaceholderColor="White"
-            Text="{Binding TextSearch}"
+            Text="{Binding TextSearch, Mode=TwoWay}"
             TextColor="White"
             Grid.Column="1"
             TextChanged="SearchBar_TextChanged">

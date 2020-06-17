@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using Ecommercer.Source.Cart.Model;
 using Ecommercer.Source.Cart.Service;
 using Ecommercer.Source.Common.Bases;
@@ -46,7 +47,13 @@ namespace Ecommercer.Source.Cart.ViewModels
             this.service = service;
         }
 
-        public override async void TabActiveChanged()
+        public override void TabActiveChanged()
+        {
+
+            _ = GetData();
+        }
+
+        async Task GetData()
         {
             var cartData = await service.GetListItemCart();
             if (cartData == null)
@@ -77,9 +84,8 @@ namespace Ecommercer.Source.Cart.ViewModels
             }
             if (obj.Type == CartEnum.Pending_Orders)
             {
-              var xx= await  NavigationService.NavigateAsync(Routes.ShippingReview);
+                await NavigationService.NavigateAsync(Routes.ShippingReview);
             }
-
         }
 
         Command Quantily;

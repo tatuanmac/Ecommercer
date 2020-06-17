@@ -11,7 +11,7 @@ namespace Ecommercer.Source.Home.Model
         public string Product_name { get; set; }
         public string Product_type { get; set; }
         public string Product_detail { get; set; }
-        public float Product_price { get; set; }
+        public double Product_price { get; set; }
         public int Product_status { get; set; }
         public DateTime Product_ordered { get; set; }
         public string Status

@@ -5,14 +5,13 @@
     xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:navigation="clr-namespace:Ecommercer.Source.Common.Navigation"
     x:Name="self"
-    
     BackgroundColor="{StaticResource BackgroundColor}"
     x:Class="Ecommercer.Source.Home.Views.HomePage">
 
     <StackLayout
         Spacing="0">
         <navigation:HomeNavigationBar
-            TitleView="Settings"
+            TitleView="Home"
             Command="{Binding SearchCommand}"
             MenuCommand="{Binding MasterMenuCommand}" />
 

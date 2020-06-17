@@ -3,206 +3,212 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:navigation="clr-namespace:Ecommercer.Source.Common.Navigation"
     x:Name="self"
     x:Class="Ecommercer.Source.Profile.Views.ProfilePage">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-        </Grid.RowDefinitions>
-
-        <Grid
-            Grid.Row="0">
+    <StackLayout
+        Spacing="0">
+        <navigation:HomeNavigationBar
+            TitleView="Profile" />
+        <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition
-                    Height="120" />
-                <RowDefinition
-                    Height="120" />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
             </Grid.RowDefinitions>
-            <!--header image-->
-            <Image
-                Source="imgHeader"
-                Aspect="AspectFill" />
 
-            <!--avatar-->
-            <Frame
+            <Grid
+                Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition
+                        Height="120" />
+                    <RowDefinition
+                        Height="120" />
+                </Grid.RowDefinitions>
+                <!--header image-->
+                <Image
+                    Source="imgHeader"
+                    Aspect="AspectFill" />
+
+                <!--avatar-->
+                <Frame
+                    Grid.RowSpan="2"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    HeightRequest="80"
+                    WidthRequest="80"
+                    BorderColor="White"
+                    CornerRadius="40"
+                    Padding="0">
+                    <ffimage:CachedImage
+                        Source="user1" />
+                </Frame>
+            </Grid>
+
+            <!--name & address-->
+            <StackLayout
+                Grid.Row="1"
+                VerticalOptions="Start">
+
+                <Label
+                    HorizontalTextAlignment="Center"
+                    FontSize="19"
+                    Text="{Binding StoreDetail.store.User.User_fullname}" />
+
+                <Label
+                    HorizontalTextAlignment="Center"
+                    FontSize="10"
+                    TextColor="#A6B0BD"
+                    Text="{Binding StoreDetail.store.User.User_address}" />
+
+                <!--edit profile-->
+                <Button
+                    Command="{Binding EditProfileCommand}"
+                    Margin="16"
+                    BackgroundColor="Transparent"
+                    HeightRequest="48"
+                    CornerRadius="10"
+                    VerticalOptions="Center"
+                    Text="EDIT PROFILE"
+                    TextColor="#327AE5"
+                    BorderColor="#327AE5"
+                    BorderWidth="2" />
+
+                <BoxView
+                    Margin="0,16"
+                    VerticalOptions="Center"
+                    HeightRequest="1"
+                    Color="#E1E4EC" />
+            </StackLayout>
+
+            <StackLayout
+                Grid.Row="2"
                 Grid.RowSpan="2"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
-                HeightRequest="80"
-                WidthRequest="80"
-                BorderColor="White"
-                CornerRadius="40"
-                Padding="0">
-                <ffimage:CachedImage
-                    Source="user1" />
-            </Frame>
-        </Grid>
+                Spacing="16">
 
-        <!--name & address-->
-        <StackLayout
-            Grid.Row="1"
-            VerticalOptions="Start">
+                <Label
+                    HorizontalOptions="Center"
+                    Text="O R D E R  H I S T O R Y" />
 
-            <Label
-                HorizontalTextAlignment="Center"
-                FontSize="19"
-                Text="{Binding StoreDetail.store.User.User_fullname}" />
+                <CollectionView
+                    HorizontalScrollBarVisibility="Never"
+                    ItemsSource="{Binding StoreDetail.store.ProductItem}">
 
-            <Label
-                HorizontalTextAlignment="Center"
-                FontSize="10"
-                TextColor="#A6B0BD"
-                Text="{Binding StoreDetail.store.User.User_address}" />
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout
+                            Orientation="Horizontal"
+                            ItemSpacing="24" />
+                    </CollectionView.ItemsLayout>
 
-            <!--edit profile-->
-            <Button
-                Command="{Binding EditProfileCommand}"
-                Margin="16"
-                BackgroundColor="Transparent"
-                HeightRequest="48"
-                CornerRadius="10"
-                VerticalOptions="Center"
-                Text="EDIT PROFILE"
-                TextColor="#327AE5"
-                BorderColor="#327AE5"
-                BorderWidth="2" />
-
-            <BoxView
-                Margin="0,16"
-                VerticalOptions="Center"
-                HeightRequest="1"
-                Color="#E1E4EC" />
-        </StackLayout>
-
-        <StackLayout
-            Grid.Row="2"
-            Grid.RowSpan="2"
-            Spacing="16">
-
-            <Label
-                HorizontalOptions="Center"
-                Text="O R D E R  H I S T O R Y" />
-
-            <CollectionView
-                HorizontalScrollBarVisibility="Never"
-                ItemsSource="{Binding StoreDetail.store.ProductItem}">
-
-                <CollectionView.ItemsLayout>
-                    <LinearItemsLayout
-                        Orientation="Horizontal"
-                        ItemSpacing="24" />
-                </CollectionView.ItemsLayout>
-
-                <CollectionView.Header>
-                    <BoxView
-                        HorizontalOptions="Center"
-                        WidthRequest="24" />
-                </CollectionView.Header>
-                <CollectionView.Footer>
-                    <BoxView
-                        HorizontalOptions="Center"
-                        WidthRequest="72" />
-                </CollectionView.Footer>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout>
-                            <Frame
-                                IsClippedToBounds="True"
-                                WidthRequest="200"
-                                HeightRequest="220"
-                                Padding="0"
-                                CornerRadius="14"
-                                Margin="0,8">
-                                <Frame.GestureRecognizers>
-                                    <TapGestureRecognizer
-                                        Command="{Binding Source={Reference self}, Path=BindingContext.ItemDetailCommand}" />
-                                </Frame.GestureRecognizers>
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition />
-                                        <ColumnDefinition />
-                                        <ColumnDefinition />
-                                    </Grid.ColumnDefinitions>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition
-                                            Height="32" />
-                                        <RowDefinition />
-                                        <RowDefinition
-                                            Height="17" />
-                                        <RowDefinition
-                                            Height="40" />
-                                    </Grid.RowDefinitions>
-                                    <StackLayout
-                                        Grid.ColumnSpan="2"
-                                        HorizontalOptions="Start"
-                                        VerticalOptions="Start"
-                                        Margin="8"
-                                        Orientation="Horizontal">
+                    <CollectionView.Header>
+                        <BoxView
+                            HorizontalOptions="Center"
+                            WidthRequest="24" />
+                    </CollectionView.Header>
+                    <CollectionView.Footer>
+                        <BoxView
+                            HorizontalOptions="Center"
+                            WidthRequest="72" />
+                    </CollectionView.Footer>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Frame
+                                    IsClippedToBounds="True"
+                                    WidthRequest="200"
+                                    HeightRequest="220"
+                                    Padding="0"
+                                    CornerRadius="14"
+                                    Margin="0,8">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            Command="{Binding Source={Reference self}, Path=BindingContext.ItemDetailCommand}" />
+                                    </Frame.GestureRecognizers>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition />
+                                            <ColumnDefinition />
+                                            <ColumnDefinition />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition
+                                                Height="32" />
+                                            <RowDefinition />
+                                            <RowDefinition
+                                                Height="17" />
+                                            <RowDefinition
+                                                Height="40" />
+                                        </Grid.RowDefinitions>
+                                        <StackLayout
+                                            Grid.ColumnSpan="2"
+                                            HorizontalOptions="Start"
+                                            VerticalOptions="Start"
+                                            Margin="8"
+                                            Orientation="Horizontal">
+                                            <Frame
+                                                Padding="0"
+                                                IsClippedToBounds="True"
+                                                HasShadow="False"
+                                                BackgroundColor="{Binding Color}"
+                                                VerticalOptions="Center"
+                                                HorizontalOptions="Center"
+                                                HeightRequest="8"
+                                                WidthRequest="8"
+                                                CornerRadius="4" />
+                                            <Label
+                                                Text="{Binding Status}"
+                                                TextColor="{Binding Color}"
+                                                FontSize="9" />
+                                        </StackLayout>
                                         <Frame
-                                            Padding="0"
-                                            IsClippedToBounds="True"
-                                            HasShadow="False"
-                                            BackgroundColor="{Binding Color}"
-                                            VerticalOptions="Center"
                                             HorizontalOptions="Center"
-                                            HeightRequest="8"
-                                            WidthRequest="8"
-                                            CornerRadius="4" />
-                                        <Label
-                                            Text="{Binding Status}"
-                                            TextColor="{Binding Color}"
-                                            FontSize="9" />
-                                    </StackLayout>
-                                    <Frame
-                                        HorizontalOptions="Center"
-                                        VerticalOptions="Center"
-                                        Grid.Row="1"
-                                        HasShadow="False"
-                                        Grid.ColumnSpan="3"
-                                        Padding="0">
-                                        <ffimage:CachedImage
-                                            HeightRequest="130"
-                                            WidthRequest="130"
-                                            Aspect="AspectFill"
-                                            Source="{Binding Product_big_image}" />
-                                    </Frame>
+                                            VerticalOptions="Center"
+                                            Grid.Row="1"
+                                            HasShadow="False"
+                                            Grid.ColumnSpan="3"
+                                            Padding="0">
+                                            <ffimage:CachedImage
+                                                HeightRequest="130"
+                                                WidthRequest="130"
+                                                Aspect="AspectFill"
+                                                Source="{Binding Product_big_image}" />
+                                        </Frame>
 
-                                    <BoxView
-                                        Grid.Row="2"
-                                        Grid.ColumnSpan="3"
-                                        VerticalOptions="Center"
-                                        HeightRequest="1"
-                                        Color="#E1E4EC" />
-                                    <StackLayout
-                                        Grid.Row="3"
-                                        Grid.ColumnSpan="3">
-                                        <Label
-                                            HorizontalTextAlignment="Center"
-                                            Text="{Binding Product_name}"
-                                            FontSize="11" />
-                                        <Label
-                                            HorizontalTextAlignment="Center"
-                                            TextColor="#A6B0BD"
-                                            FontSize="9">
-                                            <Label.FormattedText>
-                                                <FormattedString>
-                                                    <Span
-                                                        Text="Ordered: " />
-                                                    <Span
-                                                        Text="{Binding Product_ordered, StringFormat='{0:dd/MM/yyyy}'}" />
-                                                </FormattedString>
-                                            </Label.FormattedText>
-                                        </Label>
-                                    </StackLayout>
-                                </Grid>
-                            </Frame>
-                        </StackLayout>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </StackLayout>
-    </Grid>
+                                        <BoxView
+                                            Grid.Row="2"
+                                            Grid.ColumnSpan="3"
+                                            VerticalOptions="Center"
+                                            HeightRequest="1"
+                                            Color="#E1E4EC" />
+                                        <StackLayout
+                                            Grid.Row="3"
+                                            Grid.ColumnSpan="3">
+                                            <Label
+                                                HorizontalTextAlignment="Center"
+                                                Text="{Binding Product_name}"
+                                                FontSize="11" />
+                                            <Label
+                                                HorizontalTextAlignment="Center"
+                                                TextColor="#A6B0BD"
+                                                FontSize="9">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                        <Span
+                                                            Text="Ordered: " />
+                                                        <Span
+                                                            Text="{Binding Product_ordered, StringFormat='{0:dd/MM/yyyy}'}" />
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+                                        </StackLayout>
+                                    </Grid>
+                                </Frame>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
 </ContentPage>
