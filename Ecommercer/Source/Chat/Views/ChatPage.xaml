@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:navigation="clr-namespace:Ecommercer.Source.Common.Navigation"
     xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:renderer="clr-namespace:Ecommercer.Source.Common.Renderer"
     NavigationPage.HasNavigationBar="False"
     x:Class="Ecommercer.Source.Chat.Views.ChatPage">
     <ContentPage.Content>
@@ -107,6 +108,30 @@
 
                 </ListView.ItemTemplate>
             </ListView>
+            <Grid
+                VerticalOptions="Center"
+                HeightRequest="100"
+                Margin="0,0,0,40"
+                BackgroundColor="White">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition
+                        Width="56" />
+                </Grid.ColumnDefinitions>
+
+                <renderer:BorderLessEntry
+                    Margin="16,0"
+                    Placeholder="Your response..."
+                    TextColor="#A6B0BD" />
+                <Button
+                    Margin="0,0,16,0"
+                    Command="{Binding SendMessage}"
+                    Grid.Column="1"
+                    Text="Send"
+                    BackgroundColor="Transparent" />
+            </Grid>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

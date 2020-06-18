@@ -193,10 +193,7 @@
     <ImageAsset Include="Resources\Assets.xcassets\icClose.imageset\icClose%403x.png" />
     <ImageAsset Include="Resources\Assets.xcassets\icClose.imageset\Contents.json" />
     <ImageAsset Include="Resources\Assets.xcassets\icClose.imageset\icClose.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\icCartBlue.imageset\icCartBlue.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\icCartBlue.imageset\icCartBlue%403x.png" />
     <ImageAsset Include="Resources\Assets.xcassets\icCartBlue.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\icCartBlue.imageset\icCartBlue%402x.png" />
     <ImageAsset Include="Resources\Assets.xcassets\icSearch.imageset\Contents.json" />
     <ImageAsset Include="Resources\Assets.xcassets\icArrowDown.imageset\icArrowDown%402x.png" />
     <ImageAsset Include="Resources\Assets.xcassets\icArrowDown.imageset\icArrowDown%403x.png" />
@@ -260,6 +257,9 @@
     <ImageAsset Include="Resources\Assets.xcassets\icMenu.imageset\icMenu%403x.png" />
     <ImageAsset Include="Resources\Assets.xcassets\icMenu.imageset\icMenu.png" />
     <ImageAsset Include="Resources\Assets.xcassets\icMenu.imageset\icMenu%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\icCartBlue.imageset\icCart%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\icCartBlue.imageset\icCart%403x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\icCartBlue.imageset\icCart.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -48,7 +48,7 @@ namespace Ecommercer
             InitializeComponent();
 
             VersionTracking.Track();
-            var abc = await NavigationService.NavigateAsync(Routes.Chat);
+            var abc = await NavigationService.NavigateAsync(Routes.EcoTabbed);
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)

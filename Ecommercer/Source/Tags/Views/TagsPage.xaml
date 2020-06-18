@@ -9,5 +9,8 @@
         Spacing="0">
         <navigation:HomeNavigationBar
             TitleView="Tags" />
+        <FlexLayout>
+
+        </FlexLayout>
     </StackLayout>
 </ContentPage>
