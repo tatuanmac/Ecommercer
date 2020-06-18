@@ -47,10 +47,9 @@ namespace Ecommercer.Source.Common.Navigation
             InitializeComponent();
             var heightStatusBar = DependencyService.Get<IGetHeightStatusBar>().GetStatusBarHeight();
             var heightNavigation = DependencyService.Get<IGetHeightStatusBar>().GetNavigationHeight();
-            double a = heightNavigation + heightStatusBar;
 
             gridNav.Margin = new Thickness(0, heightStatusBar, 0, 0);
-            this.HeightRequest = a;
+            this.HeightRequest = heightNavigation + heightStatusBar;
             //
             var gestureRecognizer = new TapGestureRecognizer();
             gestureRecognizer.Tapped += (sender, e) => FilterCommand?.Execute(sender);

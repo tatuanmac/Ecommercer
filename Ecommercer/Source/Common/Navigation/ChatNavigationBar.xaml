@@ -1,8 +1,76 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage
+<navigation:GradientColorStack
+    xmlns:navigation="clr-namespace:Ecommercer.Source.Common.Navigation"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="Ecommercer.Source.Common.Navigation.ChatNavigationBar">
-    <ContentPage.Content>
-    </ContentPage.Content>
-</ContentPage>
+    x:Class="Ecommercer.Source.Common.Navigation.ChatNavigationBar"
+    Orientation="Horizontal"
+    StartColor="{StaticResource GradientStart}"
+    EndColor="{StaticResource GradientEnd}">
+    <Grid
+        x:Name="gridNav"
+        HorizontalOptions="FillAndExpand">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+                Width="52" />
+            <ColumnDefinition
+                Width="*" />
+            <ColumnDefinition
+                Width="52" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="Auto" />
+        </Grid.RowDefinitions>
+        <Image
+            Grid.Column="0"
+            Source="icBack"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            HeightRequest="16"
+            Aspect="AspectFill"
+            x:Name="back">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer
+                    Tapped="TapGestureRecognizer_Tapped" />
+            </Image.GestureRecognizers>
+        </Image>
+        <StackLayout
+            Spacing="0"
+            VerticalOptions="CenterAndExpand"
+            HorizontalOptions="CenterAndExpand"
+            Grid.Column="1">
+            <Label
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                Text="{Binding TitleView}"
+                LineBreakMode="WordWrap"
+                TextColor="White"
+                Margin="16"
+                FontAttributes="Bold"
+                
+                x:Name="title" />
+            <Label
+                TextColor="White"
+                Text="Shop's Owner"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                FontSize="10" />
+        </StackLayout>
+
+
+        <Image
+            Grid.Column="2"
+            Source="icMenu"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            HeightRequest="16"
+            Aspect="AspectFit"
+            x:Name="menu">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer
+                    Tapped="TapGestureRecognizer_Tapped1" />
+            </Image.GestureRecognizers>
+        </Image>
+    </Grid>
+</navigation:GradientColorStack>

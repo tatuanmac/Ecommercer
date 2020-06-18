@@ -238,9 +238,6 @@
     <ImageAsset Include="Resources\Assets.xcassets\icTags.imageset\Contents.json" />
     <ImageAsset Include="Resources\Assets.xcassets\icTags.imageset\icTags%402x.png" />
     <ImageAsset Include="Resources\Assets.xcassets\icTags.imageset\icTags%403x.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\icMenu.imageset\icMenu-1.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\icMenu.imageset\icMenu%402x-1.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\icMenu.imageset\icMenu%403x-1.png" />
     <ImageAsset Include="Resources\Assets.xcassets\btnCloseBlack.imageset\Contents.json" />
     <ImageAsset Include="Resources\Assets.xcassets\btnCloseBlack.imageset\btnCloseBlack.png" />
     <ImageAsset Include="Resources\Assets.xcassets\btnCloseBlack.imageset\btnCloseBlack%402x.png" />
@@ -260,6 +257,9 @@
     <ImageAsset Include="Resources\Assets.xcassets\icCheckmark.imageset\icCheckmark.png" />
     <ImageAsset Include="Resources\Assets.xcassets\icCheckmark.imageset\icCheckmark%402x.png" />
     <ImageAsset Include="Resources\Assets.xcassets\icCheckmark.imageset\icCheckmark%403x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\icMenu.imageset\icMenu%403x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\icMenu.imageset\icMenu.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\icMenu.imageset\icMenu%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

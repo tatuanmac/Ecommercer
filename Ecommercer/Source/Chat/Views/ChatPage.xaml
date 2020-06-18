@@ -4,12 +4,15 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:navigation="clr-namespace:Ecommercer.Source.Common.Navigation"
     xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    NavigationPage.HasNavigationBar="False"
     x:Class="Ecommercer.Source.Chat.Views.ChatPage">
     <ContentPage.Content>
         <StackLayout
-            Padding="0">
-            <navigation:NavigationBar
-                TitleView="Chat Support" />
+            Spacing="0">
+            <navigation:ChatNavigationBar
+                TitleView="Chat Support"
+                BackCommand="{Binding BackCommand}"
+                MenuCommand="{Binding MenuCommand}" />
             <ListView
                 RowHeight="156"
                 SeparatorVisibility="None">
@@ -42,7 +45,7 @@
                                     <Grid.RowDefinitions>
                                         <RowDefinition
                                             Height="69" />
-                                        
+
                                         <RowDefinition />
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
@@ -95,7 +98,7 @@
                                         Grid.ColumnSpan="3"
                                         Grid.Row="1"
                                         TextColor="#A6B0BD"
-                                        Text="Hi Martha. Unfortunately, I don’t have those in stock yet, but they should be here next week, if you are not in a hurry." />
+                                        Text="Hi Martha. Unfortunately, I don't have those in stock yet, but they should be here next week, if you are not in a hurry." />
                                 </Grid>
 
                             </Frame>

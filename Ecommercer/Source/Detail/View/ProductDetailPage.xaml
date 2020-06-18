@@ -136,6 +136,7 @@
                         <Button
                             Grid.Row="4"
                             BackgroundColor="Transparent"
+                            Command="{Binding AskCommand}"
                             CornerRadius="10"
                             FontSize="10"
                             Text="ASK A QUESTION"
@@ -146,6 +147,7 @@
                         <Button
                             Grid.Row="4"
                             Grid.Column="1"
+                            Command="{Binding PurchaseCommand}"
                             BackgroundColor="#327AE5"
                             CornerRadius="10"
                             Text="PURCHASE"

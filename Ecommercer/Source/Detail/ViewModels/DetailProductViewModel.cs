@@ -45,6 +45,22 @@ namespace Ecommercer.Source.Detail.ViewModels
 
         }
 
+        Command AskCmd;
+        public Command AskCommand => AskCmd = AskCmd ?? new Command(AskPage);
+
+        private async void AskPage()
+        {
+            await NavigationService.NavigateAsync(Routes.Chat);
+        }
+
+        Command PurchaseCmd;
+        public Command PurchaseCommand => PurchaseCmd = PurchaseCmd ?? new Command(PurchaseProduct);
+
+        private void PurchaseProduct()
+        {
+
+        }
+
         Command BackCmd;
         public Command BackCommand => BackCmd = BackCmd ?? new Command(BackToPreviousPage);
 
