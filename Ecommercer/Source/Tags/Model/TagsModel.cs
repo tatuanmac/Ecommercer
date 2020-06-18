@@ -6,12 +6,9 @@ namespace Ecommercer.Source.Tags.Model
 {
     public class TagsModel : ModelBase
     {
-        public UserModel User { get; set; }
-        public Tags ListTag { get; set; }
-    }
-    public class Tags : ModelBase
-    {
         public string Tag_id { get; set; }
         public string Tag_title { get; set; }
+        public float TagSize { get; set; }
+        public float SizeRadius { get; set; }
     }
 }

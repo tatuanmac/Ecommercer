@@ -9,8 +9,38 @@
         Spacing="0">
         <navigation:HomeNavigationBar
             TitleView="Tags" />
-        <FlexLayout>
+        <Label
+            Text="Help us make the experience perfect for you. Choose the items that you're the most interested in."
+            HorizontalOptions="CenterAndExpand"
+            FontSize="20"
+            TextColor="#A6B0BD"
+            Margin="8" />
+        <FlexLayout
+            Wrap="Wrap"
+            AlignItems="Stretch"
+            JustifyContent="SpaceEvenly"
+            BindableLayout.ItemsSource="{Binding Tags}">
 
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <Frame
+                        CornerRadius="{Binding SizeRadius}"
+                        BackgroundColor="Aqua"
+                        HeightRequest="{Binding TagSize}"
+                        VerticalOptions="Center"
+                        WidthRequest="{Binding TagSize}"
+                        Margin="8"
+                        Padding="0"
+                        HorizontalOptions="Center">
+                        <Label
+                            Text="{Binding Tag_title}"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"> 
+                        </Label>
+                    </Frame>
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
         </FlexLayout>
+
     </StackLayout>
 </ContentPage>
