@@ -5,8 +5,8 @@ using Ecommercer.Source.Authentication.Views;
 using Ecommercer.Source.Cart.Service;
 using Ecommercer.Source.Cart.ViewModels;
 using Ecommercer.Source.Cart.Views;
-using Ecommercer.Source.Common.Renderer;
-using Ecommercer.Source.Deals.Navigation;
+using Ecommercer.Source.Chat.ViewModels;
+using Ecommercer.Source.Chat.Views;
 using Ecommercer.Source.Deals.Service;
 using Ecommercer.Source.Deals.ViewModels;
 using Ecommercer.Source.Deals.Views;
@@ -75,6 +75,7 @@ namespace Ecommercer
             containerRegistry.RegisterForNavigation<ShippingReviewPage, ShippingReviewPageViewModel>();
             containerRegistry.RegisterForNavigation<StoreDetailPage, StoreDetailViewModel>();
             containerRegistry.RegisterForNavigation<ProductDetailPage, DetailProductViewModel>();
+            containerRegistry.RegisterForNavigation<ChatPage, ChatViewModel>();
         }
 
         private void RegisterService(IContainerRegistry containerRegistry)
@@ -87,12 +88,15 @@ namespace Ecommercer
 
         private void RegisterDialogs(IContainerRegistry containerRegistry)
         {
+
         }
 
         private void RegisterExternalService(IContainerRegistry containerRegistry)
         {
+
         }
     }
+
     public sealed partial class Routes
     {
         static readonly string navigation = nameof(NavigationPage);
@@ -105,5 +109,6 @@ namespace Ecommercer
         public static readonly Uri StoreDetail = new Uri($"{nameof(StoreDetailPage)}", UriKind.Relative);
         public static readonly Uri Search = new Uri($"{nameof(SearchPage)}", UriKind.Relative);
         public static readonly Uri ProductDetail = new Uri($"{nameof(ProductDetailPage)}", UriKind.Relative);
+        public static readonly Uri Chat = new Uri($"{nameof(ChatPage)}", UriKind.Relative);
     }
 }

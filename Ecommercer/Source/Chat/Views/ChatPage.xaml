@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:navigation="clr-namespace:Ecommercer.Source.Common.Navigation"
+    xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    x:Class="Ecommercer.Source.Chat.Views.ChatPage">
+    <ContentPage.Content>
+        <StackLayout
+            Padding="0">
+            <navigation:NavigationBar
+                TitleView="Chat Support" />
+            <ListView
+                RowHeight="156"
+                SeparatorVisibility="None">
+                <ListView.ItemsSource>
+                    <x:Array
+                        Type="{x:Type x:String}">
+                        <x:String>mono</x:String>
+                        <x:String>monodroid</x:String>
+                        <x:String>monotouch</x:String>
+                        <x:String>monorail</x:String>
+                        <x:String>monodevelop</x:String>
+                        <x:String>monotone</x:String>
+                        <x:String>monopoly</x:String>
+                        <x:String>monomodal</x:String>
+                        <x:String>mononucleosis</x:String>
+                    </x:Array>
+                </ListView.ItemsSource>
+                <ListView.Header>
+                    <BoxView
+                        HeightRequest="16" />
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame
+                                Margin="16,0,16,16"
+                                Padding="0">
+                                <Grid
+                                    Margin="16,0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition
+                                            Height="69" />
+                                        
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition
+                                            Width="38" />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition
+                                            Width="70" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <!--user avatar-->
+                                    <ffimage:CachedImage
+                                        Source="user1"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Center"
+                                        WidthRequest="38"
+                                        HeightRequest="38" />
+
+                                    <!--user name-->
+                                    <Label
+                                        Margin="16,0"
+                                        Text="Martha Richards"
+                                        FontSize="15"
+                                        VerticalOptions="Center"
+                                        Grid.Column="1" />
+
+                                    <!--time-->
+                                    <Label
+                                        TextColor="#A6B0BD"
+                                        FontSize="10"
+                                        VerticalTextAlignment="Center"
+                                        HorizontalTextAlignment="End"
+                                        Grid.Column="2">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span
+                                                    Text="5m" />
+                                                <Span
+                                                    Text=" ago" />
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <BoxView
+                                        Grid.ColumnSpan="3"
+                                        Grid.Row="0"
+                                        VerticalOptions="End"
+                                        HeightRequest="1"
+                                        Color="#E1E4EC" />
+                                    <Label
+                                        Grid.ColumnSpan="3"
+                                        Grid.Row="1"
+                                        TextColor="#A6B0BD"
+                                        Text="Hi Martha. Unfortunately, I don’t have those in stock yet, but they should be here next week, if you are not in a hurry." />
+                                </Grid>
+
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
