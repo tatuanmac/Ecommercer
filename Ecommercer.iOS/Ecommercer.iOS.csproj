@@ -71,6 +71,7 @@
     <Compile Include="Renderers\EntryRenderers.cs" />
     <Compile Include="Renderers\GradientColorStackRenderer.cs" />
     <Compile Include="Renderers\NaviRendererForiOS.cs" />
+    <Compile Include="Renderers\ListViewWithoutScrollRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">

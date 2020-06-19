@@ -10,5 +10,6 @@ namespace Ecommercer.Source.Tags.Model
         public string Tag_title { get; set; }
         public float TagSize { get; set; }
         public float SizeRadius { get; set; }
+        public bool IsSelected { get; set; }
     }
 }

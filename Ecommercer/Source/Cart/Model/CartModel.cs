@@ -16,6 +16,7 @@ namespace Ecommercer.Source.Cart.Model
         public string Title { get; set; }
         public bool IsSelected { get; set; }
     }
+
     public class CartModel : ModelBase
     {
         public StoreModel StoreItem { get; set; }

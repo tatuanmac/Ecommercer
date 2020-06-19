@@ -23,7 +23,6 @@ namespace Ecommercer.Source.Cart.Service
                 {
                     StoreItem = new StoreModel
                         {
-
                              User =  new UserModel
                              {
                                  User_avatar = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/VAN_CAT.png/440px-VAN_CAT.png",

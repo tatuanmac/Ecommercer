@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using Ecommercer.Source.Common.Bases;
 using Ecommercer.Source.Tags.Model;
 using Prism.Navigation;
+using Xamarin.Forms;
 
 namespace Ecommercer.Source.Tags.ViewModels
 {
@@ -19,7 +20,8 @@ namespace Ecommercer.Source.Tags.ViewModels
             },
             new TagsModel
             {
-                 Tag_title =  "mlem 2"
+                 Tag_title =  "mlem 2",
+                 IsSelected = true
             },
             new TagsModel
             {
@@ -72,10 +74,6 @@ namespace Ecommercer.Source.Tags.ViewModels
             new TagsModel
             {
                  Tag_title =  "mlem 8"
-            },
-            new TagsModel
-            {
-                 Tag_title =  "mlem 9"
             }
         };
 
@@ -86,6 +84,26 @@ namespace Ecommercer.Source.Tags.ViewModels
             {
                 tag.TagSize = Random.Next(80, 130);
                 tag.SizeRadius = tag.TagSize / 2;
+            }
+        }
+        Command TagCmd;
+        public Command TagCommand => TagCmd = TagCmd ?? new Command<TagsModel>(TagsCommand);
+
+        private void TagsCommand(TagsModel obj)
+        {
+
+            if (obj == null)
+            {
+                obj.IsSelected = false;
+            }
+
+            if (obj.IsSelected == true)
+            {
+                obj.IsSelected = false;
+            }
+            else
+            {
+                obj.IsSelected = true;
             }
         }
     }

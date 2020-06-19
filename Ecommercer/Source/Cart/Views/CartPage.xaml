@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:navigation="clr-namespace:Ecommercer.Source.Common.Navigation"
+    xmlns:renderer="clr-namespace:Ecommercer.Source.Common.Renderer"
     x:Name="self"
     BackgroundColor="{StaticResource BackgroundColor}"
     x:Class="Ecommercer.Source.Cart.Views.CartPage">
@@ -56,89 +57,163 @@
         </CollectionView>
 
         <ListView
-            RowHeight="96"
-            BackgroundColor="{StaticResource BackgroundColor}"
-            x:Name="GroupedView"
-            IsGroupingEnabled="true"
             HasUnevenRows="True"
-            SeparatorVisibility="None"
-            ItemsSource="{Binding ListCartItem}">
-
-            <!--header-->
-            <ListView.GroupHeaderTemplate>
-                <DataTemplate>
-                    <ViewCell
-                        Height="96">
-                        <Frame
-                            Margin="16,16,16,0"
-                            Padding="0"
-                            HasShadow="False">
-                            <Grid
-                                ColumnSpacing="0">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition />
-                                    <RowDefinition />
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition
-                                        Width="80" />
-                                    <ColumnDefinition />
-                                    <ColumnDefinition
-                                        Width="60" />
-                                </Grid.ColumnDefinitions>
-                                <Frame
-                                    Grid.RowSpan="2"
-                                    VerticalOptions="Center"
-                                    HorizontalOptions="Center"
-                                    HeightRequest="48"
-                                    HasShadow="False"
-                                    WidthRequest="48"
-                                    CornerRadius="20"
-                                    Padding="0">
-                                    <ffimage:CachedImage
-                                        Source="user1" />
-                                </Frame>
-
-                                <Label
-                                    Grid.Column="1"
-                                    FontSize="11"
-                                    VerticalTextAlignment="End"
-                                    TextColor="#A6B0BD"
-                                    Text="Order from:" />
-                                <Label
-                                    Grid.Column="1"
-                                    Grid.Row="1"
-                                    FontSize="16"
-                                    VerticalTextAlignment="Start"
-                                    Text="Mark Robertson" />
-                                <Image
-                                    Grid.Column="2"
-                                    HorizontalOptions="Center"
-                                    WidthRequest="28"
-                                    VerticalOptions="Center"
-                                    HeightRequest="8"
-                                    Grid.RowSpan="2"
-                                    Source="icMenu" />
-                            </Grid>
-                        </Frame>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.GroupHeaderTemplate>
-
-            <!--item-->
+            CachingStrategy="RecycleElement"
+            BackgroundColor="{StaticResource BackgroundColor}"
+            ItemsSource="{Binding ListCartItem}"
+            SeparatorVisibility="None">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <Frame
-                            WidthRequest="100"
-                            HeightRequest="100"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            BackgroundColor="Aqua"
-                            HasShadow="False" />
+                            Padding="0"
+                            Margin="16">
+                            <renderer:ListViewWithoutScroll
+                                HeightRequest="{Binding StoreItem.HeightRow}"
+                                RowHeight="96"
+                                SeparatorVisibility="None"
+                                VerticalScrollBarVisibility="Never"
+                                VerticalOptions="FillAndExpand"
+                                ItemsSource="{Binding StoreItem.ProductItem}">
+
+                                <!--header-->
+                                <ListView.Header>
+                                    <Frame
+                                        HeightRequest="96"
+                                        Margin="16,16,16,0"
+                                        Padding="0"
+                                        HasShadow="False">
+                                        <Grid
+                                            ColumnSpacing="0">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition
+                                                    Width="80" />
+                                                <ColumnDefinition />
+                                                <ColumnDefinition
+                                                    Width="60" />
+                                            </Grid.ColumnDefinitions>
+                                            <Frame
+                                                Grid.RowSpan="2"
+                                                VerticalOptions="Center"
+                                                HorizontalOptions="Center"
+                                                HeightRequest="48"
+                                                HasShadow="False"
+                                                WidthRequest="48"
+                                                CornerRadius="20"
+                                                Padding="0">
+                                                <ffimage:CachedImage
+                                                    Source="{Binding StoreItem.User.User_avatar}" />
+                                            </Frame>
+
+                                            <Label
+                                                Grid.Column="1"
+                                                FontSize="11"
+                                                VerticalTextAlignment="End"
+                                                TextColor="#A6B0BD"
+                                                Text="Order from:" />
+                                            <Label
+                                                Grid.Column="1"
+                                                Grid.Row="1"
+                                                FontSize="16"
+                                                VerticalTextAlignment="Start"
+                                                Text="{Binding StoreItem.User.User_fullname}" />
+                                            <Image
+                                                Grid.Column="2"
+                                                HorizontalOptions="Center"
+                                                WidthRequest="28"
+                                                VerticalOptions="Center"
+                                                HeightRequest="8"
+                                                Grid.RowSpan="2"
+                                                Source="icMenu" />
+                                        </Grid>
+                                    </Frame>
+                                </ListView.Header>
+
+                                <!--template-->
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <Frame
+                                                Margin="16,8"
+                                                BorderColor="#F8F8F8"
+                                                HasShadow="False"
+                                                Padding="0">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition />
+                                                        <ColumnDefinition />
+                                                        <ColumnDefinition />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition />
+                                                        <RowDefinition />
+                                                        <RowDefinition />
+                                                    </Grid.RowDefinitions>
+                                                    <ffimage:CachedImage
+                                                        Grid.RowSpan="3"
+                                                        Margin="8"
+                                                        Aspect="AspectFit"
+                                                        Source="{Binding Product_big_image}" />
+                                                    <Label
+                                                        Grid.Column="1"
+                                                        Grid.ColumnSpan="2"
+                                                        VerticalTextAlignment="Center"
+                                                        HorizontalTextAlignment="Start"
+                                                        Text="{Binding Product_name}" />
+                                                    <Label
+                                                        Grid.Column="1"
+                                                        Grid.Row="1"
+                                                        Grid.ColumnSpan="2"
+                                                        VerticalTextAlignment="Center"
+                                                        HorizontalTextAlignment="Start"
+                                                        Text="{Binding Product_name}" />
+
+                                                    <Label
+                                                        Grid.Column="1"
+                                                        Grid.Row="2"
+                                                        FontAttributes="Bold"
+                                                        FontSize="22"
+                                                        TextColor="#8DC63F"
+                                                        VerticalTextAlignment="Center"
+                                                        HorizontalTextAlignment="Start">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span
+                                                                    Text="$" />
+                                                                <Span
+                                                                    Text="33.33" />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                                    <Label
+                                                        Grid.Column="2"
+                                                        Grid.Row="2"
+                                                        VerticalTextAlignment="Center">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span
+                                                                    Text="Quantily: " />
+                                                                <Span
+                                                                    Text="22" />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                                </Grid>
+                                            </Frame>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </renderer:ListViewWithoutScroll>
+                        </Frame>
                     </ViewCell>
+
                 </DataTemplate>
             </ListView.ItemTemplate>
+
         </ListView>
     </StackLayout>
 </ContentPage>
