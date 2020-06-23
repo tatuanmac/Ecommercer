@@ -261,6 +261,14 @@
     <ImageAsset Include="Resources\Assets.xcassets\icCartBlue.imageset\icCart%402x.png" />
     <ImageAsset Include="Resources\Assets.xcassets\icCartBlue.imageset\icCart%403x.png" />
     <ImageAsset Include="Resources\Assets.xcassets\icCartBlue.imageset\icCart.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\icPlay.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\icPlay.imageset\video.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\icPlay.imageset\video-1.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\icPlay.imageset\video-2.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\icPause.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\icPause.imageset\pause.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\icPause.imageset\pause-1.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\icPause.imageset\pause-2.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -299,5 +307,7 @@
     <Folder Include="Resources\Assets.xcassets\icMasterMenu.imageset\" />
     <Folder Include="Resources\Assets.xcassets\icBack.imageset\" />
     <Folder Include="Resources\Assets.xcassets\icCheckmark.imageset\" />
+    <Folder Include="Resources\Assets.xcassets\icPlay.imageset\" />
+    <Folder Include="Resources\Assets.xcassets\icPause.imageset\" />
   </ItemGroup>
 </Project>

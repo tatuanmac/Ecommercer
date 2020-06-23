@@ -3,6 +3,38 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Ecommercer.Source.Edutalk.ExamListentPage">
-    <ContentPage.Content>
-    </ContentPage.Content>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Frame
+            Grid.Row="1"
+            Padding="0"
+            HorizontalOptions="Center"
+            WidthRequest="150"
+            VerticalOptions="Center"
+            HeightRequest="150"
+            BackgroundColor="Aqua">
+
+            <Image
+                Source="icPlay">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Command="{Binding PlayCommnad}"
+                        CommandParameter="{Binding .}"/>
+                </Image.GestureRecognizers>
+                <Image.Triggers>
+                    <DataTrigger TargetType="Image"
+                                 Binding="{Binding IsPlaying}"
+                                 Value="False">
+                        <Setter Property="Source" Value="icPause"/>
+                    </DataTrigger>
+                </Image.Triggers>
+            </Image>
+        </Frame>
+    </Grid>
 </ContentPage>
