@@ -41,15 +41,13 @@ namespace Ecommercer.Source.Common.Navigation
             set { SetValue(TextSearchProperty, value); }
         }
 
-        
+
         public SearchNavigationBar()
         {
             InitializeComponent();
-            var heightStatusBar = DependencyService.Get<IGetHeightStatusBar>().GetStatusBarHeight();
-            var heightNavigation = DependencyService.Get<IGetHeightStatusBar>().GetNavigationHeight();
-
-            gridNav.Margin = new Thickness(0, heightStatusBar, 0, 0);
-            this.HeightRequest = heightNavigation + heightStatusBar;
+            gridNav.Margin = new Thickness(0, App.HeightStatusBar, 0, 0);
+            this.HeightRequest = App.HeightNavigationIOS;
+            gridNav.HeightRequest = App.HeightNavigationIOS;
             //
             var gestureRecognizer = new TapGestureRecognizer();
             gestureRecognizer.Tapped += (sender, e) => FilterCommand?.Execute(sender);
@@ -82,7 +80,7 @@ namespace Ecommercer.Source.Common.Navigation
         void SearchBar_TextChanged(System.Object sender, Xamarin.Forms.TextChangedEventArgs e)
         {
             SearchCommand?.Execute(sender);
-           
+
         }
     }
 }

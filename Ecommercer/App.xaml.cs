@@ -7,11 +7,13 @@ using Ecommercer.Source.Cart.ViewModels;
 using Ecommercer.Source.Cart.Views;
 using Ecommercer.Source.Chat.ViewModels;
 using Ecommercer.Source.Chat.Views;
+using Ecommercer.Source.Common.Navigation;
 using Ecommercer.Source.Deals.Service;
 using Ecommercer.Source.Deals.ViewModels;
 using Ecommercer.Source.Deals.Views;
 using Ecommercer.Source.Detail.View;
 using Ecommercer.Source.Detail.ViewModels;
+using Ecommercer.Source.Edutalk;
 using Ecommercer.Source.Home.Service;
 using Ecommercer.Source.Home.ViewModels;
 using Ecommercer.Source.Home.Views;
@@ -30,6 +32,9 @@ namespace Ecommercer
 {
     public partial class App : PrismApplication
     {
+        public static double HeightNavigationIOS { get; set; }
+        public static double HeightStatusBar { get; set; }
+        public static double HeightNavigation { get; set; }
         public App(IPlatformInitializer platformInitializer = null) : base(platformInitializer)
         {
             var culture = new CultureInfo("en-US");
@@ -46,9 +51,14 @@ namespace Ecommercer
         protected override async void OnInitialized()
         {
             InitializeComponent();
+            //Heigt navigation
+
+            HeightNavigation = DependencyService.Get<IGetHeightStatusBar>().GetNavigationHeight();
+            HeightStatusBar = DependencyService.Get<IGetHeightStatusBar>().GetStatusBarHeight();
+            HeightNavigationIOS = HeightStatusBar + HeightNavigation;
 
             VersionTracking.Track();
-            var abc = await NavigationService.NavigateAsync(Routes.EcoTabbed);
+            var abc = await NavigationService.NavigateAsync(Routes.ExamListent);
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -76,6 +86,9 @@ namespace Ecommercer
             containerRegistry.RegisterForNavigation<StoreDetailPage, StoreDetailViewModel>();
             containerRegistry.RegisterForNavigation<ProductDetailPage, DetailProductViewModel>();
             containerRegistry.RegisterForNavigation<ChatPage, ChatViewModel>();
+            //
+            containerRegistry.RegisterForNavigation<ExamListentPage, ExamListentViewModel>();
+
         }
 
         private void RegisterService(IContainerRegistry containerRegistry)
@@ -100,6 +113,7 @@ namespace Ecommercer
     public sealed partial class Routes
     {
         static readonly string navigation = nameof(NavigationPage);
+        public static readonly Uri ExamListent = new Uri($"/{navigation}/{nameof(ExamListentPage)}", UriKind.Absolute);
         public static readonly Uri LoginSignUp = new Uri($"/{navigation}/{nameof(LoginSignUpPage)}", UriKind.Relative);
         public static readonly Uri Login = new Uri($"{nameof(LoginPage)}", UriKind.Relative);
         public static readonly Uri EcoTabbed = new Uri($"/{navigation}/{nameof(EcoTabbedPage)}", UriKind.Absolute);
@@ -111,4 +125,5 @@ namespace Ecommercer
         public static readonly Uri ProductDetail = new Uri($"{nameof(ProductDetailPage)}", UriKind.Relative);
         public static readonly Uri Chat = new Uri($"{nameof(ChatPage)}", UriKind.Relative);
     }
+
 }

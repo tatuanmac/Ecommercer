@@ -162,8 +162,6 @@
             </CollectionView>-->
             </Frame>
 
-
-
             <Frame
                 Grid.Row="1"
                 Grid.RowSpan="2"

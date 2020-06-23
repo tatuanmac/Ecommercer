@@ -10,6 +10,7 @@ namespace Ecommercer.Source.Tags.ViewModels
 {
     public class TagsViewModel : TabbedViewModelBase
     {
+
         readonly Random Random = new Random();
 
         public ObservableCollection<TagsModel> Tags { get; set; } = new ObservableCollection<TagsModel>
@@ -105,6 +106,22 @@ namespace Ecommercer.Source.Tags.ViewModels
             {
                 obj.IsSelected = true;
             }
+        }
+
+        Command SearchCmd;
+        public Command SearchCommand => SearchCmd = SearchCmd ?? new Command(Searching);
+
+        private async void Searching()
+        {
+            await NavigationService.NavigateAsync(Routes.Search);
+        }
+
+        Command MasterMenuCmd;
+        public Command MasterMenuCommand => MasterMenuCmd = MasterMenuCmd ?? new Command(MasterPageMenu);
+
+        private void MasterPageMenu()
+        {
+
         }
     }
 }

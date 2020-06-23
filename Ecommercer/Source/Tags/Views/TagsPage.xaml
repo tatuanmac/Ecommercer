@@ -2,70 +2,85 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:navigation="clr-namespace:Ecommercer.Source.Common.Navigation"
     x:Name="self"
+     BackgroundColor="{StaticResource BackgroundColor}"
     x:Class="Ecommercer.Source.Tags.Views.TagsPage">
-    <StackLayout
-        Spacing="0">
-        <navigation:HomeNavigationBar
-            TitleView="Tags" />
-        <Label
-            Text="Help us make the experience perfect for you. Choose the items that you're the most interested in."
-            HorizontalOptions="CenterAndExpand"
-            FontSize="20"
-            TextColor="#A6B0BD"
-            Margin="8" />
-        <FlexLayout
-            Wrap="Wrap"
-            AlignItems="Stretch"
-            JustifyContent="SpaceEvenly"
-            BindableLayout.ItemsSource="{Binding Tags}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="{Binding NavigationHeightIOS}"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
 
-            <BindableLayout.ItemTemplate>
-                <DataTemplate>
-                    <Frame
-                        CornerRadius="{Binding SizeRadius}"
-                        BorderColor="LightGray"
-                        HeightRequest="{Binding TagSize}"
-                        VerticalOptions="Center"
-                        WidthRequest="{Binding TagSize}"
-                        Margin="8"
-                        Padding="0"
-                        HorizontalOptions="Center">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer
-                                Command="{Binding Source={Reference self}, Path=BindingContext.TagCommand}"
-                                CommandParameter="{Binding .}" />
-                        </Frame.GestureRecognizers>
-                        <Frame.Triggers>
-                            <DataTrigger
-                                TargetType="Frame"
-                                Binding="{Binding IsSelected}"
-                                Value="True">
-                                <Setter
-                                    Property="BackgroundColor"
-                                    Value="#F7620B" />
-                            </DataTrigger>
-                        </Frame.Triggers>
-                        <Label
-                            Text="{Binding Tag_title}"
-                            TextColor="#A6B0BD"
+        <navigation:HomeNavigationBar
+            Grid.Row="0"
+            TitleView="Tags"
+            Command="{Binding SearchCommand}"
+            MenuCommand="{Binding MasterMenuCommand}" />
+
+        <StackLayout
+            Grid.Row="1"
+            Spacing="0">
+            <Label
+                Text="Help us make the experience perfect for you. Choose the items that you're the most interested in."
+                HorizontalOptions="CenterAndExpand"
+                FontSize="20"
+                TextColor="#A6B0BD"
+                Margin="8" />
+            <FlexLayout
+                Wrap="Wrap"
+                AlignItems="Stretch"
+                JustifyContent="SpaceEvenly"
+                BindableLayout.ItemsSource="{Binding Tags}">
+
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Frame
+                            CornerRadius="{Binding SizeRadius}"
+                            BorderColor="LightGray"
+                            HeightRequest="{Binding TagSize}"
                             VerticalOptions="Center"
+                            WidthRequest="{Binding TagSize}"
+                            Margin="8"
+                            Padding="0"
                             HorizontalOptions="Center">
-                            <Label.Triggers>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Command="{Binding Source={Reference self}, Path=BindingContext.TagCommand}"
+                                    CommandParameter="{Binding .}" />
+                            </Frame.GestureRecognizers>
+                            <Frame.Triggers>
                                 <DataTrigger
-                                    TargetType="Label"
+                                    TargetType="Frame"
                                     Binding="{Binding IsSelected}"
                                     Value="True">
-                                    <Setter Property="TextColor"
-                                            Value="White"/>
+                                    <Setter
+                                        Property="BackgroundColor"
+                                        Value="#F7620B" />
                                 </DataTrigger>
-                            </Label.Triggers>
-                        </Label>
-                    </Frame>
-                </DataTemplate>
-            </BindableLayout.ItemTemplate>
-        </FlexLayout>
+                            </Frame.Triggers>
+                            <Label
+                                Text="{Binding Tag_title}"
+                                TextColor="#A6B0BD"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center">
+                                <Label.Triggers>
+                                    <DataTrigger
+                                        TargetType="Label"
+                                        Binding="{Binding IsSelected}"
+                                        Value="True">
+                                        <Setter
+                                            Property="TextColor"
+                                            Value="White" />
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
+                        </Frame>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </FlexLayout>
+        </StackLayout>
+    </Grid>
 
-    </StackLayout>
 </ContentPage>

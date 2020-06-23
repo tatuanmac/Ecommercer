@@ -12,7 +12,7 @@
         Spacing="0">
         <navigation:HomeNavigationBar
             TitleView="Cart" />
-
+        
         <CollectionView
             BackgroundColor="White"
             HeightRequest="56"

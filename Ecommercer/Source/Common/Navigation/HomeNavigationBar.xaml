@@ -6,7 +6,9 @@
     x:Class="Ecommercer.Source.Common.Navigation.HomeNavigationBar"
     Orientation="Horizontal"
     StartColor="{StaticResource GradientStart}"
-    EndColor="{StaticResource GradientEnd}">
+    EndColor="{StaticResource GradientEnd}"
+    VerticalOptions="Start">
+
     <Grid x:Name="gridNav"
         HorizontalOptions="FillAndExpand">
         <Grid.ColumnDefinitions>
@@ -17,15 +19,11 @@
             <ColumnDefinition
                 Width="52" />
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition
-                Height="Auto" />
-        </Grid.RowDefinitions>
+
         <Image
             Source="icMasterMenu"
             HorizontalOptions="Center"
             VerticalOptions="Center"
-            HeightRequest="16"
             Aspect="AspectFill"
             x:Name="menu">
             <Image.GestureRecognizers>
@@ -33,6 +31,7 @@
                     Tapped="TapGestureRecognizer_Tapped1" />
             </Image.GestureRecognizers>
         </Image>
+
         <Label
             VerticalOptions="CenterAndExpand"
             VerticalTextAlignment="Center"
@@ -58,5 +57,6 @@
                     Tapped="TapGestureRecognizer_Tapped" />
             </Image.GestureRecognizers>
         </Image>
+
     </Grid>
 </navigation:GradientColorStack>
