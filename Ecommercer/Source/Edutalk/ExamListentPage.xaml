@@ -42,7 +42,6 @@
             Margin="32,0"
             Grid.RowSpan="2"
             Padding="0"
-            HasShadow="False"
             HorizontalOptions="Start"
             WidthRequest="48"
             VerticalOptions="Center"

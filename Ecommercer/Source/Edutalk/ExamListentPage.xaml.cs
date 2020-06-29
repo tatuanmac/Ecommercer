@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Ecommercer.Source.Edutalk
@@ -55,6 +55,12 @@ namespace Ecommercer.Source.Edutalk
 
         void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
         {
+            SwitchButton();
+        }
+
+        async Task SwitchButton()
+        {
+            await Task.WhenAll(IsPlaying == true ? PlayButton.RotateTo(360, 250) : PlayButton.RotateTo(0, 250), PlayButton.FadeTo(0, 250));
             if (IsPlaying == true)
             {
                 IsPlaying = false;
@@ -67,6 +73,7 @@ namespace Ecommercer.Source.Edutalk
                 mediaElement.Pause();
                 PlayButton.Source = ("ic_play_solid");
             }
+            await PlayButton.FadeTo(1, 250);
         }
     }
 }
