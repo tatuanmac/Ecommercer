@@ -50,6 +50,7 @@ namespace Ecommercer
         }
         protected override async void OnInitialized()
         {
+            Device.SetFlags(new string[] { "MediaElement_Experimental" });
             InitializeComponent();
             //Heigt navigation
 
@@ -87,7 +88,7 @@ namespace Ecommercer
             containerRegistry.RegisterForNavigation<ProductDetailPage, DetailProductViewModel>();
             containerRegistry.RegisterForNavigation<ChatPage, ChatViewModel>();
             //
-            containerRegistry.RegisterForNavigation<ExamListentPage, ExamListentViewModel>();
+            containerRegistry.RegisterForNavigation<TestPage, TestViewModel>();
 
         }
 
@@ -113,7 +114,7 @@ namespace Ecommercer
     public sealed partial class Routes
     {
         static readonly string navigation = nameof(NavigationPage);
-        public static readonly Uri ExamListent = new Uri($"/{navigation}/{nameof(ExamListentPage)}", UriKind.Absolute);
+        public static readonly Uri ExamListent = new Uri($"/{navigation}/{nameof(TestPage)}", UriKind.Relative);
         public static readonly Uri LoginSignUp = new Uri($"/{navigation}/{nameof(LoginSignUpPage)}", UriKind.Relative);
         public static readonly Uri Login = new Uri($"{nameof(LoginPage)}", UriKind.Relative);
         public static readonly Uri EcoTabbed = new Uri($"/{navigation}/{nameof(EcoTabbedPage)}", UriKind.Absolute);

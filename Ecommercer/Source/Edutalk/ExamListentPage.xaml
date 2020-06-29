@@ -1,40 +1,148 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage
+<ContentView
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Ecommercer.Source.Edutalk.ExamListentPage">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition
+                Height="60" />
+            <RowDefinition
+                Height="60" />
             <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
+            <RowDefinition
+                Height="160" />
+            <RowDefinition
+                Height="48" />
         </Grid.RowDefinitions>
+
+        <MediaElement
+            x:Name="mediaElement"
+            IsVisible="False"
+            AutoPlay="False"
+            ShowsPlaybackControls="True" />
 
         <Frame
             Grid.Row="1"
+            Grid.RowSpan="2"
             Padding="0"
-            HorizontalOptions="Center"
-            WidthRequest="150"
-            VerticalOptions="Center"
-            HeightRequest="150"
-            BackgroundColor="Aqua">
+            Margin="16,0">
+            <ScrollView
+                VerticalScrollBarVisibility="Never">
+                <Label
+                    Margin="16,30,16,0"
+                    FontSize="18"
+                    Text="Chia sẻ lại cho anh em cẩn thật mua hàng Online. Lần đầu gặp nhưng cũng may cho mình.
+Ngày 15/6 mình đặt mua con Lemfo SG2 trên Shope của 1 shop đã bán 37c đánh giá cũng uy tín 4.5 sao. Sau 6 ngày mong ngóng chờ đợi thì em cũng về đến.
+Chiều hôm đó ship gọi mình ra nhận hàng. Lúc gặp ông đưa cho kiện hàng rồi bảo mình.
+- Anh có muốn mở ra kiểm hàng trước không, kiểm trước mà không lấy mất 30k phí.Chia sẻ lại cho anh em cẩn thật mua hàng Online. Lần đầu gặp nhưng cũng may cho mình.
+Ngày 15/6 mình đặt mua con Lemfo SG2 trên Shope của 1 shop đã bán 37c đánh giá cũng uy tín 4.5 sao. Sau 6 ngày mong ngóng chờ đợi thì em cũng về đến.
+Chiều hôm đó ship gọi mình ra nhận hàng. Lúc gặp ông đưa cho kiện hàng rồi bảo mình.
+- Anh có muốn mở ra kiểm hàng trước không, kiểm trước mà không lấy mất 30k phí.Chia sẻ lại cho anh em cẩn thật mua hàng Online. Lần đầu gặp nhưng cũng may cho mình.
+Ngày 15/6 mình đặt mua con Lemfo SG2 trên Shope của 1 shop đã bán 37c đánh giá cũng uy tín 4.5 sao. Sau 6 ngày mong ngóng chờ đợi thì em cũng về đến.
+Chiều hôm đó ship gọi mình ra nhận hàng. Lúc gặp ông đưa cho kiện hàng rồi bảo mình.
+- Anh có muốn mở ra kiểm hàng trước không, kiểm trước mà không lấy mất 30k phí." />
+            </ScrollView>
+        </Frame>
 
-            <Image
-                Source="icPlay">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer
-                        Command="{Binding PlayCommnad}"
-                        CommandParameter="{Binding .}"/>
-                </Image.GestureRecognizers>
-                <Image.Triggers>
-                    <DataTrigger TargetType="Image"
-                                 Binding="{Binding IsPlaying}"
-                                 Value="False">
-                        <Setter Property="Source" Value="icPause"/>
-                    </DataTrigger>
-                </Image.Triggers>
-            </Image>
+        <Frame
+            Margin="32,0"
+            Grid.RowSpan="2"
+            Padding="0"
+            HasShadow="False"
+            HorizontalOptions="Start"
+            WidthRequest="48"
+            VerticalOptions="Center"
+            BackgroundColor="#36499A"
+            CornerRadius="24"
+            HeightRequest="48">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer
+                    Tapped="TapGestureRecognizer_Tapped" />
+            </Frame.GestureRecognizers>
+            <Button
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                HeightRequest="16"
+                WidthRequest="16"
+                x:Name="PlayButton"
+                ImageSource="ic_play_solid">
+            </Button>
+        </Frame>
+
+        <CarouselView
+            PeekAreaInsets="80"
+            Grid.Row="3"
+            HorizontalScrollBarVisibility="Never">
+            <CarouselView.ItemsSource>
+                <x:Array
+                    Type="{x:Type x:String}">
+                    <x:String>mono</x:String>
+                    <x:String>monodroid</x:String>
+                    <x:String>monotouch</x:String>
+                    <x:String>monorail</x:String>
+                    <x:String>monodevelop</x:String>
+                    <x:String>monotone</x:String>
+                    <x:String>monopoly</x:String>
+                    <x:String>monomodal</x:String>
+                    <x:String>mononucleosis</x:String>
+                </x:Array>
+            </CarouselView.ItemsSource>
+            <CarouselView.ItemsLayout>
+                <LinearItemsLayout
+                    Orientation="Horizontal" />
+            </CarouselView.ItemsLayout>
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame
+                            HasShadow="True"
+                            CornerRadius="5"
+                            Margin="16"
+                            Padding="0"
+                            HeightRequest="80"
+                            WidthRequest="300"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="Center">
+
+                            <StackLayout
+                                Margin="4"
+                                Orientation="Horizontal">
+
+                                <Label
+                                    VerticalTextAlignment="Center"
+                                    HorizontalTextAlignment="Center"
+                                    Text="1." />
+
+
+                                <Label
+                                    VerticalTextAlignment="End"
+                                    HorizontalTextAlignment="Center"
+                                    Margin="0,0,0,8"
+                                    Text="---------------------------" />
+
+
+                            </StackLayout>
+
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+        <Frame
+            Grid.Row="4"
+            HasShadow="False"
+            Margin="32,0"
+            CornerRadius="20"
+            IsClippedToBounds="True"
+            Padding="0">
+            <Button
+                BackgroundColor="#36499A"
+                Text="NEXT"
+                TextColor="White"
+                FontAttributes="Bold"
+                FontSize="20" />
         </Frame>
     </Grid>
-</ContentPage>
+</ContentView>

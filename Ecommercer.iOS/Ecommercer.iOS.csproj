@@ -262,13 +262,21 @@
     <ImageAsset Include="Resources\Assets.xcassets\icCartBlue.imageset\icCart%403x.png" />
     <ImageAsset Include="Resources\Assets.xcassets\icCartBlue.imageset\icCart.png" />
     <ImageAsset Include="Resources\Assets.xcassets\icPlay.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\icPause.imageset\Contents.json" />
     <ImageAsset Include="Resources\Assets.xcassets\icPlay.imageset\video.png" />
     <ImageAsset Include="Resources\Assets.xcassets\icPlay.imageset\video-1.png" />
     <ImageAsset Include="Resources\Assets.xcassets\icPlay.imageset\video-2.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\icPause.imageset\Contents.json" />
     <ImageAsset Include="Resources\Assets.xcassets\icPause.imageset\pause.png" />
     <ImageAsset Include="Resources\Assets.xcassets\icPause.imageset\pause-1.png" />
     <ImageAsset Include="Resources\Assets.xcassets\icPause.imageset\pause-2.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\ic_pause_solid.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\ic_pause_solid.imageset\ic_pause_solid.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\ic_pause_solid.imageset\ic_pause_solid%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\ic_pause_solid.imageset\ic_pause_solid%403x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\ic_play_solid.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\ic_play_solid.imageset\ic_play_solid.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\ic_play_solid.imageset\ic_play_solid%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\ic_play_solid.imageset\ic_play_solid%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -309,5 +317,7 @@
     <Folder Include="Resources\Assets.xcassets\icCheckmark.imageset\" />
     <Folder Include="Resources\Assets.xcassets\icPlay.imageset\" />
     <Folder Include="Resources\Assets.xcassets\icPause.imageset\" />
+    <Folder Include="Resources\Assets.xcassets\ic_pause_solid.imageset\" />
+    <Folder Include="Resources\Assets.xcassets\ic_play_solid.imageset\" />
   </ItemGroup>
 </Project>
