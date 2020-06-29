@@ -48,6 +48,8 @@ namespace Ecommercer.Source.Edutalk
                 SourceMedia = ("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3");
 
                 mediaElement.Source = SourceMedia;
+
+                clView.ItemsSource = ExamListen.Answers;
             }
         }
 
@@ -56,14 +58,14 @@ namespace Ecommercer.Source.Edutalk
             if (IsPlaying == true)
             {
                 IsPlaying = false;
-                PlayButton.ImageSource = ("ic_pause_solid");
+                PlayButton.Source = ("ic_pause_solid");
                 mediaElement.Play();
             }
             else
             {
                 IsPlaying = true;
                 mediaElement.Pause();
-                PlayButton.ImageSource = ("ic_play_solid");
+                PlayButton.Source = ("ic_play_solid");
             }
         }
     }

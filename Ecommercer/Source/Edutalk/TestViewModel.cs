@@ -4,10 +4,11 @@ using Prism.Navigation;
 
 namespace Ecommercer.Source.Edutalk
 {
-    public class TestViewModel:ViewModelBase
+    public class TestViewModel : ViewModelBase
     {
         public ExamListent Model { set; get; }
-        public TestViewModel(INavigationService navigationService):base(navigationService)
+
+        public TestViewModel(INavigationService navigationService) : base(navigationService)
         {
             Model = new ExamListent
             {
@@ -15,12 +16,32 @@ namespace Ecommercer.Source.Edutalk
             {
                  new ExamAnswer()
                  {
-                      Answer="alo alo",
+                      Answer="a",
+                 },
+                 new ExamAnswer()
+                 {
+                      Answer="b",
+                 },
+                 new ExamAnswer()
+                 {
+                      Answer="c",
+                 },
+                 new ExamAnswer()
+                 {
+                      Answer="d",
+                 },
+                 new ExamAnswer()
+                 {
+                      Answer="e",
+                 },
+                 new ExamAnswer()
+                 {
+                      Answer="f",
                  }
             },
-                 Question= "blo blo",
+                Question = "blo blo",
 
-            };
+            } ;
         }
     }
 }
